@@ -96,10 +96,10 @@ export function GalleryView({ locale }: GalleryViewProps) {
               }}
               aria-pressed={activeCategory === key}
               className={cn(
-                'px-5 py-2 min-h-11 text-xs uppercase tracking-[0.2em] border rounded-full transition-all',
+                'px-4 py-2 text-xs uppercase tracking-[0.2em] rounded-full transition-colors',
                 activeCategory === key
-                  ? 'bg-terracotta-500 text-white border-terracotta-500 font-bold'
-                  : 'border-cream-200 text-cream-500 hover:border-gold-500/50'
+                  ? 'bg-bloo-50 text-bloo-800 font-semibold'
+                  : 'text-cream-500 hover:text-bloo-800'
               )}
             >
               {label}

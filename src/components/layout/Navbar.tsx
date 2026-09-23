@@ -74,8 +74,8 @@ export function Navbar({ locale }: NavbarProps) {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 glass-nav',
-        isScrolled && 'shadow-md'
+        'fixed top-0 left-0 right-0 z-50',
+        isScrolled ? 'glass-nav glass-nav--scrolled' : 'glass-nav'
       )}
       role="banner"
     >
@@ -104,11 +104,11 @@ export function Navbar({ locale }: NavbarProps) {
                 className="flex flex-col items-center justify-center text-center"
                 aria-label={`${t.nav.home} — ${t.brand.name}`}
               >
-                <span className="font-display font-extrabold tracking-tight whitespace-nowrap text-lg sm:text-xl lg:text-2xl text-bloo-950">
+                <span className="font-display font-extrabold tracking-tight whitespace-nowrap text-base sm:text-xl lg:text-2xl text-bloo-950">
                   BLOO{' '}
                   <span className="text-terracotta-500 font-light italic">Coffee</span>
                 </span>
-                <span className="text-[0.55rem] uppercase tracking-[0.4em] text-cream-400 mt-0.5 hidden sm:flex items-center gap-1.5">
+                <span className="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-[0.35em] text-cream-400 mt-0.5 flex items-center gap-1.5">
                   <span className="inline-flex items-center gap-1.5">
                     {BUSINESS_INFO.neighborhood}
                   </span>
@@ -166,7 +166,7 @@ export function Navbar({ locale }: NavbarProps) {
                   aria-expanded={isLanguageOpen}
                   aria-label={t.nav.language}
                   aria-haspopup="menu"
-                  className="h-11 w-11 p-0 rounded-full border border-cream-200 bg-charcoal-900"
+                  className="h-10 w-10 p-0 rounded-full text-bloo-800 hover:bg-bloo-50"
                 >
                   <Globe className="w-4 h-4" aria-hidden="true" />
                   <span className="sr-only">{locale.toUpperCase()}</span>
@@ -190,14 +190,14 @@ export function Navbar({ locale }: NavbarProps) {
               </div>
               <button
                 ref={hamburgerRef}
-                className="p-3 -m-1 min-h-11 min-w-11 flex items-center justify-center text-bloo-950 hover:text-terracotta-500 transition-colors"
+                className="p-2.5 -m-1.5 min-h-10 min-w-10 flex items-center justify-center text-bloo-950 hover:text-terracotta-500 transition-colors"
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label={t.nav.openMenu}
                 aria-expanded={isMobileMenuOpen}
                 aria-haspopup="dialog"
                 aria-controls="mobile-menu"
               >
-                <Menu className="w-6 h-6" aria-hidden="true" />
+                <Menu className="w-5 h-5" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -219,22 +219,32 @@ export function Navbar({ locale }: NavbarProps) {
             aria-modal="true"
           >
             <div className="flex flex-col h-full p-8">
-              <div className="flex items-center justify-between mb-10">
-                <Link
-                  href={`/${locale}`}
-                  onClick={closeMobileMenu}
-                  className="font-display font-extrabold tracking-tight text-2xl text-bloo-950"
-                >
-                  BLOO{' '}
-                  <span className="text-terracotta-500 font-light italic">Coffee</span>
-                </Link>
+              <div className="flex items-start justify-between mb-8">
+                <div>
+                  <Link
+                    href={`/${locale}`}
+                    onClick={closeMobileMenu}
+                    className="font-display font-extrabold tracking-tight text-xl text-bloo-950 block"
+                  >
+                    BLOO{' '}
+                    <span className="text-terracotta-500 font-light italic">Coffee</span>
+                  </Link>
+                  <span className="text-[0.5rem] uppercase tracking-[0.35em] text-cream-400 mt-1 flex items-center gap-1.5">
+                    {BUSINESS_INFO.neighborhood}
+                    <span className="w-1 h-1 rounded-full bg-cream-300" aria-hidden="true" />
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="w-2.5 h-2.5" aria-hidden="true" />
+                      {BUSINESS_INFO.hours.label}
+                    </span>
+                  </span>
+                </div>
                 <button
                   ref={closeMenuRef}
                   onClick={closeMobileMenu}
-                  className="min-h-11 min-w-11 flex items-center justify-center text-cream-400 hover:text-terracotta-500 transition-colors"
+                  className="min-h-10 min-w-10 flex items-center justify-center text-cream-400 hover:text-terracotta-500 transition-colors"
                   aria-label={t.nav.closeMenu}
                 >
-                  <X className="w-6 h-6" aria-hidden="true" />
+                  <X className="w-5 h-5" aria-hidden="true" />
                 </button>
               </div>
 
@@ -267,8 +277,8 @@ export function Navbar({ locale }: NavbarProps) {
                 </div>
               </nav>
 
-              <div className="space-y-3 pt-6 border-t border-cream-200">
-                <Button variant="secondary" size="lg" fullWidth asChild>
+              <div className="space-y-2 pt-6 border-t border-cream-200">
+                <Button variant="primary" size="sm" fullWidth asChild>
                   <a
                     href={`/${locale}/contact`}
                     onClick={closeMobileMenu}
@@ -277,7 +287,7 @@ export function Navbar({ locale }: NavbarProps) {
                     {t.nav.contact}
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" fullWidth asChild>
+                <Button variant="outline" size="sm" fullWidth asChild>
                   <a
                     href={GOOGLE_MAPS.directionsUrl}
                     target="_blank"
@@ -285,17 +295,17 @@ export function Navbar({ locale }: NavbarProps) {
                     onClick={closeMobileMenu}
                     className="inline-flex items-center justify-center gap-3"
                   >
-                    <MapPin className="w-5 h-5" aria-hidden="true" />
+                    <MapPin className="w-4 h-4" aria-hidden="true" />
                     {t.nav.directions}
                   </a>
                 </Button>
-                <Button variant="ghost" size="lg" fullWidth asChild>
+                <Button variant="secondary" size="sm" fullWidth asChild>
                   <a
                     href={BUSINESS_INFO.phoneHref}
                     onClick={closeMobileMenu}
                     className="inline-flex items-center justify-center gap-3"
                   >
-                    <Phone className="w-5 h-5" aria-hidden="true" />
+                    <Phone className="w-4 h-4" aria-hidden="true" />
                     {t.nav.call}
                   </a>
                 </Button>
@@ -304,9 +314,9 @@ export function Navbar({ locale }: NavbarProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 px-4 py-3 text-sm uppercase tracking-[0.2em] text-cream-300 hover:text-terracotta-500 transition-colors"
+                  className="flex items-center justify-center gap-2 py-2.5 text-xs uppercase tracking-[0.2em] text-cream-400 hover:text-terracotta-500 transition-colors"
                 >
-                  <InstagramIcon className="w-5 h-5" />
+                  <InstagramIcon className="w-4 h-4" />
                   {t.nav.follow} Instagram
                 </a>
               </div>

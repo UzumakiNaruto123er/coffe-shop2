@@ -5,7 +5,7 @@
  * custom domain is configured. Until then, the Vercel deployment is used.
  * An empty or whitespace value is treated the same as unset.
  */
-const DEFAULT_SITE_URL = 'https://coffe-shop1.vercel.app';
+const DEFAULT_SITE_URL = 'https://coffe-shop-2.vercel.app';
 
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL

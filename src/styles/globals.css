@@ -372,12 +372,19 @@ select {
   font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 
-/* Glass navigation */
+/* Glass navigation — transparent at top, subtle translucent on scroll */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-nav--scrolled {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(15, 35, 52, 0.08);
+  box-shadow: 0 1px 12px rgba(15, 35, 52, 0.05);
 }
 
 .dark-glass-nav {

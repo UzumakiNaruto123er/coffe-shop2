@@ -33,9 +33,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles = {
   primary: 'bg-terracotta-500 text-white hover:bg-terracotta-600 active:bg-terracotta-700 focus:ring-terracotta-500',
-  secondary: 'bg-bloo-50 text-bloo-950 border border-bloo-100 hover:bg-bloo-100 active:bg-bloo-200 focus:ring-bloo-300',
-  outline: 'border-2 border-terracotta-500 text-terracotta-500 hover:bg-terracotta-500 hover:text-white active:bg-terracotta-600 focus:ring-terracotta-500',
-  ghost: 'text-cream-400 hover:text-cream-200 hover:bg-white/10 active:bg-white/15 focus:ring-white/40',
+  secondary: 'bg-white text-bloo-800 border border-bloo-200 hover:bg-bloo-50 hover:border-bloo-300 active:bg-bloo-100 focus:ring-bloo-300',
+  outline: 'border border-bloo-300 text-bloo-700 hover:border-bloo-500 hover:bg-bloo-50 active:bg-bloo-100 focus:ring-bloo-300',
+  ghost: 'text-bloo-600 hover:bg-bloo-50 hover:text-bloo-800 active:bg-bloo-100 focus:ring-bloo-300',
   destructive: 'bg-red-600 text-white hover:bg-red-500 active:bg-red-700 focus:ring-red-500',
 };
 

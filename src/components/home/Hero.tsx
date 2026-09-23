@@ -31,7 +31,7 @@ export function Hero({ locale }: HeroProps) {
             </span>
             <h1
               id="hero-title"
-              className="text-clamp-hero font-display font-extrabold text-bloo-950 max-w-xl text-balance"
+              className="text-clamp-hero font-display font-extrabold text-bloo-950 max-w-xl text-balance tracking-[-0.02em]"
             >
               {t.home.hero.title1}{' '}
               <span className="italic font-medium text-terracotta-500">
@@ -59,20 +59,15 @@ export function Hero({ locale }: HeroProps) {
               </Button>
             </div>
 
-            <div className="mt-12 flex flex-wrap items-center gap-2.5">
-              {t.home.hero.servicesHint.split('·').map((chip) => (
-                <span
-                  key={chip}
-                  className="px-4 py-1.5 rounded-full bg-charcoal-900 border border-cream-200 text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-cream-500"
-                >
-                  {chip.trim()}
-                </span>
-              ))}
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-bloo-50 border border-bloo-100 text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-bloo-700">
+            <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 text-[0.7rem] uppercase tracking-[0.25em] text-cream-500">
+              <span>
+                {t.home.hero.servicesHint.split('·').map((chip) => chip.trim()).join('  ·  ')}
+              </span>
+              <span className="inline-flex items-center gap-1.5 text-bloo-700">
                 <Star className="w-3 h-3 fill-current" aria-hidden="true" />
                 {BUSINESS_INFO.rating.toFixed(1)}
               </span>
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-bloo-50 border border-bloo-100 text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-bloo-700">
+              <span className="inline-flex items-center gap-1.5 text-bloo-700">
                 <Clock className="w-3 h-3" aria-hidden="true" />
                 {BUSINESS_INFO.hours.label}
               </span>
@@ -91,7 +86,7 @@ export function Hero({ locale }: HeroProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bloo-950/20 to-transparent" aria-hidden="true" />
             </div>
-            <div className="absolute -bottom-6 -start-6 sm:start-8 bg-charcoal-950 border border-cream-200 rounded-3xl px-7 py-5 shadow-xl hidden sm:block ltr:lg:left-8">
+            <div className="absolute -bottom-6 start-6 bg-charcoal-950 border border-cream-200 rounded-3xl px-7 py-5 shadow-xl hidden sm:block">
               <p className="text-[0.6rem] uppercase tracking-[0.3em] font-semibold text-cream-400 mb-1">
                 {t.home.quickInfo.ratingLabel}
               </p>

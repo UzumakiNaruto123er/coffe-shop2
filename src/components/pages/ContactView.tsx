@@ -138,7 +138,7 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
               </form>
             ) : (
               <div className="max-w-xl border border-cream-200 bg-charcoal-900 p-8 lg:p-10 rounded-[1.5rem]">
-                <h2 className="font-display text-3xl text-cream-100 mb-4">{page.formTitle}</h2>
+                <h2 className="font-display text-3xl text-cream-100 mb-4">{page.noFormTitle}</h2>
                 <p className="text-cream-100/60 mb-8">{page.noEmail}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="primary" size="lg" asChild>

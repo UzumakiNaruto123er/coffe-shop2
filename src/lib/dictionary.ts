@@ -335,7 +335,8 @@ const en = {
     required: 'This field is required',
     invalidEmail: 'Please enter a valid email address',
     noEmail:
-      'We\'re not set up for email yet — the fastest ways to reach us are a call or a message on Instagram.',
+      'The quickest ways to reach us are a phone call or a message on Instagram — we\'ll get back to you right away.',
+    noFormTitle: 'Reach us directly',
     documentNote:
       'The message is sent from your own email account. We don\'t collect or store your details on this site.',
   },
@@ -833,7 +834,8 @@ const fr: Dictionary = {
     required: 'Ce champ est requis',
     invalidEmail: 'Veuillez saisir une adresse e-mail valide',
     noEmail:
-      'Nous ne sommes pas encore joignables par e-mail — le plus rapide reste l\'appel ou un message sur Instagram.',
+      'Les moyens les plus rapides de nous joindre sont un appel téléphonique ou un message sur Instagram — nous vous répondrons très vite.',
+    noFormTitle: 'Contactez-nous directement',
     documentNote:
       'Le message est envoyé depuis votre propre compte e-mail. Nous ne collectons ni ne stockons vos coordonnées sur ce site.',
   },
@@ -1316,7 +1318,8 @@ const ar: Dictionary = {
     send: 'فتح تطبيق البريد',
     required: 'هذا الحقل مطلوب',
     invalidEmail: 'يرجى إدخال بريد إلكتروني صحيح',
-    noEmail: 'لسنا جاهزين للبريد الإلكتروني بعد — أسرع الطرق هي الاتصال بنا أو مراسلتنا على إنستغرام.',
+    noEmail: 'أسرع طريقة للوصول إلينا هي الاتصال بنا أو مراسلتنا عبر إنستغرام — وسنرد عليك فوراً.',
+    noFormTitle: 'تواصل معنا مباشرة',
     documentNote: 'تُرسل الرسالة من حساب بريدك الإلكتروني. لا نجمع أو نخزّن معلوماتك في هذا الموقع.',
   },
   galleryPage: {
