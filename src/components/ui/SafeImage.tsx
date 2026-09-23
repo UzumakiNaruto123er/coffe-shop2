@@ -19,12 +19,12 @@ export function SafeImage({ alt, className, ...props }: ImageProps) {
         role="img"
         aria-label={alt}
         className={cn(
-          'grid place-items-center bg-[#1A1A1A]',
+          'grid place-items-center bg-[#E8E6E3]',
           props.fill && 'absolute inset-0',
           className
         )}
       >
-        <Coffee className="w-10 h-10 text-gold-500/40" aria-hidden="true" />
+        <Coffee className="w-10 h-10 text-terracotta-500/40" aria-hidden="true" />
       </div>
     );
   }

@@ -1,16 +1,16 @@
 {
   "id": "/",
-  "name": "Omega Coffe",
-  "short_name": "Omega Coffe",
-  "description": "Omega Coffe — specialty coffee, board games and good moments in L'Aouina, Tunis",
+  "name": "BLOO COFFEE",
+  "short_name": "BLOO COFFEE",
+  "description": "BLOO COFFEE — specialty coffee shop in L'Aouina, Tunis",
   "lang": "en",
   "dir": "ltr",
   "start_url": "/en",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#c5a059",
+  "background_color": "#ffffff",
+  "theme_color": "#1a3a52",
   "orientation": "any",
-  "categories": ["food", "lifestyle", "entertainment"],
+  "categories": ["food", "lifestyle"],
   "icons": [
     {
       "src": "/icons/icon-72x72.png",
@@ -65,21 +65,21 @@
     {
       "name": "Menu",
       "short_name": "Menu",
-      "description": "Today's selection at Omega Coffe",
+      "description": "Today's selection at BLOO COFFEE",
       "url": "/en/menu",
       "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Location",
       "short_name": "Location",
-      "description": "Get directions to Omega Coffe",
+      "description": "Get directions to BLOO COFFEE",
       "url": "/en/location",
       "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Contact",
       "short_name": "Contact",
-      "description": "Contact Omega Coffe",
+      "description": "Contact BLOO COFFEE",
       "url": "/en/contact",
       "icons": [{ "src": "/icons/icon-192x192.png", "sizes": "192x192" }]
     }

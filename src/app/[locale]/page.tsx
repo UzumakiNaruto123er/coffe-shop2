@@ -1,11 +1,11 @@
 import { Hero } from '@/components/home/Hero';
-import { QuickInfoBar } from '@/components/home/QuickInfoBar';
-import { AtmosphereGallery } from '@/components/home/AtmosphereGallery';
+import { Offerings } from '@/components/home/Offerings';
 import { FeaturedMenu } from '@/components/home/FeaturedMenu';
+import { Stats } from '@/components/home/Stats';
+import { AtmosphereGallery } from '@/components/home/AtmosphereGallery';
+import { MapSection } from '@/components/home/MapSection';
 import { ReviewsSection } from '@/components/home/ReviewsSection';
 import { InstagramSection } from '@/components/home/InstagramSection';
-import { MapSection } from '@/components/home/MapSection';
-import { ContactCTA } from '@/components/home/ContactCTA';
 import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 
@@ -22,13 +22,13 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <>
       <Hero locale={l} />
-      <QuickInfoBar locale={l} />
-      <AtmosphereGallery locale={l} />
+      <Offerings locale={l} />
       <FeaturedMenu locale={l} />
+      <Stats locale={l} />
+      <AtmosphereGallery locale={l} />
+      <MapSection locale={l} />
       <ReviewsSection locale={l} />
       <InstagramSection locale={l} />
-      <MapSection locale={l} />
-      <ContactCTA locale={l} />
     </>
   );
 }

@@ -96,10 +96,10 @@ export function GalleryView({ locale }: GalleryViewProps) {
               }}
               aria-pressed={activeCategory === key}
               className={cn(
-                'px-5 py-2 min-h-11 text-xs uppercase tracking-[0.2em] border transition-all',
+                'px-5 py-2 min-h-11 text-xs uppercase tracking-[0.2em] border rounded-full transition-all',
                 activeCategory === key
-                  ? 'bg-gold-500 text-charcoal-950 border-gold-500 font-bold'
-                  : 'border-white/15 text-cream-200 hover:border-gold-500/50'
+                  ? 'bg-terracotta-500 text-white border-terracotta-500 font-bold'
+                  : 'border-cream-200 text-cream-500 hover:border-gold-500/50'
               )}
             >
               {label}
@@ -126,7 +126,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
-              <span className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-[#121212]/80 to-transparent text-xs uppercase tracking-[0.2em] text-cream-100">
+              <span className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bloo-950/80 to-transparent text-xs uppercase tracking-[0.2em] text-white">
                 {image.alt}
               </span>
             </button>
@@ -146,7 +146,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
             type="button"
             onClick={closeLightbox}
             aria-label={page.close}
-            className="absolute top-4 right-4 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/15 text-cream-100 hover:border-gold-500 hover:text-gold-500 transition-colors"
+            className="absolute top-4 right-4 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-gold-500 hover:text-gold-500 transition-colors"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>
@@ -155,7 +155,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
             type="button"
             onClick={prevImage}
             aria-label={page.prev}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/15 text-cream-100 hover:border-gold-500 hover:text-gold-500 transition-colors"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-gold-500 hover:text-gold-500 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 rtl:-scale-x-100" aria-hidden="true" />
           </button>
@@ -170,7 +170,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
                 className="object-contain"
               />
             </div>
-            <figcaption className="mt-4 text-sm uppercase tracking-[0.2em] text-cream-100/70 text-center">
+            <figcaption className="mt-4 text-sm uppercase tracking-[0.2em] text-white/70 text-center">
               {active.alt}
             </figcaption>
           </figure>
@@ -179,12 +179,12 @@ export function GalleryView({ locale }: GalleryViewProps) {
             type="button"
             onClick={nextImage}
             aria-label={page.next}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/15 text-cream-100 hover:border-gold-500 hover:text-gold-500 transition-colors"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-gold-500 hover:text-gold-500 transition-colors"
           >
             <ChevronRight className="w-5 h-5 rtl:-scale-x-100" aria-hidden="true" />
           </button>
 
-          <p className="absolute bottom-4 right-4 text-xs tracking-[0.2em] text-cream-100/50">
+          <p className="absolute bottom-4 right-4 text-xs tracking-[0.2em] text-white/60">
             {lightboxIndex + 1} / {visible.length}
           </p>
         </div>

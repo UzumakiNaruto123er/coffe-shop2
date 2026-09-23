@@ -7,63 +7,63 @@ export interface LegalSection {
 
 const en = {
   brand: {
-    name: 'Omega Coffe',
-    tagline: 'Coffee • Games • Good Moments',
+    name: 'BLOO COFFEE',
+    tagline: 'Coffee • Craft • Comfort',
   },
   meta: {
     home: {
-      title: 'Omega Coffe — Coffee, Games & Good Moments in L\'Aouina, Tunis',
+      title: "BLOO COFFEE — Coffee Shop in L'Aouina, Tunis",
       description:
-        'A neighborhood café in L\'Aouina, Tunis serving coffee, pastries, sandwiches, pizza and salads, with board games, karaoke nights and takeaway. Visit us or call +216 22 101 785.',
+        "Specialty coffee shop in L'Aouina, Tunis — espresso, filter, pour-over and fresh pastries. Rated 4.9 on Google. Open daily 09:00–23:00.",
     },
     menu: {
-      title: 'Menu — Omega Coffe',
+      title: 'Menu — BLOO COFFEE',
       description:
-        'Coffee, croissants, sandwiches, pizza, salads, breakfast and takeaway at Omega Coffe in L\'Aouina, Tunis. Discover today\'s selection in-store.',
+        "Espresso, filter and pour-over coffee, signature blends and fresh pastries at BLOO COFFEE in L'Aouina, Tunis. Discover today's selection in-store.",
     },
     about: {
-      title: 'About — Omega Coffe',
+      title: 'About — BLOO COFFEE',
       description:
-        'Omega Coffe is a neighborhood café in L\'Aouina, Tunis for coffee, games and good times. Find us at Résidence Bel Azure, L\'Aouina.',
+        "BLOO COFFEE is a specialty coffee shop in L'Aouina, Tunis. Find us at Rés. Houssem, Avenue Mongi Slim, Tunis 2045.",
     },
     gallery: {
-      title: 'Gallery — Omega Coffe',
+      title: 'Gallery — BLOO COFFEE',
       description:
-        'A glimpse of the atmosphere at Omega Coffe, our neighborhood café in L\'Aouina, Tunis.',
+        "A glimpse of the atmosphere at BLOO COFFEE, our specialty coffee shop in L'Aouina, Tunis.",
     },
     reviews: {
-      title: 'Reviews — Omega Coffe',
+      title: 'Reviews — BLOO COFFEE',
       description:
-        'Omega Coffe is rated 4.7 out of 5 on Google, from 47 reviews. Read what guests say about our café in L\'Aouina, Tunis.',
+        'BLOO COFFEE is rated 4.9 out of 5 on Google, from 25 reviews. Read what guests say about our coffee shop in L\'Aouina, Tunis.',
     },
     location: {
-      title: 'Location & Directions — Omega Coffe',
+      title: 'Location & Directions — BLOO COFFEE',
       description:
-        'Find Omega Coffe at Résidence Bel Azure, L\'Aouina, Tunis. Call +216 22 101 785 or get directions.',
+        'Find BLOO COFFEE at Rés. Houssem, Avenue Mongi Slim, Tunis 2045. Call +216 54 472 945 or get directions.',
     },
     contact: {
-      title: 'Contact — Omega Coffe',
+      title: 'Contact — BLOO COFFEE',
       description:
-        'Contact Omega Coffe in L\'Aouina, Tunis by phone (+216 22 101 785) or on Instagram @dice.and.beans.',
+        'Contact BLOO COFFEE in L\'Aouina, Tunis by phone (+216 54 472 945) or on Instagram @bloo.coffeeshop.',
     },
     terms: {
-      title: 'Terms of Service — Omega Coffe',
-      description: 'Terms of service for the Omega Coffe website.',
+      title: 'Terms of Service — BLOO COFFEE',
+      description: 'Terms of service for the BLOO COFFEE website.',
     },
     privacy: {
-      title: 'Privacy Policy — Omega Coffe',
-      description: 'Privacy policy for the Omega Coffe website.',
+      title: 'Privacy Policy — BLOO COFFEE',
+      description: 'Privacy policy for the BLOO COFFEE website.',
     },
     cookies: {
-      title: 'Cookie Policy — Omega Coffe',
-      description: 'Cookie policy for the Omega Coffe website.',
+      title: 'Cookie Policy — BLOO COFFEE',
+      description: 'Cookie policy for the BLOO COFFEE website.',
     },
     legal: {
-      title: 'Legal Notice — Omega Coffe',
-      description: 'Legal information about Omega Coffe, L\'Aouina, Tunis.',
+      title: 'Legal Notice — BLOO COFFEE',
+      description: "Legal information about BLOO COFFEE, L'Aouina, Tunis.",
     },
     notFound: {
-      title: 'Page not found — Omega Coffe',
+      title: 'Page not found — BLOO COFFEE',
       description: 'This page could not be found.',
     },
   },
@@ -110,49 +110,84 @@ const en = {
   home: {
     hero: {
       badge: 'L\'Aouina · Tunis',
-      title1: 'Where Coffee Meets',
-      title2: 'The Game Table',
+      title1: 'A Fresh',
+      title2: 'Moment',
       subtitle:
-        'A neighborhood café in L\'Aouina for great coffee, board games and good times with friends.',
+        'Specialty coffee in L\'Aouina — espresso, filter and pour-over brewed to order, with fresh pastries to match.',
       ctaMenu: 'Our menu',
       ctaDirections: 'Get directions',
-      servicesHint: 'Coffee · Croissants · Sandwiches · Pizza · Salads · Breakfast · Takeaway',
+      servicesHint: 'Coffee · Baked Goods · Fresh Daily',
     },
     quickInfo: {
-      coffeeLabel: 'Coffee & more',
-      coffeeValue: 'Espresso, pastries & light meals',
+      coffeeLabel: 'Espresso & filter',
+      coffeeValue: 'Brewed to order all day',
       ratingLabel: 'On Google',
       locationLabel: 'Find us',
       locationValue: 'L\'Aouina · Tunis',
-      directionsValue: 'Résidence Bel Azure',
+      directionsValue: 'Rés. Houssem, Ave Mongi Slim',
+    },
+    offerings: {
+      eyebrow: 'Our offerings',
+      title1: 'Crafted with',
+      title2: 'Precision',
+      subtitle:
+        'Every cup starts with care — from the weight of the dose to the temperature of the water. Here is what we pour.',
+      cards: [
+        {
+          icon: 'espresso',
+          title: 'Espresso & Filter',
+          description: 'Daily espresso, americano, flat white and filter coffee, pulled with care.',
+        },
+        {
+          icon: 'pour',
+          title: 'Pour-Over Rituals',
+          description: 'Slow-brewed, single-serve filter coffee prepared in front of you.',
+        },
+        {
+          icon: 'blend',
+          title: 'Signature Blends',
+          description: 'House specialties, from sweet lattes to bold iced coffees.',
+        },
+        {
+          icon: 'pastry',
+          title: 'Fresh Pastries',
+          description: 'Baked goods to pair with your cup — check the counter for today.',
+        },
+      ],
     },
     menu: {
-      eyebrow: 'What we serve',
-      title1: 'A Menu Made',
-      title2: 'For Sharing',
+      eyebrow: 'Menu preview',
+      title1: 'Signature',
+      title2: 'Tastes',
       subtitle:
-        'Coffee, pastries, sandwiches, pizza, salads and more. Our selection changes, so ask our team about today\'s specials.',
+        'A focused menu of espresso drinks, slow-brews and baked goods. Our selection varies, so ask our team about today\'s specials.',
       categoriesTitle: 'You\'ll usually find',
       categories: [
-        'Coffee',
-        'Croissants',
-        'Sandwiches',
-        'Pizza',
-        'Salads',
-        'Breakfast & brunch',
-        'Takeaway',
-        'Delivery',
+        'Espresso & Filter',
+        'Pour-Over Rituals',
+        'Signature Blends',
+        'Fresh Pastries',
       ],
       note: 'Full menu and prices are available in-store.',
       cta: 'Contact us',
     },
+    stats: {
+      ratingValue: '4.9',
+      ratingLabel: 'Google rating',
+      reviewsValue: '25',
+      reviewsLabel: 'Google reviews',
+      priceValue: '10–20 TND',
+      priceLabel: 'per person',
+      hoursValue: '09:00 – 23:00',
+      hoursLabel: 'open daily',
+    },
     atmosphere: {
-      eyebrow: 'The vibe',
-      title1: 'Coffee, Games &',
-      title2: 'Good Company',
+      eyebrow: 'Visual stories',
+      title1: 'The Space,',
+      title2: 'In Detail',
       subtitle:
-        'Board games, karaoke nights and a space that\'s built for hanging out — whether you\'re here to work, play or catch up.',
-      cta: 'Visit the gallery',
+        'A calm corner for your first coffee, a table for a slow silent session, a window spot to watch L\'Aouina wake up.',
+      cta: 'See the gallery',
     },
     reviews: {
       eyebrow: 'Reviews',
@@ -164,16 +199,16 @@ const en = {
     },
     instagram: {
       eyebrow: 'Instagram',
-      title: '@dice.and.beans',
-      subtitle: 'Follow along for updates and behind-the-scenes moments.',
+      title: '@bloo.coffeeshop',
+      subtitle: 'Follow along for the latest cups, pastries and moments at the bar.',
       cta: 'Follow us',
     },
     about: {
-      eyebrow: 'Our space',
+      eyebrow: 'Our story',
       title1: 'More Than',
-      title2: 'Just Coffee',
+      title2: 'A Coffee Shop',
       subtitle:
-        'A neighborhood spot in L\'Aouina where coffee, games and conversation come together.',
+        'A neighborhood specialty coffee shop in L\'Aouina where the bar, the pastries and the conversation come together.',
       cta: 'Our story',
     },
     contact: {
@@ -188,68 +223,68 @@ const en = {
     },
     map: {
       eyebrow: 'Find us',
-      title1: 'In the Heart',
-      title2: 'Of L\'Aouina',
+      title1: 'Join Us',
+      title2: 'In L\'Aouina',
       ctaDirections: 'Get directions',
       ctaViewMap: 'View on Google Maps',
     },
   },
   menuPage: {
     tagline: 'Menu',
-    title1: 'Taste the',
-    title2: 'Selection',
+    title1: 'Signature',
+    title2: 'Tastes',
     intro:
-      'Our menu changes from time to time. Discover today\'s selection and prices when you visit us.',
+      'Our selection changes from time to time. Discover today\'s drinks and pastries when you visit us.',
     categoriesTitle: 'You\'ll usually find',
     note: 'Menu items, prices and availability may change.',
     ctaTitle: 'Questions about our menu?',
     ctaBody: 'Call us or drop by — we\'d love to help.',
   },
   aboutPage: {
-    tagline: 'Our story & recognition',
-    title1: 'Good Coffee,',
-    title2: 'Good Times',
+    tagline: 'Our story',
+    title1: 'Coffee,',
+    title2: 'Brewed Right',
     story1:
-      'Omega Coffe is a neighborhood café in L\'Aouina, Tunis. We serve coffee and espresso drinks, fresh pastries, breakfast and brunch, sandwiches, pizza, salads — and a good dose of board games.',
+      'BLOO COFFEE is a specialty coffee shop in L\'Aouina, Tunis. We pour espresso, filter and pour-over coffee made to order, alongside fresh pastries to pair.',
     story2:
-      'Whether you come to work, play or simply unwind, our space is made for hanging out. Karaoke nights and game time keep things lively.',
-    featuresLabel: 'What makes us special',
+      'Whether you come for a quick espresso, a slow pour-over or a table to settle into, the bar is the heart of the space — and the door is always open.',
+    featuresLabel: 'What we focus on',
     features: [
       {
         icon: 'coffee',
-        title: 'Coffee & espresso',
-        description: 'Coffee, espresso drinks and options for everyone, served all day.',
+        title: 'Coffee, brewed right',
+        description: 'Espresso, filter and pour-over, each cup made to order.',
       },
       {
-        icon: 'dice',
-        title: 'Board games',
-        description: 'Ready-to-play board games for all ages and levels.',
+        icon: 'beans',
+        title: 'Careful sourcing',
+        description: 'Quality-orientated coffee served fresh at the bar all day.',
       },
       {
         icon: 'people',
-        title: 'Community',
-        description: 'A welcoming space for friends, families and solo visitors.',
+        title: 'A welcoming space',
+        description: 'A comfortable corner to work, meet or take a pause.',
       },
       {
         icon: 'mug',
-        title: 'Food & pastries',
-        description: 'Breakfast, brunch, sandwiches, pizza, salads and pastries.',
+        title: 'Fresh pastries',
+        description: 'Baked goods to pair with your cup — see the counter today.',
       },
       {
         icon: 'bag',
-        title: 'Takeaway & delivery',
-        description: 'Take your coffee and food to go, or order delivery.',
+        title: 'Takeaway',
+        description: 'Take your coffee and pastries to go.',
       },
       {
-        icon: 'mic',
-        title: 'Karaoke',
-        description: 'Karaoke nights to make things lively.',
+        icon: 'sparkle',
+        title: 'The little details',
+        description: 'Timed shots, measured portions and a clean, quiet room.',
       },
     ],
     recognitionLabel: 'Recognition',
-    ratingValue: '4.7',
+    ratingValue: '4.9',
     ratingLabel: 'Google rating',
-    reviewsValue: '47',
+    reviewsValue: '25',
     reviewsLabel: 'Google reviews',
     hoursTitle: 'Opening hours',
     hoursNote: 'Opening hours may vary. Call us before you visit to confirm.',
@@ -266,7 +301,7 @@ const en = {
   locationPage: {
     tagline: 'Location & contact',
     title1: 'Visit',
-    title2: 'Omega Coffe',
+    title2: 'BLOO COFFEE',
     addressLabel: 'Our address',
     callLabel: 'Call us',
     followLabel: 'Follow us',
@@ -274,9 +309,9 @@ const en = {
     hoursNote: 'Hours may vary from time to time. Call us to confirm before you visit.',
     arrivalTitle: 'Getting here',
     arrivalDesc:
-      'We\'re at Résidence Bel Azure in L\'Aouina, Tunis. Use the map below for exact directions.',
+      'We\'re at Rés. Houssem, Avenue Mongi Slim, Tunis 2045. Use the map below for exact directions.',
     ctaDirections: 'Get directions',
-    mapTitle: 'Omega Coffe on the map',
+    mapTitle: 'BLOO COFFEE on the map',
   },
   contactPage: {
     tagline: 'Contact',
@@ -287,9 +322,9 @@ const en = {
     callLabel: 'Call',
     callDesc: 'You can reach us by phone',
     instagramLabel: 'Instagram',
-    instagramDesc: 'Message us @dice.and.beans',
+    instagramDesc: 'Message us @bloo.coffeeshop',
     addressLabel: 'Find us',
-    note: 'The quickest ways to reach us are a phone call or Instagram. You can also send us a message with the form below — it opens your email app.',
+    note: 'The quickest ways to reach us are a phone call or Instagram. You can also reserve a table by phone — or send us a message with the form below, which opens your email app.',
     formTitle: 'Send us a message',
     formIntro:
       'The form opens your email app with your message ready to send — nothing is stored on this site.',
@@ -324,7 +359,7 @@ const en = {
   },
   footer: {
     aboutText:
-      'A neighborhood café in L\'Aouina, Tunis — coffee, board games and good times.',
+      'A specialty coffee shop in L\'Aouina, Tunis — espresso, filter, pour-over and fresh pastries.',
     exploreTitle: 'Explore',
     contactTitle: 'Contact',
     legalTitle: 'Legal',
@@ -334,9 +369,9 @@ const en = {
   },
   notFound: {
     badge: '404',
-    title1: 'Looks Like',
-    title2: 'You Rolled a Wrong Number',
-    message: 'This page doesn\'t exist, or it has moved to another table.',
+    title1: 'Page Not',
+    title2: 'Found',
+    message: 'This page doesn\'t exist, or it has moved.',
     backHome: 'Back to home',
   },
   legal: {
@@ -345,11 +380,11 @@ const en = {
     terms: {
       title: 'Terms of Service',
       intro:
-        'Welcome to the Omega Coffe website. By using this site, you agree to the terms below.',
+        'Welcome to the BLOO COFFEE website. By using this site, you agree to the terms below.',
       sections: [
         {
           heading: '1. About this site',
-          body: 'This website presents information about Omega Coffe, a café located at Résidence Bel Azure, L\'Aouina, Tunis, Tunisia, and its services.',
+          body: 'This website presents information about BLOO COFFEE, a coffee shop located at Rés. Houssem, Avenue Mongi Slim, Tunis 2045, Tunisia, and its services.',
         },
         {
           heading: '2. Menu, prices and hours',
@@ -361,7 +396,7 @@ const en = {
         },
         {
           heading: '4. Intellectual property',
-          body: 'All content on this site — text, logos and design — is the property of Omega Coffe unless stated otherwise. Do not reuse it without permission.',
+          body: 'All content on this site — text, logos and design — is the property of BLOO COFFEE unless stated otherwise. Do not reuse it without permission.',
         },
         {
           heading: '5. Limitation of liability',
@@ -373,7 +408,7 @@ const en = {
         },
         {
           heading: '7. Contact',
-          body: 'For any question about these terms, call us at +216 22 101 785 or message us on Instagram @dice.and.beans.',
+          body: 'For any question about these terms, call us at +216 54 472 945 or message us on Instagram @bloo.coffeeshop.',
         },
       ],
     },
@@ -404,7 +439,7 @@ const en = {
         },
         {
           heading: '6. Contact',
-          body: 'Questions about this policy? Contact us by phone at +216 22 101 785.',
+          body: 'Questions about this policy? Contact us by phone at +216 54 472 945.',
         },
       ],
     },
@@ -427,7 +462,7 @@ const en = {
         },
         {
           heading: '4. Contact',
-          body: 'For questions about cookies, contact us by phone at +216 22 101 785.',
+          body: 'For questions about cookies, contact us by phone at +216 54 472 945.',
         },
       ],
     },
@@ -437,15 +472,15 @@ const en = {
       sections: [
         {
           heading: 'Company / business',
-          body: 'Omega Coffe — coffee shop and games café located at Résidence Bel Azure, L\'Aouina, Tunis, Tunisia.',
+          body: 'BLOO COFFEE — specialty coffee shop located at Rés. Houssem, Avenue Mongi Slim, Tunis 2045, Tunisia.',
         },
         {
           heading: 'Contact',
-          body: 'Phone: +216 22 101 785. Instagram: @dice.and.beans.',
+          body: 'Phone: +216 54 472 945. Instagram: @bloo.coffeeshop.',
         },
         {
           heading: 'Director of publication',
-          body: 'Omega Coffe team, L\'Aouina, Tunis.',
+          body: 'BLOO COFFEE team, L\'Aouina, Tunis.',
         },
         {
           heading: 'Hosting',
@@ -470,63 +505,63 @@ export type Dictionary = Widen<typeof en>;
 
 const fr: Dictionary = {
   brand: {
-    name: 'Omega Coffe',
-    tagline: 'Café • Jeux • Beaux Moments',
+    name: 'BLOO COFFEE',
+    tagline: 'Café • Savoir-faire • Confort',
   },
   meta: {
     home: {
-      title: 'Omega Coffe — Café, jeux et beaux moments à L\'Aouina, Tunis',
+      title: 'BLOO COFFEE — Coffee Shop à L\'Aouina, Tunis',
       description:
-        'Un café de quartier à L\'Aouina, Tunis, servant café, pâtisseries, sandwichs, pizzas et salades, avec jeux de société, soirées karaoké et à emporter. Rendez-vous sur place ou appelez le +216 22 101 785.',
+        'Coffee shop à L\'Aouina, Tunis — espresso, café filtre, pour-over et pâtisseries fraîches. Noté 4,9 sur Google. Ouvert tous les jours de 09:00 à 23:00.',
     },
     menu: {
-      title: 'Menu — Omega Coffe',
+      title: 'Menu — BLOO COFFEE',
       description:
-        'Café, croissants, sandwichs, pizzas, salades, petit-déjeuner et à emporter chez Omega Coffe à L\'Aouina, Tunis. Découvrez la sélection du jour en magasin.',
+        'Espresso, café filtre et pour-over, mélanges signature et pâtisseries fraîches chez BLOO COFFEE à L\'Aouina, Tunis. Découvrez la sélection du jour en magasin.',
     },
     about: {
-      title: 'À propos — Omega Coffe',
+      title: 'À propos — BLOO COFFEE',
       description:
-        'Omega Coffe est un café de quartier à L\'Aouina, Tunis, pour le café, les jeux et les bons moments. Retrouvez-nous à la Résidence Bel Azure, L\'Aouina.',
+        'BLOO COFFEE est un coffee shop à L\'Aouina, Tunis. Retrouvez-nous au Rés. Houssem, Avenue Mongi Slim, Tunis 2045.',
     },
     gallery: {
-      title: 'Galerie — Omega Coffe',
+      title: 'Galerie — BLOO COFFEE',
       description:
-        'Un aperçu de l\'ambiance chez Omega Coffe, notre café de quartier à L\'Aouina, Tunis.',
+        'Un aperçu de l\'ambiance chez BLOO COFFEE, notre coffee shop à L\'Aouina, Tunis.',
     },
     reviews: {
-      title: 'Avis — Omega Coffe',
+      title: 'Avis — BLOO COFFEE',
       description:
-        'Omega Coffe est noté 4,7 sur 5 sur Google, sur 47 avis. Découvrez ce que disent les clients de notre café à L\'Aouina, Tunis.',
+        'BLOO COFFEE est noté 4,9 sur 5 sur Google, sur 25 avis. Découvrez ce que disent les clients de notre coffee shop à L\'Aouina, Tunis.',
     },
     location: {
-      title: 'Adresse et itinéraire — Omega Coffe',
+      title: 'Adresse et itinéraire — BLOO COFFEE',
       description:
-        'Retrouvez Omega Coffe à la Résidence Bel Azure, L\'Aouina, Tunis. Appelez le +216 22 101 785 ou suivez l\'itinéraire.',
+        'Retrouvez BLOO COFFEE au Rés. Houssem, Avenue Mongi Slim, Tunis 2045. Appelez le +216 54 472 945 ou suivez l\'itinéraire.',
     },
     contact: {
-      title: 'Contact — Omega Coffe',
+      title: 'Contact — BLOO COFFEE',
       description:
-        'Contactez Omega Coffe à L\'Aouina, Tunis, par téléphone (+216 22 101 785) ou sur Instagram @dice.and.beans.',
+        'Contactez BLOO COFFEE à L\'Aouina, Tunis, par téléphone (+216 54 472 945) ou sur Instagram @bloo.coffeeshop.',
     },
     terms: {
-      title: 'Conditions d\'utilisation — Omega Coffe',
-      description: 'Conditions d\'utilisation du site Omega Coffe.',
+      title: 'Conditions d\'utilisation — BLOO COFFEE',
+      description: 'Conditions d\'utilisation du site BLOO COFFEE.',
     },
     privacy: {
-      title: 'Politique de confidentialité — Omega Coffe',
-      description: 'Politique de confidentialité du site Omega Coffe.',
+      title: 'Politique de confidentialité — BLOO COFFEE',
+      description: 'Politique de confidentialité du site BLOO COFFEE.',
     },
     cookies: {
-      title: 'Politique de cookies — Omega Coffe',
-      description: 'Politique de cookies du site Omega Coffe.',
+      title: 'Politique de cookies — BLOO COFFEE',
+      description: 'Politique de cookies du site BLOO COFFEE.',
     },
     legal: {
-      title: 'Mentions légales — Omega Coffe',
-      description: 'Informations légales sur Omega Coffe, L\'Aouina, Tunis.',
+      title: 'Mentions légales — BLOO COFFEE',
+      description: 'Informations légales sur BLOO COFFEE, L\'Aouina, Tunis.',
     },
     notFound: {
-      title: 'Page introuvable — Omega Coffe',
+      title: 'Page introuvable — BLOO COFFEE',
       description: 'Cette page est introuvable.',
     },
   },
@@ -573,49 +608,84 @@ const fr: Dictionary = {
   home: {
     hero: {
       badge: 'L\'Aouina · Tunis',
-      title1: 'Là où le café',
-      title2: 'rencontre le jeu',
+      title1: 'Un Moment',
+      title2: 'De Fraîcheur',
       subtitle:
-        'Un café de quartier à L\'Aouina pour un bon café, des jeux de société et de bons moments entre amis.',
+        'Coffee shop à L\'Aouina — espresso, filtre et pour-over préparés à la commande, avec des pâtisseries fraîches.',
       ctaMenu: 'Notre menu',
       ctaDirections: 'Obtenir l\'itinéraire',
-      servicesHint: 'Café · Croissants · Sandwichs · Pizzas · Salades · Petit-déjeuner · À emporter',
+      servicesHint: 'Café · Pâtisseries · Frais Chaque Jour',
     },
     quickInfo: {
-      coffeeLabel: 'Café & plus',
-      coffeeValue: 'Espresso, pâtisseries & plats légers',
+      coffeeLabel: 'Espresso & filtre',
+      coffeeValue: 'Préparé à la commande toute la journée',
       ratingLabel: 'Sur Google',
       locationLabel: 'Nous trouver',
       locationValue: 'L\'Aouina · Tunis',
-      directionsValue: 'Résidence Bel Azure',
+      directionsValue: 'Rés. Houssem, Av. Mongi Slim',
+    },
+    offerings: {
+      eyebrow: 'Nos offres',
+      title1: 'Préparés Avec',
+      title2: 'Précision',
+      subtitle:
+        'Chaque tasse commence avec soin — du dosage à la température de l\'eau. Voici ce que nous servons.',
+      cards: [
+        {
+          icon: 'espresso',
+          title: 'Espresso & Filtre',
+          description: 'Espresso du jour, americano, flat white et café filtre, préparés avec soin.',
+        },
+        {
+          icon: 'pour',
+          title: 'Rituels Pour-Over',
+          description: 'Café filtre infusé lentement, portion par portion, devant vous.',
+        },
+        {
+          icon: 'blend',
+          title: 'Mélanges Signature',
+          description: 'Nos spécialités maison, des lattes doux aux cafés glacés intenses.',
+        },
+        {
+          icon: 'pastry',
+          title: 'Pâtisseries Fraîches',
+          description: 'De quoi accompagner votre tasse — découvrez le comptoir du jour.',
+        },
+      ],
     },
     menu: {
-      eyebrow: 'Ce que nous servons',
-      title1: 'Un Menu Fait',
-      title2: 'Pour le Partage',
+      eyebrow: 'Aperçu du menu',
+      title1: 'Saveurs',
+      title2: 'Signature',
       subtitle:
-        'Café, pâtisseries, sandwichs, pizzas, salades et plus. Notre sélection change : demandez à notre équipe les spécialités du jour.',
+        'Un menu ciblé d\'espresso, de slow-brews et de pâtisseries. Notre sélection varie — demandez à notre équipe les spécialités du jour.',
       categoriesTitle: 'Vous trouverez généralement',
       categories: [
-        'Café',
-        'Croissants',
-        'Sandwichs',
-        'Pizzas',
-        'Salades',
-        'Petit-déjeuner & brunch',
-        'À emporter',
-        'Livraison',
+        'Espresso & Filtre',
+        'Rituels Pour-Over',
+        'Mélanges Signature',
+        'Pâtisseries Fraîches',
       ],
       note: 'Le menu complet et les prix sont disponibles en magasin.',
       cta: 'Contactez-nous',
     },
+    stats: {
+      ratingValue: '4,9',
+      ratingLabel: 'Note Google',
+      reviewsValue: '25',
+      reviewsLabel: 'Avis Google',
+      priceValue: '10–20 TND',
+      priceLabel: 'par personne',
+      hoursValue: '09:00 – 23:00',
+      hoursLabel: 'ouvert tous les jours',
+    },
     atmosphere: {
-      eyebrow: 'L\'ambiance',
-      title1: 'Café, Jeux &',
-      title2: 'Bonne Compagnie',
+      eyebrow: 'Histoires visuelles',
+      title1: 'L\'Espace,',
+      title2: 'Dans le Détail',
       subtitle:
-        'Jeux de société, soirées karaoké et un espace pensé pour traîner entre amis, travailler ou se détendre.',
-      cta: 'Visiter la galerie',
+        'Un coin tranquille pour votre premier café, une table pour un moment lent, une place près de la fenêtre pour voir L\'Aouina s\'éveiller.',
+      cta: 'Voir la galerie',
     },
     reviews: {
       eyebrow: 'Avis',
@@ -627,16 +697,16 @@ const fr: Dictionary = {
     },
     instagram: {
       eyebrow: 'Instagram',
-      title: '@dice.and.beans',
-      subtitle: 'Suivez-nous pour les actualités et les coulisses.',
+      title: '@bloo.coffeeshop',
+      subtitle: 'Suivez les dernières tasses, pâtisseries et moments au bar.',
       cta: 'Nous suivre',
     },
     about: {
-      eyebrow: 'Notre espace',
+      eyebrow: 'Notre histoire',
       title1: 'Plus Qu\'un',
-      title2: 'Simple Café',
+      title2: 'Simple Coffee Shop',
       subtitle:
-        'Un lieu de quartier à L\'Aouina où café, jeux et conversation se rencontrent.',
+        'Un coffee shop de quartier à L\'Aouina où le bar, les pâtisseries et la conversation se rencontrent.',
       cta: 'Notre histoire',
     },
     contact: {
@@ -651,68 +721,68 @@ const fr: Dictionary = {
     },
     map: {
       eyebrow: 'Nous trouver',
-      title1: 'Au Cœur',
-      title2: 'De L\'Aouina',
+      title1: 'Rejoignez-nous',
+      title2: 'À L\'Aouina',
       ctaDirections: 'Obtenir l\'itinéraire',
       ctaViewMap: 'Voir sur Google Maps',
     },
   },
   menuPage: {
     tagline: 'Menu',
-    title1: 'Découvrez',
-    title2: 'La Sélection',
+    title1: 'Saveurs',
+    title2: 'Signature',
     intro:
-      'Notre menu évolue de temps en temps. Découvrez la sélection et les prix du jour lors de votre visite.',
+      'Notre sélection évolue de temps en temps. Découvrez les boissons et pâtisseries du jour lors de votre visite.',
     categoriesTitle: 'Vous trouverez généralement',
     note: 'Les plats, prix et disponibilités peuvent changer.',
     ctaTitle: 'Des questions sur notre menu ?',
     ctaBody: 'Appelez-nous ou passez nous voir — nous serons ravis de vous aider.',
   },
   aboutPage: {
-    tagline: 'Notre histoire & reconnaissance',
-    title1: 'Bon Café,',
-    title2: 'Bons Moments',
+    tagline: 'Notre histoire',
+    title1: 'Un Café,',
+    title2: 'Bien Préparé',
     story1:
-      'Omega Coffe est un café de quartier à L\'Aouina, Tunis. Nous servons café et boissons espresso, pâtisseries fraîches, petit-déjeuner et brunch, sandwichs, pizzas, salades — et une bonne dose de jeux de société.',
+      'BLOO COFFEE est un coffee shop à L\'Aouina, Tunis. Nous servons espresso, filtre et pour-over préparés à la commande, accompagnés de pâtisseries fraîches.',
     story2:
-      'Que vous veniez pour travailler, jouer ou simplement vous détendre, notre espace est fait pour traîner. Les soirées karaoké et les parties de jeux animent les lieux.',
-    featuresLabel: 'Ce qui nous rend spéciaux',
+      'Que vous veniez pour un espresso rapide, un pour-over lent ou une table pour vous installer, le bar est le cœur du lieu — et la porte est toujours ouverte.',
+    featuresLabel: 'Ce que nous privilégions',
     features: [
       {
         icon: 'coffee',
-        title: 'Café & espresso',
-        description: 'Café, boissons espresso et options pour tous, servis toute la journée.',
+        title: 'Un café bien préparé',
+        description: 'Espresso, filtre et pour-over, chaque tasse préparée à la commande.',
       },
       {
-        icon: 'dice',
-        title: 'Jeux de société',
-        description: 'Jeux de société prêts à jouer pour tous les âges et niveaux.',
+        icon: 'beans',
+        title: 'Sélection soignée',
+        description: 'Un café de qualité, servi frais au bar toute la journée.',
       },
       {
         icon: 'people',
-        title: 'Communauté',
-        description: 'Un espace accueillant pour les amis, les familles et les visiteurs.',
+        title: 'Un espace accueillant',
+        description: 'Un coin confortable pour travailler, retrouver des amis ou faire une pause.',
       },
       {
         icon: 'mug',
-        title: 'Plats & pâtisseries',
-        description: 'Petit-déjeuner, brunch, sandwichs, pizzas, salades et pâtisseries.',
+        title: 'Pâtisseries fraîches',
+        description: 'De quoi accompagner votre tasse — découvrez le comptoir du jour.',
       },
       {
         icon: 'bag',
-        title: 'À emporter & livraison',
-        description: 'Emportez votre café et vos plats, ou commandez en livraison.',
+        title: 'À emporter',
+        description: 'Emportez votre café et vos pâtisseries.',
       },
       {
-        icon: 'mic',
-        title: 'Karaoké',
-        description: 'Des soirées karaoké pour animer votre moment.',
+        icon: 'sparkle',
+        title: 'Les petits détails',
+        description: 'Dosages minutés, portions mesurées et une salle calme et propre.',
       },
     ],
     recognitionLabel: 'Reconnaissance',
-    ratingValue: '4,7',
+    ratingValue: '4,9',
     ratingLabel: 'Note Google',
-    reviewsValue: '47',
+    reviewsValue: '25',
     reviewsLabel: 'Avis Google',
     hoursTitle: 'Horaires d\'ouverture',
     hoursNote: 'Les horaires peuvent varier. Appelez-nous avant de venir pour confirmer.',
@@ -729,7 +799,7 @@ const fr: Dictionary = {
   locationPage: {
     tagline: 'Adresse & contact',
     title1: 'Visitez',
-    title2: 'Omega Coffe',
+    title2: 'BLOO COFFEE',
     addressLabel: 'Notre adresse',
     callLabel: 'Appelez-nous',
     followLabel: 'Suivez-nous',
@@ -737,9 +807,9 @@ const fr: Dictionary = {
     hoursNote: 'Les horaires peuvent varier. Appelez-nous pour confirmer avant de venir.',
     arrivalTitle: 'Comment venir',
     arrivalDesc:
-      'Nous sommes à la Résidence Bel Azure à L\'Aouina, Tunis. Utilisez la carte ci-dessous pour l\'itinéraire exact.',
+      'Nous sommes au Rés. Houssem, Avenue Mongi Slim, Tunis 2045. Utilisez la carte ci-dessous pour l\'itinéraire exact.',
     ctaDirections: 'Obtenir l\'itinéraire',
-    mapTitle: 'Omega Coffe sur la carte',
+    mapTitle: 'BLOO COFFEE sur la carte',
   },
   contactPage: {
     tagline: 'Contact',
@@ -750,9 +820,9 @@ const fr: Dictionary = {
     callLabel: 'Appeler',
     callDesc: 'Vous pouvez nous joindre par téléphone',
     instagramLabel: 'Instagram',
-    instagramDesc: 'Écrivez-nous @dice.and.beans',
+    instagramDesc: 'Écrivez-nous @bloo.coffeeshop',
     addressLabel: 'Nous trouver',
-    note: 'La façon la plus rapide de nous joindre reste le téléphone ou Instagram. Vous pouvez aussi nous écrire via le formulaire ci-dessous — il ouvre votre application de messagerie.',
+    note: 'La façon la plus rapide de nous joindre reste le téléphone ou Instagram. Vous pouvez aussi réserver une table par téléphone — ou nous écrire via le formulaire ci-dessous, qui ouvre votre application de messagerie.',
     formTitle: 'Envoyez-nous un message',
     formIntro:
       'Le formulaire ouvre votre application de messagerie avec votre message prêt à envoyer — rien n\'est stocké sur ce site.',
@@ -787,7 +857,7 @@ const fr: Dictionary = {
   },
   footer: {
     aboutText:
-      'Un café de quartier à L\'Aouina, Tunis — café, jeux de société et bons moments.',
+      'Un coffee shop à L\'Aouina, Tunis — espresso, filtre, pour-over et pâtisseries fraîches.',
     exploreTitle: 'Découvrir',
     contactTitle: 'Contact',
     legalTitle: 'Mentions légales',
@@ -797,9 +867,9 @@ const fr: Dictionary = {
   },
   notFound: {
     badge: '404',
-    title1: 'On Dirait Que',
-    title2: 'Vous Avez Tiré un Mauvais Numéro',
-    message: 'Cette page n\'existe pas, ou elle a changé de table.',
+    title1: 'Page',
+    title2: 'Introuvable',
+    message: 'Cette page n\'existe pas, ou elle a changé de place.',
     backHome: 'Retour à l\'accueil',
   },
   legal: {
@@ -808,11 +878,11 @@ const fr: Dictionary = {
     terms: {
       title: 'Conditions d\'utilisation',
       intro:
-        'Bienvenue sur le site de Omega Coffe. En utilisant ce site, vous acceptez les conditions ci-dessous.',
+        'Bienvenue sur le site BLOO COFFEE. En utilisant ce site, vous acceptez les conditions ci-dessous.',
       sections: [
         {
           heading: '1. À propos de ce site',
-          body: 'Ce site présente des informations sur Omega Coffe, un café situé à la Résidence Bel Azure, L\'Aouina, Tunis, Tunisie, et sur ses services.',
+          body: 'Ce site présente des informations sur BLOO COFFEE, un coffee shop situé au Rés. Houssem, Avenue Mongi Slim, Tunis 2045, Tunisie, et sur ses services.',
         },
         {
           heading: '2. Menu, prix et horaires',
@@ -824,7 +894,7 @@ const fr: Dictionary = {
         },
         {
           heading: '4. Propriété intellectuelle',
-          body: 'Tout le contenu du site — textes, logos et design — appartient à Omega Coffe sauf mention contraire. Ne le réutilisez pas sans autorisation.',
+          body: 'Tout le contenu du site — textes, logos et design — appartient à BLOO COFFEE sauf mention contraire. Ne le réutilisez pas sans autorisation.',
         },
         {
           heading: '5. Limitation de responsabilité',
@@ -836,7 +906,7 @@ const fr: Dictionary = {
         },
         {
           heading: '7. Contact',
-          body: 'Pour toute question sur ces conditions, appelez le +216 22 101 785 ou écrivez-nous sur Instagram @dice.and.beans.',
+          body: 'Pour toute question sur ces conditions, appelez le +216 54 472 945 ou écrivez-nous sur Instagram @bloo.coffeeshop.',
         },
       ],
     },
@@ -867,7 +937,7 @@ const fr: Dictionary = {
         },
         {
           heading: '6. Contact',
-          body: 'Une question sur cette politique ? Contactez-nous au +216 22 101 785.',
+          body: 'Une question sur cette politique ? Contactez-nous au +216 54 472 945.',
         },
       ],
     },
@@ -890,7 +960,7 @@ const fr: Dictionary = {
         },
         {
           heading: '4. Contact',
-          body: 'Pour toute question sur les cookies, contactez-nous au +216 22 101 785.',
+          body: 'Pour toute question sur les cookies, contactez-nous au +216 54 472 945.',
         },
       ],
     },
@@ -900,15 +970,15 @@ const fr: Dictionary = {
       sections: [
         {
           heading: 'Entreprise / activité',
-          body: 'Omega Coffe — café et espace de jeux situé à la Résidence Bel Azure, L\'Aouina, Tunis, Tunisie.',
+          body: 'BLOO COFFEE — coffee shop situé au Rés. Houssem, Avenue Mongi Slim, Tunis 2045, Tunisie.',
         },
         {
           heading: 'Contact',
-          body: 'Téléphone : +216 22 101 785. Instagram : @dice.and.beans.',
+          body: 'Téléphone : +216 54 472 945. Instagram : @bloo.coffeeshop.',
         },
         {
           heading: 'Directeur de la publication',
-          body: 'Équipe Omega Coffe, L\'Aouina, Tunis.',
+          body: 'Équipe BLOO COFFEE, L\'Aouina, Tunis.',
         },
         {
           heading: 'Hébergement',
@@ -925,63 +995,63 @@ const fr: Dictionary = {
 
 const ar: Dictionary = {
   brand: {
-    name: 'Omega Coffe',
-    tagline: 'قهوة • ألعاب • لحظات جميلة',
+    name: 'BLOO COFFEE',
+    tagline: 'قهوة • حِرفية • راحة',
   },
   meta: {
     home: {
-      title: 'أوميغا كوفي — قهوة وألعاب ولحظات جميلة في العوينة، تونس',
+      title: 'BLOO COFFEE — مقهى متخصص في العوينة، تونس',
       description:
-        'مقهى حيوي في العوينة، تونس، يقدّم القهوة والمعجنات والسندويشات والبيتزا والسلطات، مع ألعاب الطاولة وأمسيات الكاريوكي وخدمة الأخذ. تفضّل بزيارتنا أو اتصل على +216 22 101 785.',
+        'مقهى قهوة متخصص في العوينة، تونس — إسبريسو، قهوة فلتر، بور-أوفر ومعجنات طازجة. تقييم 4.9 على Google. مفتوح يومياً من 09:00 إلى 23:00.',
     },
     menu: {
-      title: 'القائمة — أوميغا كوفي',
+      title: 'القائمة — BLOO COFFEE',
       description:
-        'القهوة والكرواسون والسندويشات والبيتزا والسلطات والفطور وخدمة الأخذ في أوميغا كوفي بالعوينة، تونس. اكتشف تشكيلة اليوم في المحل.',
+        'إسبريسو، قهوة فلتر وبور-أوفر، خلطات مميزة ومعجنات طازجة في BLOO COFFEE بالعوينة، تونس. اكتشف تشكيلة اليوم في المحل.',
     },
     about: {
-      title: 'عنّا — أوميغا كوفي',
+      title: 'عنّا — BLOO COFFEE',
       description:
-        'أوميغا كوفي مقهى حيوي في العوينة، تونس، للقهوة والألعاب والأوقات الجميلة. تجدنا في إقامة بيل أزور، العوينة.',
+        'BLOO COFFEE مقهى قهوة متخصص في العوينة، تونس. تجدنا في ر. حسّام، شارع منجي سليم، تونس 2045.',
     },
     gallery: {
-      title: 'المعرض — أوميغا كوفي',
+      title: 'المعرض — BLOO COFFEE',
       description:
-        'لمحة عن أجواء أوميغا كوفي، مقهانا في العوينة، تونس.',
+        'لمحة عن أجواء BLOO COFFEE، مقهى القهوة المتخصص في العوينة، تونس.',
     },
     reviews: {
-      title: 'التقييمات — أوميغا كوفي',
+      title: 'التقييمات — BLOO COFFEE',
       description:
-        'حصل أوميغا كوفي على تقييم 4.7 من 5 على Google بناءً على 47 تقييماً. اطّلع على ما يقوله الزوار عن مقهانا في العوينة، تونس.',
+        'حصل BLOO COFFEE على تقييم 4.9 من 5 على Google بناءً على 25 تقييماً. اطّلع على ما يقوله الزوار عن مقهانا في العوينة، تونس.',
     },
     location: {
-      title: 'الموقع والاتجاهات — أوميغا كوفي',
+      title: 'الموقع والاتجاهات — BLOO COFFEE',
       description:
-        'تجد أوميغا كوفي في إقامة بيل أزور، العوينة، تونس. اتصل على +216 22 101 785 أو احصل على الاتجاهات.',
+        'تجد BLOO COFFEE في ر. حسّام، شارع منجي سليم، تونس 2045. اتصل على +216 54 472 945 أو احصل على الاتجاهات.',
     },
     contact: {
-      title: 'اتصل بنا — أوميغا كوفي',
+      title: 'اتصل بنا — BLOO COFFEE',
       description:
-        'تواصل مع أوميغا كوفي في العوينة، تونس، عبر الهاتف (+216 22 101 785) أو عبر إنستغرام @dice.and.beans.',
+        'تواصل مع BLOO COFFEE في العوينة، تونس، عبر الهاتف (+216 54 472 945) أو عبر إنستغرام @bloo.coffeeshop.',
     },
     terms: {
-      title: 'شروط الاستخدام — أوميغا كوفي',
-      description: 'شروط استخدام موقع أوميغا كوفي.',
+      title: 'شروط الاستخدام — BLOO COFFEE',
+      description: 'شروط استخدام موقع BLOO COFFEE.',
     },
     privacy: {
-      title: 'سياسة الخصوصية — أوميغا كوفي',
-      description: 'سياسة الخصوصية لموقع أوميغا كوفي.',
+      title: 'سياسة الخصوصية — BLOO COFFEE',
+      description: 'سياسة الخصوصية لموقع BLOO COFFEE.',
     },
     cookies: {
-      title: 'سياسة ملفات الارتباط — أوميغا كوفي',
-      description: 'سياسة ملفات الارتباط لموقع أوميغا كوفي.',
+      title: 'سياسة ملفات الارتباط — BLOO COFFEE',
+      description: 'سياسة ملفات الارتباط لموقع BLOO COFFEE.',
     },
     legal: {
-      title: 'إشعار قانوني — أوميغا كوفي',
-      description: 'معلومات قانونية عن أوميغا كوفي، العوينة، تونس.',
+      title: 'إشعار قانوني — BLOO COFFEE',
+      description: 'معلومات قانونية عن BLOO COFFEE، العوينة، تونس.',
     },
     notFound: {
-      title: 'الصفحة غير موجودة — أوميغا كوفي',
+      title: 'الصفحة غير موجودة — BLOO COFFEE',
       description: 'هذه الصفحة غير موجودة.',
     },
   },
@@ -1028,49 +1098,79 @@ const ar: Dictionary = {
   home: {
     hero: {
       badge: 'العوينة · تونس',
-      title1: 'حيث تلتقي القهوة',
-      title2: 'بطاولة اللعب',
+      title1: 'لحظة',
+      title2: 'منعشة',
       subtitle:
-        'مقهى حيوي في العوينة لقهوة رائعة وألعاب طاولة وأوقات جميلة مع الأصدقاء.',
+        'مقهى قهوة متخصص في العوينة — إسبريسو، فلتر وبور-أوفر تُحضَّر عند الطلب، مع معجنات طازجة.',
       ctaMenu: 'قائمتنا',
       ctaDirections: 'احصل على الاتجاهات',
-      servicesHint: 'قهوة · كرواسون · سندويشات · بيتزا · سلطات · فطور · أخذ',
+      servicesHint: 'قهوة · مخبوزات · طازج يومياً',
     },
     quickInfo: {
-      coffeeLabel: 'قهوة وأكثر',
-      coffeeValue: 'إسبريسو ومعجنات ووجبات خفيفة',
+      coffeeLabel: 'إسبريسو & فلتر',
+      coffeeValue: 'يُحضَّر عند الطلب طوال اليوم',
       ratingLabel: 'على Google',
       locationLabel: 'موقعنا',
       locationValue: 'العوينة · تونس',
-      directionsValue: 'إقامة بيل أزور',
+      directionsValue: 'ر. حسّام، شارع منجي سليم',
+    },
+    offerings: {
+      eyebrow: 'ما نقدّمه',
+      title1: 'صُنع',
+      title2: 'بدقة',
+      subtitle:
+        'كل كوب يبدأ بالعناية — من وزن الجرعة إلى درجة حرارة الماء. هذا ما نسكبه لكم.',
+      cards: [
+        {
+          icon: 'espresso',
+          title: 'الإسبريسو والفلتر',
+          description: 'إسبريسو يومي وأمريكانو وفلتر، تُحضَّر بعناية.',
+        },
+        {
+          icon: 'pour',
+          title: 'طقوس البور-أوفر',
+          description: 'قهوة فلتر تُسكب ببطء، كوباً بكوب، أمامك مباشرة.',
+        },
+        {
+          icon: 'blend',
+          title: 'الخلطات المميزة',
+          description: 'مشروباتنا الخاصة، من اللاتيه الحلو إلى القهوة المثلجة القوية.',
+        },
+        {
+          icon: 'pastry',
+          title: 'معجنات طازجة',
+          description: 'مخبوزات لمرافقة كوبك — اطّلع على الواجهة اليوم.',
+        },
+      ],
     },
     menu: {
-      eyebrow: 'ماذا نقدّم',
-      title1: 'قائمة صُنعت',
-      title2: 'للمشاركة',
+      eyebrow: 'لمحة عن القائمة',
+      title1: 'مذاقات',
+      title2: 'مميزة',
       subtitle:
-        'قهوة ومعجنات وسندويشات وبيتزا وسلطات وأكثر. تتغير تشكيلتنا، لذا اسأل فريقنا عن اختصاصات اليوم.',
+        'قائمة مركّزة من مشروبات الإسبريسو والتحضير البطيء والمخبوزات. تشكيلتنا تتبدّل — اسأل فريقنا عن اختصاصات اليوم.',
       categoriesTitle: 'ستجد عادةً',
-      categories: [
-        'القهوة',
-        'الكرواسون',
-        'السندويشات',
-        'البيتزا',
-        'السلطات',
-        'الفطور والبرانش',
-        'خدمة الأخذ',
-        'التوصيل',
-      ],
+      categories: ['الإسبريسو والفلتر', 'طقوس البور-أوفر', 'الخلطات المميزة', 'المعجنات الطازجة'],
       note: 'القائمة الكاملة والأسعار متوفرة في المحل.',
       cta: 'اتصل بنا',
     },
+    stats: {
+      ratingValue: '4.9',
+      ratingLabel: 'تقييم Google',
+      reviewsValue: '25',
+      reviewsLabel: 'تقييم على Google',
+      priceValue: '10–20 د.ت',
+      priceLabel: 'للشخص',
+      hoursValue: '09:00 – 23:00',
+      hoursLabel: 'مفتوح يومياً',
+    },
     atmosphere: {
-      eyebrow: 'الأجواء',
-      title1: 'قهوة وألعاب و',
-      title2: 'رفقة طيبة',
+      eyebrow: 'حكايات بصرية',
+      title1: 'المساحة،',
+      title2: 'بالتفصيل',
       subtitle:
-        'ألعاب طاولة وأمسيات كاريوكي ومساحة صُممت لقضاء الوقت مع الأصدقاء أو العمل أو الاسترخاء.',
-      cta: 'زيارة المعرض',
+        'ركن هادئ لكوبك الأول، طاولة لجلسة بطيئة، ومكان قرب النافذة لمشاهدة العوينة وهي تستيقظ.',
+      cta: 'شاهد المعرض',
     },
     reviews: {
       eyebrow: 'التقييمات',
@@ -1082,16 +1182,16 @@ const ar: Dictionary = {
     },
     instagram: {
       eyebrow: 'إنستغرام',
-      title: '@dice.and.beans',
-      subtitle: 'تابعنا لآخر المستجدات ولقطات من الكواليس.',
+      title: '@bloo.coffeeshop',
+      subtitle: 'تابعنا لآخر الأكواب والمعجنات ولحظات البار.',
       cta: 'تابعنا',
     },
     about: {
-      eyebrow: 'مساحتنا',
+      eyebrow: 'قصتنا',
       title1: 'أكثر من',
-      title2: 'مجرد قهوة',
+      title2: 'مجرد مقهى',
       subtitle:
-        'مكان حيوي في العوينة تلتقي فيه القهوة والألعاب والأحاديث الجميلة.',
+        'مقهى قهوة متخصص في العوينة حيث يلتقي البار والمعجنات والأحاديث الجميلة.',
       cta: 'قصتنا',
     },
     contact: {
@@ -1106,68 +1206,68 @@ const ar: Dictionary = {
     },
     map: {
       eyebrow: 'موقعنا',
-      title1: 'في قلب',
-      title2: 'العوينة',
+      title1: 'انضم إلينا',
+      title2: 'في العوينة',
       ctaDirections: 'احصل على الاتجاهات',
       ctaViewMap: 'عرض الموقع على خرائط Google',
     },
   },
   menuPage: {
     tagline: 'القائمة',
-    title1: 'تذوّق',
-    title2: 'التشكيلة',
+    title1: 'مذاقات',
+    title2: 'مميزة',
     intro:
-      'تتغير قائمتنا من وقت لآخر. اكتشف تشكيلة اليوم وأسعارها عند زيارتك لنا.',
+      'تتغير تشكيلتنا من وقت لآخر. اكتشف مشروبات ومعجنات اليوم عند زيارتك لنا.',
     categoriesTitle: 'ستجد عادةً',
     note: 'قد تتغير الأطباق والأسعار والتوفر.',
     ctaTitle: 'أسئلة عن قائمتنا؟',
     ctaBody: 'اتصل بنا أو مرّ علينا — يسعدنا مساعدتك.',
   },
   aboutPage: {
-    tagline: 'قصتنا وتقديرنا',
-    title1: 'قهوة جيدة،',
-    title2: 'أوقات جميلة',
+    tagline: 'قصتنا',
+    title1: 'قهوة،',
+    title2: 'تُحضَّر بعناية',
     story1:
-      'أوميغا كوفي مقهى حيوي في العوينة، تونس. نقدّم القهوة ومشروبات الإسبريسو والمعجنات الطازجة والفطور والبرانش والسندويشات والبيتزا والسلطات — مع الكثير من ألعاب الطاولة.',
+      'BLOO COFFEE مقهى قهوة متخصص في العوينة، تونس. نسكب الإسبريسو والفلتر والبور-أوفر عند الطلب، إلى جانب معجنات طازجة.',
     story2:
-      'سواء جئت للعمل أو اللعب أو الاسترخاء، فمساحتنا مصممة لقضاء الوقت. أمسيات الكاريوكي وجلسات اللعب تضفي الحيوية على المكان.',
-    featuresLabel: 'ما يميزنا',
+      'سواء جئت لإسبريسو سريع أو بور-أوفر بطيء أو طاولة تستقر فيها، فقلب المكان هو البار — والباب مفتوح دائماً.',
+    featuresLabel: 'ما نركز عليه',
     features: [
       {
         icon: 'coffee',
-        title: 'القهوة والإسبريسو',
-        description: 'قهوة ومشروبات إسبريسو وخيارات للجميع، نقدّمها طوال اليوم.',
+        title: 'قهوة تُحضَّر بعناية',
+        description: 'إسبريسو وفلتر وبور-أوفر، كل كوب عند الطلب.',
       },
       {
-        icon: 'dice',
-        title: 'ألعاب الطاولة',
-        description: 'ألعاب طاولة جاهزة للعب لجميع الأعمار والمستويات.',
+        icon: 'beans',
+        title: 'اختيار دقيق',
+        description: 'قهوة عالية الجودة، تُقدَّم طازجة في البار طوال اليوم.',
       },
       {
         icon: 'people',
-        title: 'المجتمع',
-        description: 'مساحة ترحيبية للأصدقاء والعائلات والزوار.',
+        title: 'مساحة ترحيبية',
+        description: 'ركن مريح للعمل أو اللقاء أو أخذ قسط من الراحة.',
       },
       {
         icon: 'mug',
-        title: 'أطباق ومعجنات',
-        description: 'فطور وبرانش وسندويشات وبيتزا وسلطات ومعجنات.',
+        title: 'معجنات طازجة',
+        description: 'مخبوزات لمرافقة كوبك — اطّلع على الواجهة اليوم.',
       },
       {
         icon: 'bag',
-        title: 'الأخذ والتوصيل',
-        description: 'خذ قهوتك وأطباقك معك، أو اطلب توصيلاً.',
+        title: 'خدمة الأخذ',
+        description: 'خذ قهوتك ومعجناتك معك.',
       },
       {
-        icon: 'mic',
-        title: 'الكاريوكي',
-        description: 'أمسيات كاريوكي لإضافة المزيد من المرح.',
+        icon: 'sparkle',
+        title: 'التفاصيل الصغيرة',
+        description: 'توقيت مضبوط، كميات موزونة، وقاعة نظيفة وهادئة.',
       },
     ],
     recognitionLabel: 'التقدير',
-    ratingValue: '4.7',
+    ratingValue: '4.9',
     ratingLabel: 'تقييم Google',
-    reviewsValue: '47',
+    reviewsValue: '25',
     reviewsLabel: 'تقييم على Google',
     hoursTitle: 'ساعات العمل',
     hoursNote: 'قد تختلف ساعات العمل. اتصل بنا قبل الزيارة للتأكيد.',
@@ -1184,7 +1284,7 @@ const ar: Dictionary = {
   locationPage: {
     tagline: 'الموقع والاتصال',
     title1: 'تفضل بزيارة',
-    title2: 'أوميغا كوفي',
+    title2: 'BLOO COFFEE',
     addressLabel: 'عنواننا',
     callLabel: 'اتصل بنا',
     followLabel: 'تابعنا',
@@ -1192,9 +1292,9 @@ const ar: Dictionary = {
     hoursNote: 'قد تتغير ساعات العمل من وقت لآخر. اتصل بنا للتأكيد قبل الزيارة.',
     arrivalTitle: 'كيف تصل إلينا',
     arrivalDesc:
-      'نحن في إقامة بيل أزور في العوينة، تونس. استخدم الخريطة أدناه للحصول على الاتجاهات الدقيقة.',
+      'نحن في ر. حسّام، شارع منجي سليم، تونس 2045. استخدم الخريطة أدناه للحصول على الاتجاهات الدقيقة.',
     ctaDirections: 'احصل على الاتجاهات',
-    mapTitle: 'أوميغا كوفي على الخريطة',
+    mapTitle: 'BLOO COFFEE على الخريطة',
   },
   contactPage: {
     tagline: 'اتصل بنا',
@@ -1205,9 +1305,9 @@ const ar: Dictionary = {
     callLabel: 'اتصال',
     callDesc: 'يمكنك التواصل معنا عبر الهاتف',
     instagramLabel: 'إنستغرام',
-    instagramDesc: 'راسلنا @dice.and.beans',
+    instagramDesc: 'راسلنا @bloo.coffeeshop',
     addressLabel: 'موقعنا',
-    note: 'أسرع طريقة للوصول إلينا هي الهاتف أو إنستغرام. يمكنك أيضاً مراسلتنا عبر النموذج أدناه — سيفتح تطبيق بريدك الإلكتروني.',
+    note: 'أسرع طريقة للوصول إلينا هي الهاتف أو إنستغرام. يمكنك أيضاً حجز طاولة عبر الهاتف — أو مراسلتنا عبر النموذج أدناه، الذي يفتح تطبيق بريدك الإلكتروني.',
     formTitle: 'أرسل لنا رسالة',
     formIntro: 'يفتح النموذج تطبيق بريدك الإلكتروني مع رسالتك جاهزة للإرسال — لا يُخزَّن شيء في هذا الموقع.',
     nameLabel: 'اسمك',
@@ -1239,7 +1339,7 @@ const ar: Dictionary = {
   },
   footer: {
     aboutText:
-      'مقهى حيوي في العوينة، تونس — قهوة وألعاب طاولة ولحظات جميلة.',
+      'مقهى قهوة متخصص في العوينة، تونس — إسبريسو، فلتر، بور-أوفر ومعجنات طازجة.',
     exploreTitle: 'استكشف',
     contactTitle: 'التواصل',
     legalTitle: 'قانوني',
@@ -1249,9 +1349,9 @@ const ar: Dictionary = {
   },
   notFound: {
     badge: '404',
-    title1: 'يبدو أنك',
-    title2: 'رميت رقماً خاطئاً',
-    message: 'هذه الصفحة غير موجودة، أو أنها انتقلت إلى طاولة أخرى.',
+    title1: 'الصفحة',
+    title2: 'غير موجودة',
+    message: 'هذه الصفحة غير موجودة، أو أنها انتقلت إلى مكان آخر.',
     backHome: 'العودة إلى الرئيسية',
   },
   legal: {
@@ -1259,11 +1359,11 @@ const ar: Dictionary = {
     updatedDate: 'سبتمبر 2026',
     terms: {
       title: 'شروط الاستخدام',
-      intro: 'مرحباً بك في موقع أوميغا كوفي. باستخدامك هذا الموقع، فإنك توافق على الشروط أدناه.',
+      intro: 'مرحباً بك في موقع BLOO COFFEE. باستخدامك هذا الموقع، فإنك توافق على الشروط أدناه.',
       sections: [
         {
           heading: '1. عن هذا الموقع',
-          body: 'يقدّم هذا الموقع معلومات عن أوميغا كوفي، مقهى في إقامة بيل أزور، العوينة، تونس، وعن خدماته.',
+          body: 'يقدّم هذا الموقع معلومات عن BLOO COFFEE، مقهى قهوة في ر. حسّام، شارع منجي سليم، تونس 2045، وعن خدماته.',
         },
         {
           heading: '2. القائمة والأسعار وساعات العمل',
@@ -1275,7 +1375,7 @@ const ar: Dictionary = {
         },
         {
           heading: '4. الملكية الفكرية',
-          body: 'جميع محتويات الموقع — النصوص والشعارات والتصميم — ملك لأوميغا كوفي ما لم يُذكر خلاف ذلك. لا يُعاد استخدامها دون إذن.',
+          body: 'جميع محتويات الموقع — النصوص والشعارات والتصميم — ملك لـBLOO COFFEE ما لم يُذكر خلاف ذلك. لا يُعاد استخدامها دون إذن.',
         },
         {
           heading: '5. حدود المسؤولية',
@@ -1287,7 +1387,7 @@ const ar: Dictionary = {
         },
         {
           heading: '7. التواصل',
-          body: 'لأي سؤال حول هذه الشروط، اتصل بنا على +216 22 101 785 أو راسلنا عبر إنستغرام @dice.and.beans.',
+          body: 'لأي سؤال حول هذه الشروط، اتصل بنا على +216 54 472 945 أو راسلنا عبر إنستغرام @bloo.coffeeshop.',
         },
       ],
     },
@@ -1317,7 +1417,7 @@ const ar: Dictionary = {
         },
         {
           heading: '6. التواصل',
-          body: 'لديك سؤال عن هذه السياسة؟ تواصل معنا على +216 22 101 785.',
+          body: 'لديك سؤال عن هذه السياسة؟ تواصل معنا على +216 54 472 945.',
         },
       ],
     },
@@ -1339,7 +1439,7 @@ const ar: Dictionary = {
         },
         {
           heading: '4. التواصل',
-          body: 'لأي سؤال حول ملفات الارتباط، اتصل بنا على +216 22 101 785.',
+          body: 'لأي سؤال حول ملفات الارتباط، اتصل بنا على +216 54 472 945.',
         },
       ],
     },
@@ -1349,15 +1449,15 @@ const ar: Dictionary = {
       sections: [
         {
           heading: 'الشركة / النشاط',
-          body: 'أوميغا كوفي — مقهى ومساحة ألعاب في إقامة بيل أزور، العوينة، تونس.',
+          body: 'BLOO COFFEE — مقهى قهوة متخصص في ر. حسّام، شارع منجي سليم، تونس 2045.',
         },
         {
           heading: 'التواصل',
-          body: 'الهاتف: +216 22 101 785. إنستغرام: @dice.and.beans.',
+          body: 'الهاتف: +216 54 472 945. إنستغرام: @bloo.coffeeshop.',
         },
         {
           heading: 'مدير النشر',
-          body: 'فريق أوميغا كوفي، العوينة، تونس.',
+          body: 'فريق BLOO COFFEE، العوينة، تونس.',
         },
         {
           heading: 'الاستضافة',

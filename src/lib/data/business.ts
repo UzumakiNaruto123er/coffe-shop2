@@ -1,5 +1,5 @@
 /**
- * Omega Coffe — Business Data
+ * BLOO COFFEE — Business Data
  *
  * Every value here is either verified business information or
  * owner-supplied content. Do not add fabricated details (hours,
@@ -7,40 +7,49 @@
  */
 
 export const BUSINESS_INFO = {
-  name: 'Omega Coffe',
-  tagline: 'Coffee • Games • Good Moments',
+  name: 'BLOO COFFEE',
+  shortName: 'BLOO',
+  tagline: 'Coffee • Craft • Comfort',
   description:
-    'A neighborhood café in L\'Aouina, Tunis serving coffee, pastries, sandwiches, pizza and salads, with board games, karaoke nights and takeaway.',
-  address: 'Résidence Bel Azure, L\'Aouina, Tunis, Tunisia',
-  phone: '+216 22 101 785',
-  phoneHref: 'tel:+21622101785',
-  instagram: '@dice.and.beans',
-  instagramUrl: 'https://www.instagram.com/dice.and.beans/',
-  priceRange: '1–10 TND',
-  rating: 4.7,
-  reviewCount: 47,
+    'A specialty coffee shop in L\'Aouina, Tunis serving espresso, filter coffee, pour-over, signature blends and fresh pastries.',
+  neighborhood: 'L\'Aouina · Tunis',
+  address: 'Rés. Houssem, Avenue Mongi Slim, Tunis 2045, Tunisia',
+  phone: '+216 54 472 945',
+  phoneHref: 'tel:+21654472945',
+  instagram: '@bloo.coffeeshop',
+  instagramUrl: 'https://www.instagram.com/bloo.coffeeshop/',
+  email: '',
+  emailHref: '',
+  whatsapp: '',
+  whatsappHref: '',
+  priceRange: 'TND 10–20',
+  rating: 4.9,
+  reviewCount: 25,
+  hours: {
+    label: '09:00 – 23:00',
+    weekly: 'Sunday – Thursday 09:00 – 23:00',
+    weekend: 'Friday – Saturday 09:00 – 23:00',
+  },
   services: [
-    'Coffee',
-    'Croissants',
-    'Sandwiches',
-    'Pizza',
-    'Salads',
-    'Breakfast & brunch',
+    'Espresso & Filter',
+    'Pour-Over Rituals',
+    'Signature Blends',
+    'Fresh Pastries',
+    'Cold Brew',
     'Takeaway',
-    'Delivery',
-    'Karaoke',
   ],
 } as const;
 
 /**
- * Owner-supplied Google Maps URLs. These are the ONLY source of truth
- * for map links and embeds — do not replace them.
+ * Google Maps owner listing for BLOO COFFEE. These are the ONLY source
+ * of truth for map links and embeds — do not replace them.
  */
 export const GOOGLE_MAPS = {
   embedUrl:
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d341.91750797396816!2d10.256617423711498!3d36.854702345014346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cbfbbd6383ab%3A0x69780cc42f44c0b6!2sDice%20%26%20Beans!5e1!3m2!1sen!2stn!4v1789162983676!5m2!1sen!2stn',
-  directionsUrl: 'https://maps.app.goo.gl/HDnBjRrtQA6R43FA8',
-  viewUrl: 'https://maps.app.goo.gl/HDnBjRrtQA6R43FA8',
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.400706577331!2d10.252285011512054!3d36.85539976447004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2cb002ac5b805%3A0x7692391bd61273b7!2sBloo%20Coffee%20Shop!5e1!3m2!1sen!2stn!4v1790188579205!5m2!1sen!2stn',
+  // Derived from the owner listing coordinates (36.8553997, 10.2522850)
+  directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=36.8553997,10.2522850',
+  viewUrl: 'https://maps.google.com/?q=36.8553997,10.2522850',
 } as const;
 
 export interface GalleryImage {
@@ -53,7 +62,7 @@ export interface GalleryImage {
 
 /**
  * Illustrative atmosphere photography (generic café imagery).
- * Not actual photos of Omega Coffe — UI labels them as such.
+ * Not actual photos of BLOO COFFEE — UI labels them as such.
  */
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
@@ -154,15 +163,4 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     category: 'food',
     span: '',
   },
-] as const;
-
-export const DICE_PHRASES = [
-  'Coffee time.',
-  'Roll for coffee.',
-  'One more game.',
-  'Another cup?',
-  'Your turn.',
-  'Natural 20.',
-  'Critical hit.',
-  'Game on.',
 ] as const;

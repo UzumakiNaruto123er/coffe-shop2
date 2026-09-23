@@ -1,25 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Crimson_Pro, Plus_Jakarta_Sans, Amiri } from "next/font/google";
+import { Amiri } from "next/font/google";
 import "@/styles/globals.css";
 import { SITE_URL } from "@/lib/site";
-
-const crimsonPro = Crimson_Pro({
-  subsets: ["latin"],
-  variable: "--font-crimson",
-  display: "swap",
-  style: ["normal", "italic"],
-  preload: true,
-  fallback: ["Georgia", "serif"],
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-  style: ["normal"],
-  preload: true,
-  fallback: ["system-ui", "sans-serif"],
-});
 
 const amiri = Amiri({
   subsets: ["arabic"],
@@ -32,10 +14,10 @@ const amiri = Amiri({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  applicationName: "Omega Coffe",
+  applicationName: "BLOO COFFEE",
   title: {
-    default: "Omega Coffe",
-    template: "%s | Omega Coffe",
+    default: "BLOO COFFEE — Coffee Shop in L'Aouina, Tunis",
+    template: "%s | BLOO COFFEE",
   },
   robots: {
     index: true,
@@ -50,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "Omega Coffe",
+    siteName: "BLOO COFFEE",
   },
   twitter: {
     card: "summary_large_image",
@@ -58,7 +40,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#121212",
+  themeColor: "#1a3a52",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -72,15 +54,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${crimsonPro.variable} ${plusJakartaSans.variable} ${amiri.variable} h-full antialiased`}
+      className={`${amiri.variable} h-full antialiased`}
       dir="ltr"
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link rel="preconnect" href="https://cdn.fontshare.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://www.instagram.com" />
-        <meta name="theme-color" content="#c5a059" />
+        <meta name="theme-color" content="#1a3a52" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-180x180.png" />

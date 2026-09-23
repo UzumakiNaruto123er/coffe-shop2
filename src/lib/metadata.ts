@@ -36,7 +36,7 @@ export function buildPageMetadata(
     openGraph: {
       type: 'website',
       locale: getOgLocale(locale),
-      siteName: 'Omega Coffe',
+      siteName: 'BLOO COFFEE',
       title: meta.title,
       description: meta.description,
       url,

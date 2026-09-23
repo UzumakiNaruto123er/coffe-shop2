@@ -1,6 +1,6 @@
 'use client';
 
-import { MapPin, Phone, Camera, Navigation } from 'lucide-react';
+import { MapPin, Phone, Camera, Navigation, Clock } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { MapEmbed } from '@/components/ui/MapEmbed';
@@ -39,6 +39,16 @@ export function MapSection({ locale }: MapSectionProps) {
               {BUSINESS_INFO.address}
             </address>
 
+            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-cream-200 bg-charcoal-900 px-5 py-4">
+              <Clock className="w-5 h-5 text-terracotta-500" aria-hidden="true" />
+              <div>
+                <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-400 mb-1">
+                  {BUSINESS_INFO.hours.label}
+                </p>
+                <p className="text-sm font-semibold text-cream-100">{BUSINESS_INFO.hours.weekly}</p>
+              </div>
+            </div>
+
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button variant="primary" size="md" asChild className="w-full sm:w-auto">
                 <a
@@ -62,17 +72,17 @@ export function MapSection({ locale }: MapSectionProps) {
               </Button>
             </div>
 
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {channels.map(({ icon: Icon, label, value, href, external }) => (
                 <a
                   key={href}
                   href={href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noopener noreferrer' : undefined}
-                  className="group border border-white/10 bg-white/[0.03] px-5 py-5 transition-colors hover:border-gold-500/40 block"
+                  className="group border border-cream-200 bg-charcoal-900 px-5 py-5 transition-colors hover:border-gold-500/40 block"
                 >
-                  <Icon className="w-5 h-5 text-gold-500 mb-3" aria-hidden="true" />
-                  <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-500 mb-1">
+                  <Icon className="w-5 h-5 text-terracotta-500 mb-3" aria-hidden="true" />
+                  <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-400 mb-1">
                     {label}
                   </p>
                   <p className="text-sm text-cream-100 break-words">{value}</p>

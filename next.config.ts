@@ -1,5 +1,3 @@
-import type { NextConfig } from "next";
-
 const securityHeaders = [
   {
     key: 'X-Frame-Options',
@@ -22,9 +20,9 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline'",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com data:",
-      "img-src 'self' blob: data: https://images.unsplash.com",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.fontshare.com",
+      "font-src 'self' https://fonts.gstatic.com https://api.fontshare.com https://cdn.fontshare.com data:",
+      "img-src 'self' blob: data: https://images.unsplash.com https://www.google.com",
       "media-src 'self'",
       "connect-src 'self' https://analytics.vercel.app",
       "frame-src https://www.google.com",

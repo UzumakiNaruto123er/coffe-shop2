@@ -10,11 +10,11 @@ export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const variantStyles = {
-  default: 'bg-white/5 text-cream-300 border border-white/10',
-  primary: 'bg-terracotta-500 text-charcoal-950',
-  secondary: 'bg-white/10 text-cream-100 border border-white/15',
-  success: 'bg-sage-500 text-charcoal-950',
-  warning: 'bg-gold-500 text-charcoal-950',
+  default: 'bg-charcoal-900 text-cream-400 border border-cream-200',
+  primary: 'bg-terracotta-500 text-white',
+  secondary: 'bg-bloo-50 text-bloo-950 border border-bloo-100',
+  success: 'bg-sage-500 text-white',
+  warning: 'bg-gold-500 text-white',
   outline: 'border-2 border-terracotta-500 text-terracotta-500 bg-transparent',
 };
 
@@ -42,8 +42,8 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
             className={cn(
               'w-1.5 h-1.5 rounded-full',
               variant === 'default' && 'bg-terracotta-500',
-              (variant === 'primary' || variant === 'secondary' || variant === 'success') && 'bg-charcoal-950',
-              variant === 'warning' && 'bg-charcoal-950',
+              variant === 'secondary' && 'bg-terracotta-500',
+              (variant === 'primary' || variant === 'success' || variant === 'warning') && 'bg-white',
               variant === 'outline' && 'bg-terracotta-500'
             )}
             aria-hidden="true"

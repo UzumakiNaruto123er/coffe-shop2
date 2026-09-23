@@ -48,7 +48,7 @@ export function LanguageSwitcher({
               className={cn(
                 'block w-full px-4 py-2.5 text-start text-sm font-medium transition-colors',
                 lang === locale
-                  ? 'bg-terracotta-500 text-charcoal-950'
+                  ? 'bg-terracotta-500 text-white'
                   : 'text-cream-400 hover:bg-white/5 hover:text-cream-100'
               )}
             >
@@ -61,7 +61,7 @@ export function LanguageSwitcher({
   }
 
   return (
-    <div role="group" aria-label={t.nav.language} className="inline-flex items-center gap-1 p-1 rounded-full border border-white/10 bg-white/5">
+    <div role="group" aria-label={t.nav.language} className="inline-flex items-center gap-1 p-1 rounded-full border border-cream-200 bg-charcoal-900">
       {locales.map((lang) => (
         <Link
           key={lang}
@@ -71,7 +71,7 @@ export function LanguageSwitcher({
           aria-current={lang === locale ? 'true' : undefined}
           className={cn(
             'px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest rounded-full transition-all',
-            lang === locale ? 'bg-gold-500 text-charcoal-950' : 'text-cream-100/60 hover:text-white'
+            lang === locale ? 'bg-terracotta-500 text-white' : 'text-cream-400 hover:text-cream-200'
           )}
         >
           {lang === 'ar' ? 'ع' : lang.toUpperCase()}

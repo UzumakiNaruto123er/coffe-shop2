@@ -33,7 +33,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             href={GOOGLE_MAPS.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full max-w-md mx-auto overflow-hidden border border-white/10 bg-white/[0.03] p-8 backdrop-blur-sm block transition-all hover:border-gold-500/40 group"
+            className="w-full max-w-md mx-auto overflow-hidden border border-cream-200 bg-charcoal-900 p-8 backdrop-blur-sm block transition-all hover:border-gold-500/40 group"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
@@ -58,7 +58,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
                       className={
                         i < fullStars
                           ? 'w-4 h-4 fill-gold-500 text-gold-500'
-                          : 'w-4 h-4 text-cream-100/25'
+                          : 'w-4 h-4 text-cream-200'
                       }
                     />
                   ))}
@@ -68,7 +68,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             <p className="text-xs uppercase tracking-[0.2em] text-cream-500 mb-5">
               {BUSINESS_INFO.reviewCount} — {t.home.reviews.ratingSub}
             </p>
-            <span className="block text-center text-xs uppercase tracking-[0.2em] text-gold-500 group-hover:text-white transition-colors border border-gold-500/30 px-6 py-3">
+            <span className="block text-center text-xs uppercase tracking-[0.2em] text-gold-600 group-hover:text-gold-500 transition-colors border border-gold-500/40 px-6 py-3">
               {t.home.reviews.cta}
             </span>
           </a>

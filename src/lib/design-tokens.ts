@@ -1,5 +1,5 @@
 /**
- * Omega Coffe — Design System Tokens
+ * BLOO COFFEE — Design System Tokens
  * Centralized design tokens for consistent theming
  */
 

@@ -30,7 +30,7 @@ export default function LocaleError({
           <Button variant="primary" size="lg" onClick={reset} className="w-full sm:w-auto">
             {t.common.retry}
           </Button>
-          <Button variant="outline" size="lg" asChild className="w-full sm:w-auto border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-charcoal-950">
+          <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
             <Link href={`/${locale}`}>{t.common.backHome}</Link>
           </Button>
         </div>

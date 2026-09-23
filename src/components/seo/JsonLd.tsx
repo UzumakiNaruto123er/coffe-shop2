@@ -18,7 +18,7 @@ export function JsonLd() {
     url: SITE_URL,
     telephone: BUSINESS_INFO.phone,
     priceRange: BUSINESS_INFO.priceRange,
-    servingCuisine: ['Coffee', 'Sandwiches', 'Pizza', 'Salads', 'Pastries'],
+    servingCuisine: ['Coffee', 'Baked Goods', 'Pastries'],
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS_INFO.address,

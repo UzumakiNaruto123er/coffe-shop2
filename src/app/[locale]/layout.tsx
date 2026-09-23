@@ -42,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       type: 'website',
       locale: getOgLocale(locale),
-      siteName: 'Omega Coffe',
+      siteName: 'BLOO COFFEE',
       title: dict.meta.home.title,
       description: dict.meta.home.description,
       url: homeUrl,

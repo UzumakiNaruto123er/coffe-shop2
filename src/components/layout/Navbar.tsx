@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, Fragment, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, MapPin, Phone, Globe } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Globe, Clock } from 'lucide-react';
 import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
@@ -74,10 +74,8 @@ export function Navbar({ locale }: NavbarProps) {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-colors duration-300',
-        isScrolled
-          ? 'bg-charcoal-950/95 border-b border-gold-500/25 shadow-lg shadow-black/40'
-          : 'bg-gradient-to-b from-black/50 via-black/20 to-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 glass-nav',
+        isScrolled && 'shadow-md'
       )}
       role="banner"
     >
@@ -106,16 +104,19 @@ export function Navbar({ locale }: NavbarProps) {
                 className="flex flex-col items-center justify-center text-center"
                 aria-label={`${t.nav.home} — ${t.brand.name}`}
               >
-                <span
-                  className={cn(
-                    'font-display font-light tracking-[0.25em] whitespace-nowrap',
-                    'text-base sm:text-lg lg:text-xl text-cream-100'
-                  )}
-                >
-                  DICE <span className="text-terracotta-500">&amp;</span> BEANS
+                <span className="font-display font-extrabold tracking-tight whitespace-nowrap text-lg sm:text-xl lg:text-2xl text-bloo-950">
+                  BLOO{' '}
+                  <span className="text-terracotta-500 font-light italic">Coffee</span>
                 </span>
-                <span className="text-[0.55rem] uppercase tracking-[0.4em] text-cream-500 mt-1 hidden sm:block">
-                  L&apos;Aouina &bull; Tunis
+                <span className="text-[0.55rem] uppercase tracking-[0.4em] text-cream-400 mt-0.5 hidden sm:flex items-center gap-1.5">
+                  <span className="inline-flex items-center gap-1.5">
+                    {BUSINESS_INFO.neighborhood}
+                  </span>
+                  <span className="w-1 h-1 rounded-full bg-cream-300" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-1">
+                    <Clock className="w-2.5 h-2.5" aria-hidden="true" />
+                    {BUSINESS_INFO.hours.label}
+                  </span>
                 </span>
               </Link>
             </div>
@@ -135,19 +136,21 @@ export function Navbar({ locale }: NavbarProps) {
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream-400 hover:text-terracotta-400 transition-colors"
+                className="text-cream-400 hover:text-terracotta-500 transition-colors"
                 aria-label={`${t.nav.follow} Instagram`}
               >
                 <InstagramIcon className="w-5 h-5" />
               </a>
-              <span className="w-px h-6 bg-white/10" aria-hidden="true" />
+              <span className="w-px h-6 bg-cream-200" aria-hidden="true" />
               <LanguageSwitcher locale={locale} variant="pills" />
-              <Button variant="primary" size="sm" asChild aria-label={t.nav.directions}>
+              <Button variant="outline" size="sm" asChild aria-label={t.nav.directions}>
                 <a
                   href={GOOGLE_MAPS.directionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2"
                 >
+                  <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
                   {t.nav.directions}
                 </a>
               </Button>
@@ -163,7 +166,7 @@ export function Navbar({ locale }: NavbarProps) {
                   aria-expanded={isLanguageOpen}
                   aria-label={t.nav.language}
                   aria-haspopup="menu"
-                  className="h-11 w-11 p-0 rounded-full border border-white/15 bg-white/5"
+                  className="h-11 w-11 p-0 rounded-full border border-cream-200 bg-charcoal-900"
                 >
                   <Globe className="w-4 h-4" aria-hidden="true" />
                   <span className="sr-only">{locale.toUpperCase()}</span>
@@ -176,7 +179,7 @@ export function Navbar({ locale }: NavbarProps) {
                       onClick={() => setIsLanguageOpen(false)}
                     />
                     <div
-                      className="absolute end-0 top-full mt-2 w-40 bg-charcoal-900 border border-white/10 shadow-xl rounded-sm py-2 z-50"
+                      className="absolute end-0 top-full mt-2 w-40 bg-charcoal-950 border border-cream-200 shadow-xl rounded-2xl py-2 z-50"
                       role="menu"
                       aria-label={t.nav.language}
                     >
@@ -187,7 +190,7 @@ export function Navbar({ locale }: NavbarProps) {
               </div>
               <button
                 ref={hamburgerRef}
-                className="p-3 -m-1 min-h-11 min-w-11 flex items-center justify-center text-cream-100 hover:text-terracotta-400 transition-colors"
+                className="p-3 -m-1 min-h-11 min-w-11 flex items-center justify-center text-bloo-950 hover:text-terracotta-500 transition-colors"
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label={t.nav.openMenu}
                 aria-expanded={isMobileMenuOpen}
@@ -204,13 +207,13 @@ export function Navbar({ locale }: NavbarProps) {
       {isMobileMenuOpen && (
         <Fragment>
           <div
-            className="fixed inset-0 bg-black/60 z-[1199] lg:hidden menu-fade-in"
+            className="fixed inset-0 bg-black/40 z-[1199] lg:hidden menu-fade-in"
             onClick={closeMobileMenu}
             aria-hidden="true"
           />
           <aside
             id="mobile-menu"
-            className="fixed top-0 right-0 h-full w-full max-w-sm bg-charcoal-950 z-[1200] lg:hidden shadow-2xl border-l border-white/10 mobile-menu-in"
+            className="fixed top-0 right-0 h-full w-full max-w-sm bg-charcoal-950 z-[1200] lg:hidden shadow-2xl border-l border-cream-200 mobile-menu-in"
             role="dialog"
             aria-label={t.nav.openMenu}
             aria-modal="true"
@@ -220,14 +223,15 @@ export function Navbar({ locale }: NavbarProps) {
                 <Link
                   href={`/${locale}`}
                   onClick={closeMobileMenu}
-                  className="font-display text-2xl font-light tracking-[0.25em] text-cream-100"
+                  className="font-display font-extrabold tracking-tight text-2xl text-bloo-950"
                 >
-                  DICE <span className="text-terracotta-500">&amp;</span> BEANS
+                  BLOO{' '}
+                  <span className="text-terracotta-500 font-light italic">Coffee</span>
                 </Link>
                 <button
                   ref={closeMenuRef}
                   onClick={closeMobileMenu}
-                  className="min-h-11 min-w-11 flex items-center justify-center text-cream-400 hover:text-terracotta-400 transition-colors"
+                  className="min-h-11 min-w-11 flex items-center justify-center text-cream-400 hover:text-terracotta-500 transition-colors"
                   aria-label={t.nav.closeMenu}
                 >
                   <X className="w-6 h-6" aria-hidden="true" />
@@ -235,7 +239,7 @@ export function Navbar({ locale }: NavbarProps) {
               </div>
 
               <nav className="flex-1 overflow-y-auto" aria-label={t.nav.main}>
-                <ul className="space-y-1 border-t border-white/10 pt-4">
+                <ul className="space-y-1 border-t border-cream-200 pt-4">
                   {NAV_LINKS.map(({ href, key }) => (
                     <li key={key}>
                       <Link
@@ -255,7 +259,7 @@ export function Navbar({ locale }: NavbarProps) {
                   ))}
                 </ul>
 
-                <div className="mt-6 border-t border-white/10 pt-6">
+                <div className="mt-6 border-t border-cream-200 pt-6">
                   <p className="px-4 mb-2 text-xs uppercase tracking-[0.25em] text-cream-500">
                     {t.nav.language}
                   </p>
@@ -263,8 +267,17 @@ export function Navbar({ locale }: NavbarProps) {
                 </div>
               </nav>
 
-              <div className="space-y-3 pt-6 border-t border-white/10">
+              <div className="space-y-3 pt-6 border-t border-cream-200">
                 <Button variant="secondary" size="lg" fullWidth asChild>
+                  <a
+                    href={`/${locale}/contact`}
+                    onClick={closeMobileMenu}
+                    className="inline-flex items-center justify-center gap-3"
+                  >
+                    {t.nav.contact}
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" fullWidth asChild>
                   <a
                     href={GOOGLE_MAPS.directionsUrl}
                     target="_blank"
@@ -291,7 +304,7 @@ export function Navbar({ locale }: NavbarProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 px-4 py-3 text-sm uppercase tracking-[0.2em] text-cream-300 hover:text-terracotta-400 transition-colors"
+                  className="flex items-center justify-center gap-2 px-4 py-3 text-sm uppercase tracking-[0.2em] text-cream-300 hover:text-terracotta-500 transition-colors"
                 >
                   <InstagramIcon className="w-5 h-5" />
                   {t.nav.follow} Instagram

@@ -12,7 +12,7 @@ interface MapEmbedProps {
  */
 export function MapEmbed({ title, className, eager }: MapEmbedProps) {
   return (
-    <div className={cn('map-container', className)}>
+    <div className={cn('map-container rounded-[2rem]', className)}>
       <iframe
         src={GOOGLE_MAPS.embedUrl}
         allowFullScreen

@@ -11,8 +11,8 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 const variantStyles = {
   default: 'bg-charcoal-900',
-  elevated: 'bg-charcoal-900 border border-white/5',
-  outlined: 'bg-charcoal-900 border border-white/10',
+  elevated: 'bg-charcoal-900 border border-cream-200',
+  outlined: 'bg-charcoal-900 border border-cream-200',
 };
 
 const paddingStyles = {
@@ -55,7 +55,7 @@ export const CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadi
   ({ className, children, ...props }, ref) => (
     <h3
       ref={ref}
-      className={cn('text-2xl font-heading font-semibold text-cream-100', className)}
+      className={cn('text-2xl font-display font-semibold text-cream-100', className)}
       {...props}
     >
       {children}
@@ -88,7 +88,7 @@ export const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivEleme
   ({ className, children, ...props }, ref) => (
     <div
       ref={ref}
-      className={cn('mt-4 pt-4 border-t border-white/10 flex items-center', className)}
+      className={cn('mt-4 pt-4 border-t border-cream-200 flex items-center', className)}
       {...props}
     >
       {children}

@@ -137,7 +137,7 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
                 </div>
               </form>
             ) : (
-              <div className="max-w-xl border border-gold-500/30 bg-white/[0.03] p-8 lg:p-10">
+              <div className="max-w-xl border border-cream-200 bg-charcoal-900 p-8 lg:p-10 rounded-[1.5rem]">
                 <h2 className="font-display text-3xl text-cream-100 mb-4">{page.formTitle}</h2>
                 <p className="text-cream-100/60 mb-8">{page.noEmail}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -152,7 +152,7 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
                       href={BUSINESS_INFO.instagramUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-charcoal-950"
+                      className="inline-flex items-center gap-3"
                     >
                       <Camera className="w-4 h-4" aria-hidden="true" />
                       {BUSINESS_INFO.instagram}
@@ -171,12 +171,12 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
                   href={href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noopener noreferrer' : undefined}
-                  className="group border border-white/10 bg-white/[0.03] p-8 flex flex-col transition-colors hover:border-gold-500/40"
+                  className="group border border-cream-200 bg-charcoal-900 p-8 flex flex-col rounded-[1.5rem] transition-colors hover:border-gold-500/40"
                 >
-                  <Icon className="w-7 h-7 text-gold-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                  <Icon className="w-7 h-7 text-terracotta-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
                   <h2 className="font-display text-xl text-cream-100 mb-2">{label}</h2>
                   <p className="text-cream-100/55 text-sm mb-6">{description}</p>
-                  <span className="mt-auto text-xs uppercase tracking-[0.25em] text-gold-500 font-bold">
+                  <span className="mt-auto text-xs uppercase tracking-[0.25em] text-terracotta-600 font-bold">
                     {action}
                   </span>
                   <span className="sr-only">{value}</span>

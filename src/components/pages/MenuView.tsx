@@ -40,9 +40,9 @@ export function MenuView({ locale }: MenuViewProps) {
           {t.home.menu.categories.map((category) => (
             <div
               key={category}
-              className="border border-white/10 bg-white/[0.03] px-6 py-8 flex items-center justify-center text-center transition-colors hover:border-gold-500/40"
+              className="border border-cream-200 bg-charcoal-900 px-6 py-8 rounded-[1.5rem] flex items-center justify-center text-center transition-colors hover:border-gold-500/40"
             >
-              <span className="text-sm tracking-[0.15em] uppercase text-cream-200">
+              <span className="text-sm tracking-[0.15em] uppercase text-bloo-950">
                 {category}
               </span>
             </div>
@@ -51,7 +51,7 @@ export function MenuView({ locale }: MenuViewProps) {
 
         <p className="mt-8 text-sm text-cream-100/50">{page.note}</p>
 
-        <div className="mt-20 border-t border-white/10 pt-16 text-center">
+        <div className="mt-20 border-t border-cream-200 pt-16 text-center">
           <h2 className="font-display text-3xl text-cream-100 mb-3">{page.ctaTitle}</h2>
           <p className="text-cream-100/60 mb-8">{page.ctaBody}</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -62,9 +62,7 @@ export function MenuView({ locale }: MenuViewProps) {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href={`/${locale}/contact`} className="border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-charcoal-950">
-                {t.nav.contact}
-              </Link>
+              <Link href={`/${locale}/contact`}>{t.nav.contact}</Link>
             </Button>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function GlobalError({
 }) {
   return (
     <html lang="en" dir="ltr">
-      <body className="bg-[#121212] text-cream-100">
+      <body className="bg-charcoal-950 text-cream-100">
         <main className="min-h-screen flex items-center justify-center px-6">
           <div className="text-center">
             <Coffee className="w-12 h-12 text-gold-500 mx-auto mb-8" aria-hidden="true" />
@@ -23,7 +23,7 @@ export default function GlobalError({
             <button
               type="button"
               onClick={reset}
-              className="inline-flex items-center justify-center px-10 py-4 bg-gold-500 text-charcoal-950 text-xs uppercase tracking-[0.25em] font-bold hover:bg-cream-100 transition-all"
+              className="inline-flex items-center justify-center px-10 py-4 bg-terracotta-500 text-white rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-terracotta-600 transition-all"
             >
               Try again
             </button>

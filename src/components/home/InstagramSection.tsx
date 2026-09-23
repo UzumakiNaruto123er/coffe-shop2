@@ -44,7 +44,7 @@ export function InstagramSection({ locale }: InstagramSectionProps) {
             href={BUSINESS_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-gold-500 border-b border-gold-500/30 pb-1 hover:border-gold-500 transition-all"
+            className="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-terracotta-600 border-b border-cream-200 pb-1 hover:border-terracotta-500 transition-all"
           >
             {t.home.instagram.cta}
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
@@ -74,8 +74,8 @@ export function InstagramSection({ locale }: InstagramSectionProps) {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#121212]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
-              <InstagramIcon className="absolute bottom-4 left-4 w-5 h-5 text-cream-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
+              <div className="absolute inset-0 bg-gradient-to-t from-bloo-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
+              <InstagramIcon className="absolute bottom-4 left-4 w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
             </article>
           ))}
         </div>
@@ -85,7 +85,7 @@ export function InstagramSection({ locale }: InstagramSectionProps) {
             href={BUSINESS_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gold-500 text-charcoal-950 text-xs uppercase tracking-[0.25em] font-bold hover:bg-cream-100 transition-all"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-terracotta-500 text-white rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-terracotta-600 transition-all"
           >
             <InstagramIcon className="w-5 h-5" />
             {t.home.instagram.cta}

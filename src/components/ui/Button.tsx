@@ -32,10 +32,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles = {
-  primary: 'bg-terracotta-500 text-charcoal-950 hover:bg-terracotta-400 active:bg-terracotta-600 focus:ring-terracotta-500',
-  secondary: 'bg-white/10 text-cream-100 border border-white/15 hover:bg-white/20 active:bg-white/25 focus:ring-white/40',
-  outline: 'border-2 border-terracotta-500 text-terracotta-500 hover:bg-terracotta-500/10 active:bg-terracotta-500/20 focus:ring-terracotta-500',
-  ghost: 'text-cream-300 hover:text-cream-100 hover:bg-white/10 active:bg-white/15 focus:ring-white/40',
+  primary: 'bg-terracotta-500 text-white hover:bg-terracotta-600 active:bg-terracotta-700 focus:ring-terracotta-500',
+  secondary: 'bg-bloo-50 text-bloo-950 border border-bloo-100 hover:bg-bloo-100 active:bg-bloo-200 focus:ring-bloo-300',
+  outline: 'border-2 border-terracotta-500 text-terracotta-500 hover:bg-terracotta-500 hover:text-white active:bg-terracotta-600 focus:ring-terracotta-500',
+  ghost: 'text-cream-400 hover:text-cream-200 hover:bg-white/10 active:bg-white/15 focus:ring-white/40',
   destructive: 'bg-red-600 text-white hover:bg-red-500 active:bg-red-700 focus:ring-red-500',
 };
 
@@ -65,7 +65,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const isDisabled = disabled || loading;
     const buttonClasses = cn(
-      'inline-flex items-center justify-center font-semibold rounded-none transition-all duration-200',
+      'inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200',
       'focus:outline-none focus:ring-2 focus:ring-offset-0',
       'disabled:opacity-50 disabled:cursor-not-allowed',
       'active:scale-[0.98]',

@@ -42,7 +42,7 @@ export function Breadcrumbs({ locale, title, href }: BreadcrumbsProps) {
           <li key={item.url} className="flex items-center gap-2 min-w-0">
             {index > 0 && (
               <ChevronRight
-                className="w-3.5 h-3.5 text-cream-100/30 shrink-0 rtl:-scale-x-100"
+                className="w-3.5 h-3.5 text-cream-300 shrink-0 rtl:-scale-x-100"
                 aria-hidden="true"
               />
             )}

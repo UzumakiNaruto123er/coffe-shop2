@@ -53,8 +53,8 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
 
 const variantStyles = {
   default: 'bg-charcoal-950',
-  alternate: 'bg-charcoal-800',
-  dark: 'bg-charcoal-950 text-cream-100',
+  alternate: 'bg-charcoal-900',
+  dark: 'bg-bloo-950 text-white',
 };
 
 const sectionPaddingStyles = {

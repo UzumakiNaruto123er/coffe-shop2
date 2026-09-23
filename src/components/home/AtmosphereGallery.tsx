@@ -1,13 +1,12 @@
 'use client';
 
-import { SafeImage as Image } from '@/components/ui/SafeImage';
 import Link from 'next/link';
-import { MapPin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
+import { SafeImage } from '@/components/ui/SafeImage';
 import { getDictionary } from '@/lib/dictionary';
+import { GALLERY_IMAGES } from '@/lib/data/business';
 import type { Locale } from '@/lib/i18n';
-import { BUSINESS_INFO, GOOGLE_MAPS } from '@/lib/data/business';
 
 interface AtmosphereGalleryProps {
   locale: Locale;
@@ -17,48 +16,56 @@ export function AtmosphereGallery({ locale }: AtmosphereGalleryProps) {
   const t = getDictionary(locale);
 
   return (
-    <Section id="about" padding="lg" aria-labelledby="ambiance-title">
+    <Section id="gallery" padding="lg" variant="alternate" aria-labelledby="atmosphere-title">
       <Container size="lg" padding="md">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="relative aspect-[4/3] sm:aspect-[16/11] overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2070&auto=format&fit=crop"
-              alt={t.home.atmosphere.subtitle}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-
-          <div>
-            <span className="eyebrow mb-6">{t.home.atmosphere.eyebrow}</span>
-            <h2 id="ambiance-title" className="display-title font-display font-light text-cream-100">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div className="max-w-2xl">
+            <span className="eyebrow text-cream-500 mb-5">{t.home.atmosphere.eyebrow}</span>
+            <h2 id="atmosphere-title" className="display-title-sm font-display font-extrabold text-bloo-950 text-balance">
               {t.home.atmosphere.title1}{' '}
-              <span className="italic text-gold-500">{t.home.atmosphere.title2}</span>
+              <span className="italic font-medium text-terracotta-500">{t.home.atmosphere.title2}</span>
             </h2>
-            <p className="mt-6 text-lg text-cream-100/65 leading-relaxed measure">
+            <p className="mt-5 text-cream-500 leading-relaxed max-w-xl measure">
               {t.home.atmosphere.subtitle}
             </p>
-            <div className="mt-8 flex items-center gap-3 text-sm text-cream-100/60">
-              <MapPin className="w-4 h-4 text-gold-500" aria-hidden="true" />
-              <a
-                href={GOOGLE_MAPS.directionsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gold-500 transition-colors"
-              >
-                {BUSINESS_INFO.address}
-              </a>
-            </div>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Button variant="outline" size="md" asChild>
-                <Link href={`/${locale}/gallery`}>{t.home.atmosphere.cta}</Link>
-              </Button>
-              <Button variant="secondary" size="md" asChild>
-                <Link href={`/${locale}/about`}>{t.home.contact.ctaCall}</Link>
-              </Button>
-            </div>
           </div>
+          <Link
+            href={`/${locale}/gallery`}
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-terracotta-600 border-b border-cream-200 pb-1 hover:border-terracotta-500 transition-all"
+          >
+            {t.home.atmosphere.cta}
+            <ArrowRight className="w-4 h-4 rtl:rotate-180" aria-hidden="true" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[180px] sm:auto-rows-[240px] gap-4">
+          {GALLERY_IMAGES.slice(0, 5).map((image, index) => (
+            <div
+              key={index}
+              className={
+                index === 0
+                  ? 'col-span-2 row-span-2 md:col-span-1 md:row-span-2 rounded-[1.5rem] overflow-hidden'
+                  : 'rounded-[1.5rem] overflow-hidden'
+              }
+            >
+              <div className="relative w-full h-full group">
+                <SafeImage
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              </div>
+            </div>
+          ))}
+          <Link
+            href={`/${locale}/gallery`}
+            className="rounded-[1.5rem] bg-bloo-950 text-white flex flex-col items-center justify-center gap-3 text-center p-6 transition-colors hover:bg-bloo-800"
+          >
+            <span className="font-display text-lg font-bold">{t.home.atmosphere.cta}</span>
+            <ArrowRight className="w-5 h-5 rtl:rotate-180" aria-hidden="true" />
+          </Link>
         </div>
       </Container>
     </Section>

@@ -39,7 +39,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             id={inputId}
             className={cn(
-              'w-full bg-transparent border-b border-white/15 px-0 py-3',
+              'w-full bg-transparent border-b border-cream-200 px-0 py-3',
               'text-cream-100 placeholder-cream-500/60',
               'focus:outline-none focus:border-terracotta-500',
               'transition-all duration-200',
@@ -47,7 +47,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               icon && 'pl-7',
               error
                 ? 'border-red-500 focus:border-red-500'
-                : 'hover:border-white/30',
+                : 'hover:border-cream-300',
               className
             )}
             aria-invalid={error ? 'true' : 'false'}
@@ -91,14 +91,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, Omit<TextareaHTMLAttribu
           ref={ref}
           id={inputId}
           className={cn(
-            'w-full bg-transparent border-b border-white/15 px-0 py-3 resize-y min-h-[120px]',
+            'w-full bg-transparent border-b border-cream-200 px-0 py-3 resize-y min-h-[120px]',
             'text-cream-100 placeholder-cream-500/60',
             'focus:outline-none focus:border-terracotta-500',
             'transition-all duration-200',
             'disabled:opacity-40 disabled:cursor-not-allowed',
             error
               ? 'border-red-500 focus:border-red-500'
-              : 'hover:border-white/30',
+              : 'hover:border-cream-300',
             className
           )}
           aria-invalid={error ? 'true' : 'false'}

@@ -33,7 +33,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          <div className="lg:col-span-1 border border-gold-500/30 p-10 flex flex-col items-start">
+          <div className="lg:col-span-1 border border-cream-200 bg-charcoal-900 p-10 rounded-[1.5rem] flex flex-col items-start">
             <p className="text-xs uppercase tracking-[0.25em] text-cream-100/60 mb-4">
               {page.overallTitle}
             </p>
@@ -46,7 +46,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
                 const half = !filled && i === fullStars && hasHalfStar;
                 return (
                   <span key={i} className="relative inline-block">
-                    <Star className="w-6 h-6 text-cream-100/25" aria-hidden="true" />
+                    <Star className="w-6 h-6 text-cream-300" aria-hidden="true" />
                     {(filled || half) && (
                       <span className="absolute inset-0 overflow-hidden" style={{ width: half ? '50%' : '100%' }}>
                         <Star className="w-6 h-6 fill-gold-500 text-gold-500" aria-hidden="true" />
@@ -67,7 +67,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
           </div>
 
           <div className="lg:col-span-2 flex items-end">
-            <p className="text-cream-100/60 text-lg leading-relaxed measure border-l border-gold-500/30 pl-6">
+            <p className="text-cream-100/60 text-lg leading-relaxed measure border-l border-cream-300 pl-6">
               {page.note}
             </p>
           </div>

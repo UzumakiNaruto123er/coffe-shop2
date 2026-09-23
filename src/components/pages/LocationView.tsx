@@ -62,9 +62,9 @@ export function LocationView({ locale }: LocationViewProps) {
               href={href}
               target={external ? '_blank' : undefined}
               rel={external ? 'noopener noreferrer' : undefined}
-              className="group border border-white/10 bg-white/[0.03] p-8 transition-colors hover:border-gold-500/40 block"
+              className="group border border-cream-200 bg-charcoal-900 p-8 rounded-[1.5rem] transition-colors hover:border-gold-500/40 block"
             >
-              <Icon className="w-8 h-8 text-gold-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+              <Icon className="w-8 h-8 text-terracotta-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
               <p className="text-xs uppercase tracking-[0.25em] text-cream-500 mb-2">{label}</p>
               <p className="text-cream-100 break-words">{value}</p>
             </a>
