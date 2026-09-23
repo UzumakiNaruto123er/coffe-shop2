@@ -1,0 +1,833 @@
+"Starting Dice & Beans dev server..."
+"Logs: C:\Users\moham\OneDrive\Desktop\dice&beans\dice-beans\dev-server.log"
+Γû▓ Next.js 16.3.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.6:3000
+Γ£ô Ready in 1951ms
+Γ£ô Running next.config.ts took 213ms
+
+Γùï Compiling / ...
+node : ΓÜá metadataBase property in metadata export is not set for resolving social open graph or twitter images,
+using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+Au caractère Ligne:1 : 61
++ ... ns\dice-beans'; node node_modules/next/dist/bin/next dev 2>&1 | Tee-O ...
++                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá metadataBas...ta#metadatabase:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+ GET / 200 in 10.8s (next.js: 9.2s, application-code: 1607ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This
+won't be patched up. This can happen if a SSR-ed Client Component used:
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+https://react.dev/link/hydration-mismatch
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="playfair_d..." dir="ltr">
+                          <head>
+                          <body
+                            className="min-h-full flex flex-col bg-background-cream text-text-primary"
+-                           __processed_e325e972-6d9a-4caf-a783-fc78772fdd12__="true"
+-
+bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            <a>
+                            <Navbar locale="en">
+                              <header className="fixed top-..." role="banner">
+                                <nav className="relative" aria-label="Main navig...">
+                                  <_c size="lg" padding="md">
+                                    <div
+                                      ref={null}
+                                      className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex items-center justify-between h-16 lg:h-20"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <LinkComponent>
+                                        <div
+                                          className="hidden lg:flex items-center gap-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="hidden lg:flex items-center gap-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <_c>
+                                          <_c>
+                                          <a>
+                                          <div
+                                            className="relative"
+                                            role="menubar"
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="lg:hidden flex items-center gap-2"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="relative"
+                                            role="menubar"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                            ...
+                              <Home>
+                                <Hero locale="en">
+                                  <section className="relative m..." aria-labelledby="hero-title">
+                                    <div
+                                      className="absolute inset-0 z-0 relative"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <img>
+                                      <ImagePreload>
+                                      <div
+                                        className="absolute inset-0 bg-gradient-to-b from-text-primary/70
+via-text-pri..."
+-                                       bis_skin_checked="1"
+                                      >
+                                    <div
+                                      className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce"
+                                      aria-hidden="true"
+-                                     bis_skin_checked="1"
+                                    >
+                                    <_c size="lg" padding="md">
+                                      <div
+                                        ref={null}
+                                        className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="relative z-10 text-center py-20"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <h1>
+                                          <p>
+                                          <div
+                                            className="flex flex-col sm:flex-row items-center justify-center gap-4
+mb-..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex items-center justify-center gap-6 mb-12
+animate-fade-in-up..."
+-                                           bis_skin_checked="1"
+                                          >
+                                          <button onClick={function Hero.useCallback[handleDiceClick]} ...>
+                                            <div
+                                              className="w-12 h-12 rounded-full bg-background-cream/20 flex
+items-cent..."
+                                              aria-hidden="true"
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                <QuickInfoBar locale="en">
+                                  <section className="relative -..." aria-label="Quick info...">
+                                    <_c size="lg" padding="md">
+                                      <div
+                                        ref={null}
+                                        className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="grid grid-cols-2 md:grid-cols-5 gap-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                <AboutSection locale="en">
+                                  <_c2 id="about" padding="lg" variant="alternate">
+                                    <section ref={null} id="about" className="w-full bg-...">
+                                      <_c size="lg" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="aspect-[4/5] rounded-2xl overflow-hidden relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="absolute -bottom-6 -right-6 md:-bottom-8 md:-right-8
+bg-bac..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="inline-flex items-center gap-2 text-primary-600
+font-medium..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              <h2>
+                                              <div
+                                                className="prose prose-text-primary max-w-none"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <p>
+                                                <div
+                                                  className="grid sm:grid-cols-2 gap-4"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex items-start gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex items-start gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex items-start gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex items-start gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex items-start gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <div
+                                                    className="flex items-start gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                              ...
+                                <FeaturedMenu locale="en">
+                                  <_c2 id="featured-menu" padding="lg">
+                                    <section ref={null} id="featured-menu" className="w-full bg-...">
+                                      <_c size="lg" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center justify-between mb-10"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                          <div
+                                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <article className="group">
+                                              <_c variant="elevated" padding="none" hover={true}>
+                                                <div
+                                                  ref={null}
+                                                  className="rounded-2xl transition-all duration-300
+bg-background-car..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="relative aspect-[4/3] overflow-hidden relative"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <_c8 className="p-5">
+                                                    <div
+                                                      ref={null}
+                                                      className="p-5"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="flex items-start justify-between gap-3 mb-2"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <p>
+                                                      <div
+                                                        className="flex flex-wrap gap-1.5 mb-3"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                            <article className="group">
+                                              <_c variant="elevated" padding="none" hover={true}>
+                                                <div
+                                                  ref={null}
+                                                  className="rounded-2xl transition-all duration-300
+bg-background-car..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="relative aspect-[4/3] overflow-hidden relative"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <_c8 className="p-5">
+                                                    <div
+                                                      ref={null}
+                                                      className="p-5"
+-                                                     bis_skin_checked="1"
+                                                    >
+                                                      <div
+                                                        className="flex items-start justify-between gap-3 mb-2"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                                      <p>
+                                                      <div
+                                                        className="flex flex-wrap gap-1.5 mb-3"
+-                                                       bis_skin_checked="1"
+                                                      >
+                                          <div
+                                            className="text-center mt-10"
+-                                           bis_skin_checked="1"
+                                          >
+                                <AtmosphereGallery locale="en">
+                                  <_c2 id="atmosphere" padding="lg" variant="alternate">
+                                    <section ref={null} id="atmosphere" className="w-full bg-...">
+                                      <_c size="lg" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="text-center mb-12"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <article className="group rela...">
+                                              <div
+                                                className="aspect-square overflow-hidden rounded-xl relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-t from-text-primary/60
+to-t..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <article className="group rela...">
+                                              <div
+                                                className="aspect-square overflow-hidden rounded-xl relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-t from-text-primary/60
+to-t..."
+-                                               bis_skin_checked="1"
+                                              >
+                                            <article className="group rela...">
+                                              <div
+                                                className="aspect-square overflow-hidden rounded-xl relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-t from-text-primary/60
+to-t..."
+-                                               bis_skin_checked="1"
+                                              >
+                                          <div
+                                            className="text-center mt-10"
+-                                           bis_skin_checked="1"
+                                          >
+                                <ReviewsSection locale="en">
+                                  <_c2 id="reviews" padding="lg">
+                                    <section ref={null} id="reviews" className="w-full bg-...">
+                                      <_c size="lg" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center justify-between mb-10"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="inline-flex items-center gap-2 text-primary-600
+font-medium..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                            ...
+                                          <div
+                                            className="relative"
+                                            onTouchStart={function handleTouchStart}
+                                            onTouchEnd={function handleTouchEnd}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-hide"
+                                              style={{scrollSnapType:"x mandatory",WebkitOverflowScrolling:"touch"}}
+                                              role="list"
+                                              aria-label="Customer reviews"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <article className="flex-shrin..." role="listitem">
+                                                <div
+                                                  className="bg-background-card rounded-2xl p-6 shadow-md
+hover:shadow..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex items-center gap-1 mb-3"
+                                                    aria-label="5 out of 5 stars"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <p>
+                                                  <div
+                                                    className="flex items-center gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="w-10 h-10 rounded-full bg-primary-100 flex
+items-cent..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     S
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <article className="flex-shrin..." role="listitem">
+                                                <div
+                                                  className="bg-background-card rounded-2xl p-6 shadow-md
+hover:shadow..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex items-center gap-1 mb-3"
+                                                    aria-label="5 out of 5 stars"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <p>
+                                                  <div
+                                                    className="flex items-center gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="w-10 h-10 rounded-full bg-primary-100 flex
+items-cent..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     A
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                              <article className="flex-shrin..." role="listitem">
+                                                <div
+                                                  className="bg-background-card rounded-2xl p-6 shadow-md
+hover:shadow..."
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <div
+                                                    className="flex items-center gap-1 mb-3"
+                                                    aria-label="4 out of 5 stars"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                  <p>
+                                                  <div
+                                                    className="flex items-center gap-3"
+-                                                   bis_skin_checked="1"
+                                                  >
+                                                    <div
+                                                      className="w-10 h-10 rounded-full bg-primary-100 flex
+items-cent..."
+-                                                     bis_skin_checked="1"
+                                                    >
++                                                     M
+                                                    <div
+-                                                     bis_skin_checked="1"
+                                                    >
+                                <InstagramSection locale="en">
+                                  <_c2 id="instagram" padding="lg" variant="alternate">
+                                    <section ref={null} id="instagram" className="w-full bg-...">
+                                      <_c size="lg" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center justify-between mb-10"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="inline-flex items-center gap-2 text-primary-600
+font-medium..."
+-                                               bis_skin_checked="1"
+                                              >
+                                              ...
+                                            ...
+                                          <div
+                                            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <article className="aspect-squ...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-t from-text-primary/60
+to-t..."
+                                                aria-hidden="true"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <article className="aspect-squ...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-t from-text-primary/60
+to-t..."
+                                                aria-hidden="true"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <article className="aspect-squ...">
+                                              <img>
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-t from-text-primary/60
+to-t..."
+                                                aria-hidden="true"
+-                                               bis_skin_checked="1"
+                                              >
+                                          <div
+                                            className="text-center mt-10"
+-                                           bis_skin_checked="1"
+                                          >
+                                <ContactCTA locale="en">
+                                  <_c2 id="contact-cta" padding="lg" variant="dark">
+                                    <section ref={null} id="contact-cta" className="w-full bg-...">
+                                      <_c size="lg" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="text-center mb-12"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <a href="tel:+21622..." target={undefined} rel={undefined} ...>
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-br from-primary-500/20
+to-t..."
+                                                aria-hidden="true"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative flex flex-col items-center text-center"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="w-14 h-14 rounded-xl flex items-center justify-center
+mb-..."
+                                                  aria-hidden="true"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <a href="https://ma..." target="_blank" rel="noopener n..." ...>
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-br from-primary-500/20
+to-t..."
+                                                aria-hidden="true"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative flex flex-col items-center text-center"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="w-14 h-14 rounded-xl flex items-center justify-center
+mb-..."
+                                                  aria-hidden="true"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                            <a href="https://ww..." target="_blank" rel="noopener n..." ...>
+                                              <div
+                                                className="absolute inset-0 bg-gradient-to-br from-primary-500/20
+to-t..."
+                                                aria-hidden="true"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative flex flex-col items-center text-center"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <div
+                                                  className="w-14 h-14 rounded-xl flex items-center justify-center
+mb-..."
+                                                  aria-hidden="true"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                ...
+                                          <div
+                                            className="text-center"
+-                                           bis_skin_checked="1"
+                                          >
+                            <Footer locale="en">
+                              <footer className="bg-text-pr..." role="contentinfo">
+                                <_c size="lg" padding="lg">
+                                  <div
+                                    ref={null}
+                                    className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 py-12"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="lg:col-span-1"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <LinkComponent>
+                                        <p>
+                                        <div
+                                          className="space-y-3 text-secondary-400 text-sm"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center gap-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                        <h3>
+                                        <form className="space-y-3" aria-label="Newsletter...">
+                                          <div
+                                            className="relative"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                    <div
+                                      className="border-t border-white/10 pt-8"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex flex-col md:flex-row items-center justify-between gap-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <p>
+                                        <div
+                                          className="flex items-center gap-6"
+-                                         bis_skin_checked="1"
+                                        >
+                  ...
+
+[browser] Image with src "http://localhost:3000/images/hero/hero-1.svg" has "fill" and a height value of 0. This is
+likely because the parent element of the image has not been styled to have a set height.
+ GET /ar 404 in 1610ms (next.js: 1483ms, application-code: 127ms)
+ GET /ar 404 in 322ms (next.js: 47ms, application-code: 274ms)
+[browser] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This
+won't be patched up. This can happen if a SSR-ed Client Component used:
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+https://react.dev/link/hydration-mismatch
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/ar" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{rsc:{...}, ...}}>
+                    <meta>
+                    <__next_viewport_boundary__>
+                    <MetadataWrapper>
+                      <div
+                        hidden={true}
+-                       bis_skin_checked="1"
+                      >
+                    ...
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="playfair_d..." dir="ltr">
+                          <head>
+                          <body
+                            className="min-h-full flex flex-col bg-background-cream text-text-primary"
+-                           __processed_e978d6c5-c3eb-4b4f-b42a-0b5d205cf394__="true"
+-
+bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWll..."
+                          >
+                            <a>
+                            <Navbar locale="en">
+                              <header className="fixed top-..." role="banner">
+                                <nav className="relative" aria-label="Main navig...">
+                                  <_c size="lg" padding="md">
+                                    <div
+                                      ref={null}
+                                      className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex items-center justify-between h-16 lg:h-20"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <LinkComponent>
+                                        <div
+                                          className="hidden lg:flex items-center gap-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="hidden lg:flex items-center gap-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <_c>
+                                          <_c>
+                                          <a>
+                                          <div
+                                            className="relative"
+                                            role="menubar"
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+                                          className="lg:hidden flex items-center gap-2"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="relative"
+                                            role="menubar"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                            ...
+                              <SegmentViewNode type="page" pagePath="not-found.tsx">
+                                <SegmentTrieNode>
+                                <ClientPageRoot Component={function NotFound} serverProvidedParams={{...}}>
+                                  <NotFound params={Promise} searchParams={Promise}>
+                                    <div
+                                      className="min-h-screen flex items-center justify-center bg-background-cream
+px-4"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <_c size="sm" padding="md">
+                                        <div
+                                          ref={null}
+                                          className="mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="text-center py-20"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="inline-flex items-center justify-center w-24 h-24
+rounded-ful..."
+                                              aria-hidden="true"
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                            <Footer locale="en">
+                              <footer className="bg-text-pr..." role="contentinfo">
+                                <_c size="lg" padding="lg">
+                                  <div
+                                    ref={null}
+                                    className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 py-12"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="lg:col-span-1"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <LinkComponent>
+                                        <p>
+                                        <div
+                                          className="space-y-3 text-secondary-400 text-sm"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex items-center gap-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+-                                       bis_skin_checked="1"
+                                      >
+                                        <h3>
+                                        <form className="space-y-3" aria-label="Newsletter...">
+                                          <div
+                                            className="relative"
+-                                           bis_skin_checked="1"
+                                          >
+                                          ...
+                                    <div
+                                      className="border-t border-white/10 pt-8"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex flex-col md:flex-row items-center justify-between gap-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <p>
+                                        <div
+                                          className="flex items-center gap-6"
+-                                         bis_skin_checked="1"
+                                        >
+                  ...
+
+ GET / 200 in 418ms (next.js: 64ms, application-code: 354ms)
