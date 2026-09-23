@@ -20,6 +20,13 @@ export function getOgLocale(locale: string): string {
   return map[locale] ?? 'en_TN';
 }
 
+export const OG_IMAGE = {
+  url: `${SITE_URL}/opengraph-image`,
+  width: 1200,
+  height: 630,
+  alt: "BLOO COFFEE — Specialty Coffee Shop in L'Aouina, Tunis",
+};
+
 export function getLocaleUrl(locale: string, path = ''): string {
   const clean = path.startsWith('/') ? path : `/${path}`;
   return `${SITE_URL}/${locale}${clean === '/' ? '' : clean}`;

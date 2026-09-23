@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getDictionary, type Dictionary } from '@/lib/dictionary';
 import { type Locale, locales } from '@/lib/i18n';
-import { getOgLocale, getLocaleUrl } from '@/lib/site';
+import { getOgLocale, getLocaleUrl, OG_IMAGE } from '@/lib/site';
 
 export function getAlternates(
   locale: Locale,
@@ -40,6 +40,11 @@ export function buildPageMetadata(
       title: meta.title,
       description: meta.description,
       url,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [OG_IMAGE],
     },
   };
 }

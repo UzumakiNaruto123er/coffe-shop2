@@ -35,6 +35,6 @@ export const config = {
      * - favicon.ico and manifest.json
      * - public files: images, icons, sitemap, robots
      */
-    '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|manifest.json|sitemap.xml|robots.txt|images|icons).*)',
+    '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|manifest.json|sitemap.xml|robots.txt|opengraph-image|images|icons).*)',
   ],
 };
