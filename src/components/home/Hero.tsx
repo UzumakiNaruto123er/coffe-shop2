@@ -75,7 +75,7 @@ export function Hero({ locale }: HeroProps) {
           </div>
 
           <div className="relative z-10">
-            <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
               <SafeImage
                 src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop"
                 alt={t.home.hero.subtitle}

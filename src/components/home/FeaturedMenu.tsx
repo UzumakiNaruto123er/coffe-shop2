@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Navigation, Coffee, Droplets, Sparkles, CakeSlice } from 'lucide-react';
+import { Navigation } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { getDictionary } from '@/lib/dictionary';
 import { GOOGLE_MAPS } from '@/lib/data/business';
@@ -11,15 +11,13 @@ interface FeaturedMenuProps {
   locale: Locale;
 }
 
-const CATEGORY_ICONS = [Coffee, Droplets, Sparkles, CakeSlice];
-
 export function FeaturedMenu({ locale }: FeaturedMenuProps) {
   const t = getDictionary(locale);
 
   return (
     <Section padding="lg" aria-labelledby="featured-menu-title">
       <Container size="lg" padding="md">
-        <div className="bg-bloo-950 rounded-[3rem] px-6 sm:px-12 lg:px-16 py-12 sm:py-16 relative overflow-hidden">
+        <div className="bg-bloo-950 rounded-[2rem] px-6 sm:px-12 lg:px-16 py-12 sm:py-16 relative overflow-hidden">
           <div className="bg-noise opacity-40" aria-hidden="true" />
 
           <div className="relative">
@@ -37,25 +35,24 @@ export function FeaturedMenu({ locale }: FeaturedMenuProps) {
             </div>
 
             <div className="mt-12">
-              <p className="text-[0.65rem] uppercase tracking-[0.3em] font-semibold text-bloo-200 mb-6">
+              <p className="text-[0.65rem] uppercase tracking-[0.3em] font-semibold text-bloo-200 mb-4">
                 {t.home.menu.categoriesTitle}
               </p>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {t.home.menu.categories.map((category, index) => {
-                  const Icon = CATEGORY_ICONS[index % CATEGORY_ICONS.length];
-                  return (
-                    <div
-                      key={category}
-                      className="rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-6 transition-colors hover:bg-white/[0.09]"
-                    >
-                      <Icon className="w-5 h-5 text-bloo-200 mb-4" aria-hidden="true" />
-                      <p className="font-display font-semibold text-white text-sm leading-snug">
-                        {category}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
+              <ol className="grid sm:grid-cols-2 gap-x-14">
+                {t.home.menu.categories.map((category, index) => (
+                  <li
+                    key={category}
+                    className="flex items-baseline gap-6 py-6 border-b border-white/10"
+                  >
+                    <span className="font-display text-4xl font-extrabold text-bloo-200/40 leading-none">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="font-display text-lg font-semibold text-white leading-snug">
+                      {category}
+                    </span>
+                  </li>
+                ))}
+              </ol>
             </div>
 
             <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6">

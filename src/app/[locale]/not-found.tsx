@@ -38,7 +38,7 @@ export default function LocaleNotFound() {
 
           <Button variant="primary" size="lg" asChild>
             <Link href={`/${locale}`}>
-              <ArrowLeft className="w-5 h-5 mr-2" aria-hidden="true" />
+              <ArrowLeft className="w-5 h-5 rtl:rotate-180" aria-hidden="true" />
               {t.notFound.backHome}
             </Link>
           </Button>

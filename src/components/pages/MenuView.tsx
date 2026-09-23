@@ -21,12 +21,14 @@ export function MenuView({ locale }: MenuViewProps) {
     <Section id="menu" padding="xl">
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.menu} href="/menu" />
-        <div className="max-w-3xl mb-14">
-          <span className="eyebrow mb-4">{page.tagline}</span>
-          <h1 className="display-title font-display font-extrabold text-bloo-950 mb-8">
-            {page.title1} <span className="italic font-medium text-terracotta-500">{page.title2}</span>
+        <div className="max-w-3xl mb-16">
+          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+            {page.tagline}
+          </span>
+          <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
+            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
           </h1>
-          <p className="text-xl text-cream-500 leading-relaxed measure">{page.intro}</p>
+          <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.intro}</p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">

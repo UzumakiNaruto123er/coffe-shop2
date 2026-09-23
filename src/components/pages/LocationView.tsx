@@ -79,7 +79,7 @@ export function LocationView({ locale }: LocationViewProps) {
           <Button variant="primary" size="lg" asChild className="w-full sm:w-auto">
             <a href={GOOGLE_MAPS.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3">
               {page.ctaDirections}
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              <ArrowRight className="w-4 h-4 rtl:rotate-180" aria-hidden="true" />
             </a>
           </Button>
         </div>

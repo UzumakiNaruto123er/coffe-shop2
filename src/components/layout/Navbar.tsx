@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, Fragment, useCallback } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, MapPin, Phone, Globe, Clock } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Globe } from 'lucide-react';
 import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/Button';
@@ -108,15 +108,8 @@ export function Navbar({ locale }: NavbarProps) {
                   BLOO{' '}
                   <span className="text-terracotta-500 font-light italic">Coffee</span>
                 </span>
-                <span className="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-[0.35em] text-cream-400 mt-0.5 flex items-center gap-1.5">
-                  <span className="inline-flex items-center gap-1.5">
-                    {BUSINESS_INFO.neighborhood}
-                  </span>
-                  <span className="w-1 h-1 rounded-full bg-cream-300" aria-hidden="true" />
-                  <span className="inline-flex items-center gap-1">
-                    <Clock className="w-2.5 h-2.5" aria-hidden="true" />
-                    {BUSINESS_INFO.hours.label}
-                  </span>
+                <span className="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-[0.35em] text-cream-400 mt-0.5">
+                  {BUSINESS_INFO.neighborhood}
                 </span>
               </Link>
             </div>
@@ -229,13 +222,8 @@ export function Navbar({ locale }: NavbarProps) {
                     BLOO{' '}
                     <span className="text-terracotta-500 font-light italic">Coffee</span>
                   </Link>
-                  <span className="text-[0.5rem] uppercase tracking-[0.35em] text-cream-400 mt-1 flex items-center gap-1.5">
+                  <span className="text-[0.5rem] uppercase tracking-[0.35em] text-cream-400 mt-1">
                     {BUSINESS_INFO.neighborhood}
-                    <span className="w-1 h-1 rounded-full bg-cream-300" aria-hidden="true" />
-                    <span className="inline-flex items-center gap-1">
-                      <Clock className="w-2.5 h-2.5" aria-hidden="true" />
-                      {BUSINESS_INFO.hours.label}
-                    </span>
                   </span>
                 </div>
                 <button
@@ -257,9 +245,9 @@ export function Navbar({ locale }: NavbarProps) {
                         onClick={closeMobileMenu}
                         aria-current={isActive(href) ? 'page' : undefined}
                         className={cn(
-                          'block px-4 py-3 min-h-11 text-sm uppercase tracking-[0.2em] transition-colors',
+                          'block px-4 py-3 min-h-11 text-sm uppercase tracking-[0.2em] rounded-lg transition-colors',
                           isActive(href)
-                            ? 'text-terracotta-500'
+                            ? 'bg-bloo-100 text-bloo-800 font-semibold'
                             : 'text-cream-300 hover:text-cream-100'
                         )}
                       >

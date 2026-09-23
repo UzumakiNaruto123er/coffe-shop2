@@ -44,7 +44,7 @@ export function AboutView({ locale }: AboutViewProps) {
           </div>
 
           <div className="grid grid-cols-2 gap-4 self-start">
-            <div className="border border-gold-500/30 p-6 md:p-8">
+            <div className="border border-gold-500/30 p-6 md:p-8 rounded-[1.5rem]">
               <div className="flex items-center gap-2 mb-2">
                 <Star className="w-5 h-5 fill-gold-500 text-gold-500" aria-hidden="true" />
                 <span className="font-display text-4xl font-light text-gold-500">{page.ratingValue}</span>

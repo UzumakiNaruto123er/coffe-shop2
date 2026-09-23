@@ -98,7 +98,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
               className={cn(
                 'px-4 py-2 text-xs uppercase tracking-[0.2em] rounded-full transition-colors',
                 activeCategory === key
-                  ? 'bg-bloo-50 text-bloo-800 font-semibold'
+                  ? 'bg-bloo-100 text-bloo-800 font-semibold'
                   : 'text-cream-500 hover:text-bloo-800'
               )}
             >
