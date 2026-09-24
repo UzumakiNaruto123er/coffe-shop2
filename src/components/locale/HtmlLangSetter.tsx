@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { type Locale, localeDirections } from '@/lib/i18n';
 
-const STORAGE_KEY = 'dicebeans-locale';
+const STORAGE_KEY = 'bloo-locale';
 
 /**
  * Keeps the document `<html>` lang/dir attributes in sync with the

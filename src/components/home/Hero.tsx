@@ -1,13 +1,11 @@
-'use client';
-
 import Link from 'next/link';
-import { Navigation, Clock, Star } from 'lucide-react';
+import { Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SafeImage } from '@/components/ui/SafeImage';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
-import { GOOGLE_MAPS, BUSINESS_INFO } from '@/lib/data/business';
+import { GOOGLE_MAPS } from '@/lib/data/business';
 
 interface HeroProps {
   locale: Locale;
@@ -25,8 +23,8 @@ export function Hero({ locale }: HeroProps) {
       <Container size="lg" padding="md">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center py-16 sm:py-20 lg:py-24">
           <div className="relative z-10">
-            <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] font-semibold text-terracotta-600 mb-8">
-              <span className="w-10 h-px bg-terracotta-500" aria-hidden="true" />
+            <span className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.35em] font-semibold text-navy-600 mb-8">
+              <span className="w-10 h-px bg-navy-500" aria-hidden="true" />
               {t.home.hero.badge}
             </span>
             <h1
@@ -34,7 +32,7 @@ export function Hero({ locale }: HeroProps) {
               className="text-clamp-hero font-display font-extrabold text-bloo-950 max-w-xl text-balance tracking-[-0.02em]"
             >
               {t.home.hero.title1}{' '}
-              <span className="italic font-medium text-terracotta-500">
+              <span className="italic font-medium text-navy-500">
                 {t.home.hero.title2}
               </span>
             </h1>
@@ -59,18 +57,8 @@ export function Hero({ locale }: HeroProps) {
               </Button>
             </div>
 
-            <div className="mt-12 flex flex-wrap items-center gap-x-3 gap-y-2 text-[0.7rem] uppercase tracking-[0.25em] text-cream-500">
-              <span>
-                {t.home.hero.servicesHint.split('·').map((chip) => chip.trim()).join('  ·  ')}
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-bloo-700">
-                <Star className="w-3 h-3 fill-current" aria-hidden="true" />
-                {BUSINESS_INFO.rating.toFixed(1)}
-              </span>
-              <span className="inline-flex items-center gap-1.5 text-bloo-700">
-                <Clock className="w-3 h-3" aria-hidden="true" />
-                {BUSINESS_INFO.hours.label}
-              </span>
+            <div className="mt-12 text-[0.7rem] uppercase tracking-[0.25em] text-cream-500">
+              {t.home.hero.servicesHint}
             </div>
           </div>
 
@@ -85,18 +73,6 @@ export function Hero({ locale }: HeroProps) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bloo-950/20 to-transparent" aria-hidden="true" />
-            </div>
-            <div className="absolute -bottom-6 start-6 bg-charcoal-950 border border-cream-200 rounded-3xl px-7 py-5 shadow-xl hidden sm:block">
-              <p className="text-[0.6rem] uppercase tracking-[0.3em] font-semibold text-cream-400 mb-1">
-                {t.home.quickInfo.ratingLabel}
-              </p>
-              <p className="font-display text-2xl font-extrabold text-bloo-950">
-                {BUSINESS_INFO.rating.toFixed(1)}
-                <span className="text-sm font-medium text-cream-400 ms-1.5">/ 5</span>
-              </p>
-              <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-500 mt-0.5">
-                {BUSINESS_INFO.reviewCount} · Google
-              </p>
             </div>
           </div>
         </div>

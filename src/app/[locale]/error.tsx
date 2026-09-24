@@ -19,7 +19,7 @@ export default function LocaleError({
   return (
     <main className="min-h-[60vh] flex items-center justify-center px-4">
       <div className="text-center">
-        <p className="font-display text-7xl text-gold-500 mb-8" aria-hidden="true">
+        <p className="font-display text-7xl text-azure-500 mb-8" aria-hidden="true">
           !
         </p>
         <h1 className="font-display font-light text-4xl text-cream-100 mb-4">

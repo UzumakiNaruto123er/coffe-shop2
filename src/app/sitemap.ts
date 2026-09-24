@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
-import { locales, defaultLocale } from '@/lib/i18n';
+import { locales } from '@/lib/i18n';
 
 const PAGES = [
   '/menu',
@@ -27,16 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   };
 
-  add('/', 1);
   for (const locale of locales) {
-    if (locale === defaultLocale) continue;
     add(`/${locale}`, 1);
-  }
-
-  for (const page of PAGES) {
-    add(page, 0.7);
-    for (const locale of locales) {
-      if (locale === defaultLocale) continue;
+    for (const page of PAGES) {
       add(`/${locale}${page}`, 0.7);
     }
   }

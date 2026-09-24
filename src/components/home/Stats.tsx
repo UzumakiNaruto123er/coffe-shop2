@@ -1,8 +1,5 @@
-'use client';
-
 import { Container, Section } from '@/components/ui/Container';
 import { getDictionary } from '@/lib/dictionary';
-import { BUSINESS_INFO } from '@/lib/data/business';
 import type { Locale } from '@/lib/i18n';
 
 interface StatsProps {
@@ -12,8 +9,6 @@ interface StatsProps {
 export function Stats({ locale }: StatsProps) {
   const t = getDictionary(locale);
   const items = [
-    { value: BUSINESS_INFO.rating.toFixed(1), label: t.home.stats.ratingLabel },
-    { value: String(BUSINESS_INFO.reviewCount), label: t.home.stats.reviewsLabel },
     { value: t.home.stats.priceValue, label: t.home.stats.priceLabel },
     { value: t.home.stats.hoursValue, label: t.home.stats.hoursLabel },
   ];
@@ -21,7 +16,7 @@ export function Stats({ locale }: StatsProps) {
   return (
     <Section padding="sm" variant="alternate">
       <Container size="lg" padding="md">
-        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 border-y border-cream-200 py-12">
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-10 border-y border-cream-200 py-12 max-w-xl">
           {items.map((item) => (
             <div key={item.label}>
               <dt className="text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-cream-500 mb-2">

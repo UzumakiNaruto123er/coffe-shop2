@@ -29,7 +29,7 @@ export function MapSection({ locale }: MapSectionProps) {
             <span className="eyebrow mb-6">{t.home.map.eyebrow}</span>
             <h2 className="display-title font-display font-light text-cream-100">
               {t.home.map.title1}{' '}
-              <span className="italic text-gold-500">{t.home.map.title2}</span>
+              <span className="italic text-azure-500">{t.home.map.title2}</span>
             </h2>
 
             <address className="not-italic mt-8 text-lg text-cream-100/80 leading-relaxed">
@@ -40,7 +40,7 @@ export function MapSection({ locale }: MapSectionProps) {
             </address>
 
             <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-cream-200 bg-charcoal-900 px-5 py-4">
-              <Clock className="w-5 h-5 text-terracotta-500" aria-hidden="true" />
+              <Clock className="w-5 h-5 text-navy-500" aria-hidden="true" />
               <div>
                 <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-400 mb-1">
                   {BUSINESS_INFO.hours.label}
@@ -79,9 +79,9 @@ export function MapSection({ locale }: MapSectionProps) {
                   href={href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noopener noreferrer' : undefined}
-                  className="group border border-cream-200 bg-charcoal-900 px-5 py-5 transition-colors hover:border-gold-500/40 block"
+                  className="group border border-cream-200 bg-charcoal-900 px-5 py-5 transition-colors hover:border-azure-500/40 block"
                 >
-                  <Icon className="w-5 h-5 text-terracotta-500 mb-3" aria-hidden="true" />
+                  <Icon className="w-5 h-5 text-navy-500 mb-3" aria-hidden="true" />
                   <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-400 mb-1">
                     {label}
                   </p>

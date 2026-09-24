@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
@@ -23,7 +21,7 @@ export function AtmosphereGallery({ locale }: AtmosphereGalleryProps) {
             <span className="eyebrow text-cream-500 mb-5">{t.home.atmosphere.eyebrow}</span>
             <h2 id="atmosphere-title" className="display-title-sm font-display font-extrabold text-bloo-950 text-balance">
               {t.home.atmosphere.title1}{' '}
-              <span className="italic font-medium text-terracotta-500">{t.home.atmosphere.title2}</span>
+              <span className="italic font-medium text-navy-500">{t.home.atmosphere.title2}</span>
             </h2>
             <p className="mt-5 text-cream-500 leading-relaxed max-w-xl measure">
               {t.home.atmosphere.subtitle}
@@ -31,7 +29,7 @@ export function AtmosphereGallery({ locale }: AtmosphereGalleryProps) {
           </div>
           <Link
             href={`/${locale}/gallery`}
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-terracotta-600 border-b border-cream-200 pb-1 hover:border-terracotta-500 transition-all"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold text-navy-600 border-b border-cream-200 pb-1 hover:border-navy-500 transition-all"
           >
             {t.home.atmosphere.cta}
             <ArrowRight className="w-4 h-4 rtl:rotate-180" aria-hidden="true" />

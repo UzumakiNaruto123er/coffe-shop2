@@ -1,5 +1,3 @@
-'use client';
-
 import { MapPin, Phone, Camera, ArrowRight } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -46,11 +44,11 @@ export function LocationView({ locale }: LocationViewProps) {
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.location} href="/location" />
         <div className="max-w-3xl mb-16">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+          <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
             {page.tagline}
           </span>
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
+            {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
           <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.arrivalDesc}</p>
         </div>
@@ -62,9 +60,9 @@ export function LocationView({ locale }: LocationViewProps) {
               href={href}
               target={external ? '_blank' : undefined}
               rel={external ? 'noopener noreferrer' : undefined}
-              className="group border border-cream-200 bg-charcoal-900 p-8 rounded-[1.5rem] transition-colors hover:border-gold-500/40 block"
+              className="group border border-cream-200 bg-charcoal-900 p-8 rounded-[1.5rem] transition-colors hover:border-azure-500/40 block"
             >
-              <Icon className="w-8 h-8 text-terracotta-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+              <Icon className="w-8 h-8 text-navy-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
               <p className="text-xs uppercase tracking-[0.25em] text-cream-500 mb-2">{label}</p>
               <p className="text-cream-100 break-words">{value}</p>
             </a>

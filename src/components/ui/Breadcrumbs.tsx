@@ -49,12 +49,12 @@ export function Breadcrumbs({ locale, title, href }: BreadcrumbsProps) {
             {index < items.length - 1 ? (
               <Link
                 href={`/${locale}`}
-                className="text-cream-100/50 hover:text-gold-500 transition-colors truncate"
+                className="text-cream-100/50 hover:text-azure-500 transition-colors truncate"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-gold-500 truncate" aria-current="page">
+              <span className="text-azure-500 truncate" aria-current="page">
                 {item.label}
               </span>
             )}

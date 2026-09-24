@@ -76,11 +76,11 @@ export function GalleryView({ locale }: GalleryViewProps) {
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.gallery} href="/gallery" />
         <div className="max-w-3xl mb-12">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+          <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
             {page.tagline}
           </span>
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
+            {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
           <p className="text-cream-100/50">{page.disclaimer}</p>
         </div>
@@ -146,7 +146,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
             type="button"
             onClick={closeLightbox}
             aria-label={page.close}
-            className="absolute top-4 right-4 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-gold-500 hover:text-gold-500 transition-colors"
+            className="absolute top-4 right-4 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-azure-500 hover:text-azure-500 transition-colors"
           >
             <X className="w-5 h-5" aria-hidden="true" />
           </button>
@@ -155,7 +155,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
             type="button"
             onClick={prevImage}
             aria-label={page.prev}
-            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-gold-500 hover:text-gold-500 transition-colors"
+            className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-azure-500 hover:text-azure-500 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 rtl:-scale-x-100" aria-hidden="true" />
           </button>
@@ -179,7 +179,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
             type="button"
             onClick={nextImage}
             aria-label={page.next}
-            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-gold-500 hover:text-gold-500 transition-colors"
+            className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center w-11 h-11 border border-white/25 text-white hover:border-azure-500 hover:text-azure-500 transition-colors"
           >
             <ChevronRight className="w-5 h-5 rtl:-scale-x-100" aria-hidden="true" />
           </button>

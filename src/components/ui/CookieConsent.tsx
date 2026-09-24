@@ -6,7 +6,7 @@ import { Cookie } from 'lucide-react';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
 
-const STORAGE_KEY = 'dicebeans-cookie-consent';
+const STORAGE_KEY = 'bloo-cookie-consent';
 
 const listeners = new Set<() => void>();
 

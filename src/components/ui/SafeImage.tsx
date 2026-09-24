@@ -24,7 +24,7 @@ export function SafeImage({ alt, className, ...props }: ImageProps) {
           className
         )}
       >
-        <Coffee className="w-10 h-10 text-terracotta-500/40" aria-hidden="true" />
+        <Coffee className="w-10 h-10 text-navy-500/40" aria-hidden="true" />
       </div>
     );
   }

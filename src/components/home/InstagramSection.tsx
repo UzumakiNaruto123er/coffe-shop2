@@ -1,5 +1,3 @@
-'use client';
-
 import { SafeImage as Image } from '@/components/ui/SafeImage';
 import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { Container, Section } from '@/components/ui/Container';
@@ -44,7 +42,7 @@ export function InstagramSection({ locale }: InstagramSectionProps) {
             href={BUSINESS_INFO.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-terracotta-600 border-b border-cream-200 pb-1 hover:border-terracotta-500 transition-all"
+            className="hidden sm:inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-navy-600 border-b border-cream-200 pb-1 hover:border-navy-500 transition-all"
           >
             {t.home.instagram.cta}
             <svg className="w-4 h-4 rtl:-scale-x-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

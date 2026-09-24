@@ -78,16 +78,16 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.contact} href="/contact" />
         <div className="max-w-3xl mb-16">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+          <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
             {page.tagline}
           </span>
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
+            {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
           <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.subtitle}</p>
         </div>
 
-        <p className="text-sm text-cream-100/50 border-l-2 border-gold-500/40 pl-4 mb-12 max-w-2xl">
+        <p className="text-sm text-cream-100/50 border-l-2 border-azure-500/40 pl-4 mb-12 max-w-2xl">
           {page.note}
         </p>
 
@@ -171,12 +171,12 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
                   href={href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noopener noreferrer' : undefined}
-                  className="group border border-cream-200 bg-charcoal-900 p-8 flex flex-col rounded-[1.5rem] transition-colors hover:border-gold-500/40"
+                  className="group border border-cream-200 bg-charcoal-900 p-8 flex flex-col rounded-[1.5rem] transition-colors hover:border-azure-500/40"
                 >
-                  <Icon className="w-7 h-7 text-terracotta-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                  <Icon className="w-7 h-7 text-navy-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
                   <h2 className="font-display text-xl text-cream-100 mb-2">{label}</h2>
                   <p className="text-cream-100/55 text-sm mb-6">{description}</p>
-                  <span className="mt-auto text-xs uppercase tracking-[0.25em] text-terracotta-600 font-bold">
+                  <span className="mt-auto text-xs uppercase tracking-[0.25em] text-navy-600 font-bold">
                     {action}
                   </span>
                   <span className="sr-only">{value}</span>

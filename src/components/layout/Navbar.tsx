@@ -106,7 +106,7 @@ export function Navbar({ locale }: NavbarProps) {
               >
                 <span className="font-display font-extrabold tracking-tight whitespace-nowrap text-base sm:text-xl lg:text-2xl text-bloo-950">
                   BLOO{' '}
-                  <span className="text-terracotta-500 font-light italic">Coffee</span>
+                  <span className="text-navy-500 font-light italic">Coffee</span>
                 </span>
                 <span className="text-[0.5rem] sm:text-[0.55rem] uppercase tracking-[0.35em] text-cream-400 mt-0.5">
                   {BUSINESS_INFO.neighborhood}
@@ -129,7 +129,7 @@ export function Navbar({ locale }: NavbarProps) {
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream-400 hover:text-terracotta-500 transition-colors"
+                className="text-cream-400 hover:text-navy-500 transition-colors"
                 aria-label={`${t.nav.follow} Instagram`}
               >
                 <InstagramIcon className="w-5 h-5" />
@@ -183,7 +183,7 @@ export function Navbar({ locale }: NavbarProps) {
               </div>
               <button
                 ref={hamburgerRef}
-                className="p-2.5 -m-1.5 min-h-10 min-w-10 flex items-center justify-center text-bloo-950 hover:text-terracotta-500 transition-colors"
+                className="p-2.5 -m-1.5 min-h-10 min-w-10 flex items-center justify-center text-bloo-950 hover:text-navy-500 transition-colors"
                 onClick={() => setIsMobileMenuOpen(true)}
                 aria-label={t.nav.openMenu}
                 aria-expanded={isMobileMenuOpen}
@@ -220,7 +220,7 @@ export function Navbar({ locale }: NavbarProps) {
                     className="font-display font-extrabold tracking-tight text-xl text-bloo-950 block"
                   >
                     BLOO{' '}
-                    <span className="text-terracotta-500 font-light italic">Coffee</span>
+                    <span className="text-navy-500 font-light italic">Coffee</span>
                   </Link>
                   <span className="text-[0.5rem] uppercase tracking-[0.35em] text-cream-400 mt-1">
                     {BUSINESS_INFO.neighborhood}
@@ -229,7 +229,7 @@ export function Navbar({ locale }: NavbarProps) {
                 <button
                   ref={closeMenuRef}
                   onClick={closeMobileMenu}
-                  className="min-h-10 min-w-10 flex items-center justify-center text-cream-400 hover:text-terracotta-500 transition-colors"
+                  className="min-h-10 min-w-10 flex items-center justify-center text-cream-400 hover:text-navy-500 transition-colors"
                   aria-label={t.nav.closeMenu}
                 >
                   <X className="w-5 h-5" aria-hidden="true" />
@@ -302,7 +302,7 @@ export function Navbar({ locale }: NavbarProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={closeMobileMenu}
-                  className="flex items-center justify-center gap-2 py-2.5 text-xs uppercase tracking-[0.2em] text-cream-400 hover:text-terracotta-500 transition-colors"
+                  className="flex items-center justify-center gap-2 py-2.5 text-xs uppercase tracking-[0.2em] text-cream-400 hover:text-navy-500 transition-colors"
                 >
                   <InstagramIcon className="w-4 h-4" />
                   {t.nav.follow} Instagram

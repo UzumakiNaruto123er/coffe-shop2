@@ -1,5 +1,3 @@
-'use client';
-
 import { Star } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { getDictionary } from '@/lib/dictionary';
@@ -22,7 +20,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             <span className="eyebrow mb-6">{t.home.reviews.eyebrow}</span>
             <h2 className="display-title font-display font-light text-cream-100">
               {t.home.reviews.title1}{' '}
-              <span className="italic text-gold-500">{t.home.reviews.title2}</span>
+              <span className="italic text-azure-500">{t.home.reviews.title2}</span>
             </h2>
             <p className="mt-6 text-lg text-cream-100/65 leading-relaxed measure">
               {t.home.reviews.subtitle}
@@ -33,7 +31,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             href={GOOGLE_MAPS.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full max-w-md mx-auto overflow-hidden border border-cream-200 bg-charcoal-900 p-8 backdrop-blur-sm block transition-all hover:border-gold-500/40 group"
+            className="w-full max-w-md mx-auto overflow-hidden border border-cream-200 bg-charcoal-900 p-8 backdrop-blur-sm block transition-all hover:border-azure-500/40 group"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
@@ -48,7 +46,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-gold-500 font-bold text-sm">
+                <span className="text-azure-500 font-bold text-sm">
                   {BUSINESS_INFO.rating.toFixed(1)}
                 </span>
                 <div className="flex" aria-hidden="true">
@@ -57,7 +55,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
                       key={i}
                       className={
                         i < fullStars
-                          ? 'w-4 h-4 fill-gold-500 text-gold-500'
+                          ? 'w-4 h-4 fill-azure-500 text-azure-500'
                           : 'w-4 h-4 text-cream-200'
                       }
                     />
@@ -68,7 +66,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             <p className="text-xs uppercase tracking-[0.2em] text-cream-500 mb-5">
               {BUSINESS_INFO.reviewCount} — {t.home.reviews.ratingSub}
             </p>
-            <span className="block text-center text-xs uppercase tracking-[0.2em] text-gold-600 group-hover:text-gold-500 transition-colors border border-gold-500/40 px-6 py-3">
+            <span className="block text-center text-xs uppercase tracking-[0.2em] text-azure-600 group-hover:text-azure-500 transition-colors border border-azure-500/40 px-6 py-3">
               {t.home.reviews.cta}
             </span>
           </a>

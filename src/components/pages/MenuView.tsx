@@ -1,6 +1,4 @@
-'use client';
-
-import { Phone, Coffee, Droplets, Sparkles, CakeSlice } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { getDictionary } from '@/lib/dictionary';
@@ -11,62 +9,76 @@ interface MenuViewProps {
   locale: Locale;
 }
 
-const CATEGORY_ICONS = [Coffee, Droplets, Sparkles, CakeSlice];
-
 export function MenuView({ locale }: MenuViewProps) {
   const t = getDictionary(locale);
   const page = t.menuPage;
+
+  const categoryDescriptions = Object.fromEntries(
+    t.home.offerings.cards.map((card) => [card.title, card.description])
+  );
 
   return (
     <Section id="menu" padding="xl">
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.menu} href="/menu" />
         <div className="max-w-3xl mb-16">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+          <span className="text-navy-500 text-xs uppercase tracking-[0.4em] mb-4 block">
             {page.tagline}
           </span>
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
+            {page.title1} <span className="italic text-navy-500">{page.title2}</span>
           </h1>
           <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.intro}</p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <div className="lg:col-span-4">
-            <p className="eyebrow mb-6">{page.categoriesTitle}</p>
-            <div className="rounded-[1.5rem] bg-bloo-950 text-white p-8 sm:p-10">
-              <h2 className="font-display text-2xl font-bold">{page.ctaTitle}</h2>
-              <p className="mt-3 text-white/70 text-sm leading-relaxed">{page.ctaBody}</p>
+            <div className="rounded-2xl border border-cream-200 bg-charcoal-900 p-8 sm:p-10">
+              <h2 className="font-display text-2xl font-bold text-cream-100">{page.ctaTitle}</h2>
+              <p className="mt-3 text-cream-100/70 text-sm leading-relaxed">{page.ctaBody}</p>
               <a
                 href={BUSINESS_INFO.phoneHref}
-                className="inline-flex items-center gap-3 mt-7 px-6 py-3 bg-white text-bloo-950 rounded-full text-xs uppercase tracking-[0.2em] font-bold hover:bg-bloo-50 transition-all"
+                className="inline-flex items-center gap-3 mt-7 px-6 py-3 bg-navy-500 text-white rounded-full text-xs uppercase tracking-[0.2em] font-bold hover:bg-navy-600 transition-all"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 {BUSINESS_INFO.phone}
               </a>
-              <p className="mt-6 text-xs text-white/50 leading-relaxed">{page.note}</p>
+              <p className="mt-6 text-xs text-cream-100/50 leading-relaxed">{page.note}</p>
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-cream-200 bg-white p-8 sm:p-10">
+              <p className="text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-cream-500 mb-4">
+                {page.alsoLabel}
+              </p>
+              <ul className="space-y-3">
+                {page.extras.map((item) => (
+                  <li key={item} className="font-display text-lg font-semibold text-bloo-950">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
           <div className="lg:col-span-8">
-            <ol className="border-y border-cream-200 divide-y divide-cream-200">
-              {t.home.menu.categories.map((category, index) => {
-                const Icon = CATEGORY_ICONS[index % CATEGORY_ICONS.length];
+            <ul className="border-t border-cream-200">
+              {t.home.menu.categories.map((category) => {
+                const description = categoryDescriptions[category];
                 return (
-                  <li key={category} className="flex items-center gap-5 sm:gap-7 py-6">
-                    <span className="font-display text-2xl sm:text-3xl font-extrabold text-cream-300 w-10 sm:w-12 shrink-0">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span className="w-11 h-11 shrink-0 rounded-xl bg-bloo-50 text-bloo-700 flex items-center justify-center">
-                      <Icon className="w-5 h-5" aria-hidden="true" />
-                    </span>
-                    <span className="font-display text-xl sm:text-2xl font-bold text-bloo-950">
+                  <li
+                    key={category}
+                    className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-8 py-7 border-b border-cream-200"
+                  >
+                    <span className="font-display text-2xl font-bold text-bloo-950 sm:w-72 shrink-0">
                       {category}
                     </span>
+                    {description ? (
+                      <span className="text-cream-500 leading-relaxed">{description}</span>
+                    ) : null}
                   </li>
                 );
               })}
-            </ol>
+            </ul>
           </div>
         </div>
       </Container>

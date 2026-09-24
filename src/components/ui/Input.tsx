@@ -29,7 +29,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         <div className="relative">
           {icon && (
             <div
-              className="absolute left-0 top-1/2 -translate-y-1/2 text-terracotta-500 pointer-events-none"
+              className="absolute left-0 top-1/2 -translate-y-1/2 text-navy-500 pointer-events-none"
               aria-hidden="true"
             >
               {icon}
@@ -41,7 +41,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             className={cn(
               'w-full bg-transparent border-b border-cream-200 px-0 py-3',
               'text-cream-100 placeholder-cream-500/60',
-              'focus:outline-none focus:border-terracotta-500',
+              'focus:outline-none focus:border-navy-500',
               'transition-all duration-200',
               'disabled:opacity-40 disabled:cursor-not-allowed',
               icon && 'pl-7',
@@ -93,7 +93,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, Omit<TextareaHTMLAttribu
           className={cn(
             'w-full bg-transparent border-b border-cream-200 px-0 py-3 resize-y min-h-[120px]',
             'text-cream-100 placeholder-cream-500/60',
-            'focus:outline-none focus:border-terracotta-500',
+            'focus:outline-none focus:border-navy-500',
             'transition-all duration-200',
             'disabled:opacity-40 disabled:cursor-not-allowed',
             error

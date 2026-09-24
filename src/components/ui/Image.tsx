@@ -54,7 +54,7 @@ export function OptimizedImage({
 export function ImageWithFallback({
   src,
   alt,
-  fallbackSrc = '/images/placeholder.jpg',
+  fallbackSrc = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='600'><rect width='100%25' height='100%25' fill='%23dce6ee'/></svg>",
   width,
   height,
   priority = false,

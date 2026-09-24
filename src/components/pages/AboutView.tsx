@@ -1,5 +1,3 @@
-'use client';
-
 import { Coffee, Bean, Users, CupSoda, ShoppingBag, Sparkles, Star } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -29,11 +27,11 @@ export function AboutView({ locale }: AboutViewProps) {
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.about} href="/about" />
         <div className="max-w-3xl mb-16">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+          <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
             {page.tagline}
           </span>
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
+            {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
         </div>
 
@@ -44,10 +42,10 @@ export function AboutView({ locale }: AboutViewProps) {
           </div>
 
           <div className="grid grid-cols-2 gap-4 self-start">
-            <div className="border border-gold-500/30 p-6 md:p-8 rounded-[1.5rem]">
+            <div className="border border-azure-500/30 p-6 md:p-8 rounded-[1.5rem]">
               <div className="flex items-center gap-2 mb-2">
-                <Star className="w-5 h-5 fill-gold-500 text-gold-500" aria-hidden="true" />
-                <span className="font-display text-4xl font-light text-gold-500">{page.ratingValue}</span>
+                <Star className="w-5 h-5 fill-azure-500 text-azure-500" aria-hidden="true" />
+                <span className="font-display text-4xl font-light text-azure-500">{page.ratingValue}</span>
               </div>
               <p className="text-xs uppercase tracking-[0.2em] text-cream-100/60">{page.ratingLabel}</p>
             </div>
@@ -63,8 +61,8 @@ export function AboutView({ locale }: AboutViewProps) {
           {page.features.map((feature) => {
             const Icon = FEATURE_ICONS[feature.icon as keyof typeof FEATURE_ICONS] ?? Coffee;
             return (
-              <div key={feature.title} className="group border border-cream-200 bg-charcoal-900 p-8 rounded-[1.5rem] transition-colors hover:border-gold-500/40">
-                <Icon className="w-8 h-8 text-gold-500 mb-6" aria-hidden="true" />
+              <div key={feature.title} className="group border border-cream-200 bg-charcoal-900 p-8 rounded-[1.5rem] transition-colors hover:border-azure-500/40">
+                <Icon className="w-8 h-8 text-azure-500 mb-6" aria-hidden="true" />
                 <h3 className="font-display text-xl text-cream-100 mb-2">{feature.title}</h3>
                 <p className="text-cream-100/55 text-sm leading-relaxed">{feature.description}</p>
               </div>
@@ -78,7 +76,7 @@ export function AboutView({ locale }: AboutViewProps) {
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href={BUSINESS_INFO.phoneHref}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-terracotta-500 text-white rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-terracotta-600 transition-all w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-navy-500 text-white rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-navy-600 transition-all w-full sm:w-auto justify-center"
             >
               {t.nav.call} — {BUSINESS_INFO.phone}
             </a>

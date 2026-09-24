@@ -17,12 +17,12 @@ export default function LocaleNotFound() {
     <div className="min-h-screen flex items-center justify-center bg-charcoal-950 px-4">
       <Container size="sm" padding="md">
         <div className="text-center py-20">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.5em] mb-6 block">
+          <span className="text-azure-500 text-xs uppercase tracking-[0.5em] mb-6 block">
             {t.notFound.badge}
           </span>
 
           <div className="inline-flex items-center justify-center w-24 h-24 mb-8" aria-hidden="true">
-            <CupSoda className="w-16 h-16 text-terracotta-500/40" />
+            <CupSoda className="w-16 h-16 text-navy-500/40" />
           </div>
 
           <h1 className="font-display text-7xl font-extralight italic text-cream-100 mb-4">

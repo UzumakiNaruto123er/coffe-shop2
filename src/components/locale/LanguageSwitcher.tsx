@@ -12,7 +12,7 @@ interface LanguageSwitcherProps {
   onSelect?: () => void;
 }
 
-const STORAGE_KEY = 'dicebeans-locale';
+const STORAGE_KEY = 'bloo-locale';
 
 /**
  * Real, working language switcher. Builds localized URLs that keep the

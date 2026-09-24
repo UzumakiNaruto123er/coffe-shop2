@@ -24,8 +24,8 @@ export function BackToTop({ locale }: { locale: Locale }) {
       aria-label={t.common.backToTop}
       className={cn(
         'no-print fixed bottom-6 right-6 z-40 inline-flex items-center justify-center w-12 h-12 rounded-full',
-        'border border-terracotta-500 bg-terracotta-500 text-white shadow-lg backdrop-blur',
-        'transition-all duration-300 hover:bg-terracotta-600 hover:border-terracotta-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-terracotta-500',
+        'border border-navy-500 bg-navy-500 text-white shadow-lg backdrop-blur',
+        'transition-all duration-300 hover:bg-navy-600 hover:border-navy-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-500',
         visible ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 translate-y-2'
       )}
     >

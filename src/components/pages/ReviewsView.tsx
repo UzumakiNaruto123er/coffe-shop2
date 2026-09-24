@@ -1,5 +1,3 @@
-'use client';
-
 import { Star } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -24,11 +22,11 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.reviews} href="/reviews" />
         <div className="max-w-3xl mb-16">
-          <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+          <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
             {page.tagline}
           </span>
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-gold-500">{page.title2}</span>
+            {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
         </div>
 
@@ -37,7 +35,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
             <p className="text-xs uppercase tracking-[0.25em] text-cream-100/60 mb-4">
               {page.overallTitle}
             </p>
-            <p className="font-display font-light text-7xl text-gold-500 mb-4">
+            <p className="font-display font-light text-7xl text-azure-500 mb-4">
               {BUSINESS_INFO.rating.toFixed(1)}
             </p>
             <div className="flex gap-1 mb-3" aria-hidden="true">
@@ -49,7 +47,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
                     <Star className="w-6 h-6 text-cream-300" aria-hidden="true" />
                     {(filled || half) && (
                       <span className="absolute inset-0 overflow-hidden" style={{ width: half ? '50%' : '100%' }}>
-                        <Star className="w-6 h-6 fill-gold-500 text-gold-500" aria-hidden="true" />
+                        <Star className="w-6 h-6 fill-azure-500 text-azure-500" aria-hidden="true" />
                       </span>
                     )}
                   </span>

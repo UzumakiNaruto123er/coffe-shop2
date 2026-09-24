@@ -18,7 +18,7 @@ export function LegalView({ locale, legalKey }: LegalViewProps) {
     <Section id="legal" padding="xl">
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={page.title} href={`/${legalKey}`} />
-        <span className="text-gold-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+        <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
           {dict.legal.lastUpdated}: {dict.legal.updatedDate}
         </span>
         <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">{page.title}</h1>

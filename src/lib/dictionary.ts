@@ -118,14 +118,6 @@ const en = {
       ctaDirections: 'Get directions',
       servicesHint: 'Coffee · Baked Goods · Fresh Daily',
     },
-    quickInfo: {
-      coffeeLabel: 'Espresso & filter',
-      coffeeValue: 'Brewed to order all day',
-      ratingLabel: 'On Google',
-      locationLabel: 'Find us',
-      locationValue: 'L\'Aouina · Tunis',
-      directionsValue: 'Rés. Houssem, Ave Mongi Slim',
-    },
     offerings: {
       eyebrow: 'Our offerings',
       title1: 'Crafted with',
@@ -141,12 +133,12 @@ const en = {
         {
           icon: 'pour',
           title: 'Pour-Over Rituals',
-          description: 'Slow-brewed, single-serve filter coffee prepared in front of you.',
+          description: 'Slow-brewed filter coffee prepared in front of you.',
         },
         {
           icon: 'blend',
           title: 'Signature Blends',
-          description: 'House specialties, from sweet lattes to bold iced coffees.',
+          description: 'House signatures, served hot or iced.',
         },
         {
           icon: 'pastry',
@@ -172,10 +164,6 @@ const en = {
       cta: 'Contact us',
     },
     stats: {
-      ratingValue: '4.9',
-      ratingLabel: 'Google rating',
-      reviewsValue: '25',
-      reviewsLabel: 'Google reviews',
       priceValue: '10–20 TND',
       priceLabel: 'per person',
       hoursValue: '09:00 – 23:00',
@@ -237,6 +225,8 @@ const en = {
       'Our selection changes from time to time. Discover today\'s drinks and pastries when you visit us.',
     categoriesTitle: 'You\'ll usually find',
     note: 'Menu items, prices and availability may change.',
+    alsoLabel: 'Also on the menu',
+    extras: ['Cold Brew', 'Takeaway'],
     ctaTitle: 'Questions about our menu?',
     ctaBody: 'Call us or drop by — we\'d love to help.',
   },
@@ -455,7 +445,7 @@ const en = {
         },
         {
           heading: '2. Cookies we use',
-          body: 'This site uses a small number of technical cookies to remember your preferred language, and anonymized analytics cookies if enabled.',
+          body: 'This site uses a small number of technical cookies to remember your preferred language. It does not use tracking or advertising cookies.',
         },
         {
           heading: '3. Managing cookies',
@@ -617,14 +607,7 @@ const fr: Dictionary = {
       ctaDirections: 'Obtenir l\'itinéraire',
       servicesHint: 'Café · Pâtisseries · Frais Chaque Jour',
     },
-    quickInfo: {
-      coffeeLabel: 'Espresso & filtre',
-      coffeeValue: 'Préparé à la commande toute la journée',
-      ratingLabel: 'Sur Google',
-      locationLabel: 'Nous trouver',
-      locationValue: 'L\'Aouina · Tunis',
-      directionsValue: 'Rés. Houssem, Av. Mongi Slim',
-    },
+    
     offerings: {
       eyebrow: 'Nos offres',
       title1: 'Préparés Avec',
@@ -640,12 +623,12 @@ const fr: Dictionary = {
         {
           icon: 'pour',
           title: 'Rituels Pour-Over',
-          description: 'Café filtre infusé lentement, portion par portion, devant vous.',
+          description: 'Café filtre infusé lentement devant vous.',
         },
         {
           icon: 'blend',
           title: 'Mélanges Signature',
-          description: 'Nos spécialités maison, des lattes doux aux cafés glacés intenses.',
+          description: 'Nos mélanges signature, servis chauds ou glacés.',
         },
         {
           icon: 'pastry',
@@ -671,10 +654,6 @@ const fr: Dictionary = {
       cta: 'Contactez-nous',
     },
     stats: {
-      ratingValue: '4,9',
-      ratingLabel: 'Note Google',
-      reviewsValue: '25',
-      reviewsLabel: 'Avis Google',
       priceValue: '10–20 TND',
       priceLabel: 'par personne',
       hoursValue: '09:00 – 23:00',
@@ -736,6 +715,8 @@ const fr: Dictionary = {
       'Notre sélection évolue de temps en temps. Découvrez les boissons et pâtisseries du jour lors de votre visite.',
     categoriesTitle: 'Vous trouverez généralement',
     note: 'Les plats, prix et disponibilités peuvent changer.',
+    alsoLabel: 'Aussi au menu',
+    extras: ['Cold Brew', 'À emporter'],
     ctaTitle: 'Des questions sur notre menu ?',
     ctaBody: 'Appelez-nous ou passez nous voir — nous serons ravis de vous aider.',
   },
@@ -954,7 +935,7 @@ const fr: Dictionary = {
         },
         {
           heading: '2. Cookies utilisés',
-          body: 'Ce site utilise quelques cookies techniques pour mémoriser votre langue préférée, et éventuellement des cookies d\'analyse anonymisés.',
+          body: 'Ce site utilise quelques cookies techniques pour mémoriser votre langue préférée. Il n\'utilise aucun cookie de suivi ou de publicité.',
         },
         {
           heading: '3. Gérer les cookies',
@@ -1108,14 +1089,7 @@ const ar: Dictionary = {
       ctaDirections: 'احصل على الاتجاهات',
       servicesHint: 'قهوة · مخبوزات · طازج يومياً',
     },
-    quickInfo: {
-      coffeeLabel: 'إسبريسو & فلتر',
-      coffeeValue: 'يُحضَّر عند الطلب طوال اليوم',
-      ratingLabel: 'على Google',
-      locationLabel: 'موقعنا',
-      locationValue: 'العوينة · تونس',
-      directionsValue: 'ر. حسّام، شارع منجي سليم',
-    },
+    
     offerings: {
       eyebrow: 'ما نقدّمه',
       title1: 'صُنع',
@@ -1131,12 +1105,12 @@ const ar: Dictionary = {
         {
           icon: 'pour',
           title: 'طقوس البور-أوفر',
-          description: 'قهوة فلتر تُسكب ببطء، كوباً بكوب، أمامك مباشرة.',
+          description: 'قهوة فلتر تُسكب ببطء أمامك مباشرة.',
         },
         {
           icon: 'blend',
           title: 'الخلطات المميزة',
-          description: 'مشروباتنا الخاصة، من اللاتيه الحلو إلى القهوة المثلجة القوية.',
+          description: 'خلطاتنا المميزة، تُسكب طازجة، ساخنة أو مثلجة.',
         },
         {
           icon: 'pastry',
@@ -1157,10 +1131,6 @@ const ar: Dictionary = {
       cta: 'اتصل بنا',
     },
     stats: {
-      ratingValue: '4.9',
-      ratingLabel: 'تقييم Google',
-      reviewsValue: '25',
-      reviewsLabel: 'تقييم على Google',
       priceValue: '10–20 د.ت',
       priceLabel: 'للشخص',
       hoursValue: '09:00 – 23:00',
@@ -1222,6 +1192,8 @@ const ar: Dictionary = {
       'تتغير تشكيلتنا من وقت لآخر. اكتشف مشروبات ومعجنات اليوم عند زيارتك لنا.',
     categoriesTitle: 'ستجد عادةً',
     note: 'قد تتغير الأطباق والأسعار والتوفر.',
+    alsoLabel: 'أيضاً في القائمة',
+    extras: ['كولد برو', 'طلب خارجي'],
     ctaTitle: 'أسئلة عن قائمتنا؟',
     ctaBody: 'اتصل بنا أو مرّ علينا — يسعدنا مساعدتك.',
   },
@@ -1434,7 +1406,7 @@ const ar: Dictionary = {
         },
         {
           heading: '2. ملفات الارتباط التي نستخدمها',
-          body: 'يستخدم هذا الموقع عدداً قليلاً من ملفات الارتباط التقنية لتذكر لغتك المفضلة، وربما ملفات ارتباط تحليلات مجهولة المصدر.',
+          body: 'يستخدم هذا الموقع عدداً قليلاً من ملفات الارتباط التقنية لتذكر لغتك المفضلة فقط، ولا يستخدم ملفات ارتباط للتتبع أو الإعلانات.',
         },
         {
           heading: '3. إدارة ملفات الارتباط',

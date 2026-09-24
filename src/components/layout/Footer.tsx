@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { MapPin, Phone } from 'lucide-react';
 import { InstagramIcon } from '@/components/ui/InstagramIcon';
@@ -43,7 +41,7 @@ export function Footer({ locale }: FooterProps) {
             <Link href={`/${locale}`} className="inline-block" aria-label={`${t.brand.name} — ${t.nav.home}`}>
               <span className="font-display font-extrabold tracking-tight text-2xl text-bloo-950">
                 BLOO{' '}
-                <span className="text-terracotta-500 font-light italic">Coffee</span>
+                <span className="text-navy-500 font-light italic">Coffee</span>
               </span>
             </Link>
             <p className="text-sm text-cream-500 mt-5 mb-5 leading-relaxed measure">
@@ -61,7 +59,7 @@ export function Footer({ locale }: FooterProps) {
                   <li key={key}>
                     <Link
                       href={href}
-                      className="text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-terracotta-600 transition-colors"
+                      className="text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-navy-600 transition-colors"
                     >
                       {t.nav[key]}
                     </Link>
@@ -76,29 +74,29 @@ export function Footer({ locale }: FooterProps) {
             <h3 className="eyebrow mb-6">{t.footer.contactTitle}</h3>
             <div className="space-y-4 text-sm text-cream-400">
               <p className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 flex-shrink-0 text-terracotta-500 mt-0.5" aria-hidden="true" />
+                <MapPin className="w-4 h-4 flex-shrink-0 text-navy-500 mt-0.5" aria-hidden="true" />
                 <span className="break-words">{BUSINESS_INFO.address}</span>
               </p>
-              <a href={BUSINESS_INFO.phoneHref} className="flex items-center gap-3 hover:text-terracotta-600 transition-colors">
-                <Phone className="w-4 h-4 flex-shrink-0 text-terracotta-500" aria-hidden="true" />
+              <a href={BUSINESS_INFO.phoneHref} className="flex items-center gap-3 hover:text-navy-600 transition-colors">
+                <Phone className="w-4 h-4 flex-shrink-0 text-navy-500" aria-hidden="true" />
                 <span>{BUSINESS_INFO.phone}</span>
               </a>
               <a
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 hover:text-terracotta-600 transition-colors"
+                className="flex items-center gap-3 hover:text-navy-600 transition-colors"
               >
-                <InstagramIcon className="w-4 h-4 flex-shrink-0 text-terracotta-500" aria-hidden="true" />
+                <InstagramIcon className="w-4 h-4 flex-shrink-0 text-navy-500" aria-hidden="true" />
                 <span>{BUSINESS_INFO.instagram}</span>
               </a>
               <a
                 href={GOOGLE_MAPS.directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 hover:text-terracotta-600 transition-colors"
+                className="flex items-center gap-3 hover:text-navy-600 transition-colors"
               >
-                <MapPin className="w-4 h-4 flex-shrink-0 text-terracotta-500" aria-hidden="true" />
+                <MapPin className="w-4 h-4 flex-shrink-0 text-navy-500" aria-hidden="true" />
                 <span>{t.footer.directions}</span>
               </a>
             </div>
@@ -113,7 +111,7 @@ export function Footer({ locale }: FooterProps) {
                   <li key={key}>
                     <Link
                       href={`/${locale}${href}`}
-                      className="text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-terracotta-600 transition-colors"
+                      className="text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-navy-600 transition-colors"
                     >
                       {t.legal[key].title}
                     </Link>

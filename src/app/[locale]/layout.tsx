@@ -57,7 +57,7 @@ export async function generateMetadata({
     applicationName: 'BLOO COFFEE',
     title: {
       default: dict.meta.home.title,
-      template: '%s | BLOO COFFEE',
+      template: '%s',
     },
     description: dict.meta.home.description,
     robots: {
