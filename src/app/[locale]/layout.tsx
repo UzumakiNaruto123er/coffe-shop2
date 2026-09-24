@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Amiri } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { locales, isValidLocale, localeDirections, type Locale } from '@/lib/i18n';
-import { getOgLocale, getLocaleUrl, SITE_URL, OG_IMAGE } from '@/lib/site';
+import { getOgLocale, getLocaleUrl, SITE_URL, getOgImage } from '@/lib/site';
 import { getDictionary } from '@/lib/dictionary';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -81,11 +81,11 @@ export async function generateMetadata({
       title: dict.meta.home.title,
       description: dict.meta.home.description,
       url: homeUrl,
-      images: [OG_IMAGE],
+      images: [getOgImage(locale)],
     },
     twitter: {
       ...globalTwitter,
-      images: [OG_IMAGE],
+      images: [getOgImage(locale)],
     },
   };
 }

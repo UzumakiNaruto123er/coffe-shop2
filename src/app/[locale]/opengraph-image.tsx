@@ -1,10 +1,4 @@
-import type { Metadata } from 'next';
 import { ImageResponse } from 'next/og';
-import { SITE_URL } from '@/lib/site';
-
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-};
 
 export const alt = "BLOO COFFEE — Specialty Coffee Shop in L'Aouina, Tunis";
 export const size = { width: 1200, height: 630 };
