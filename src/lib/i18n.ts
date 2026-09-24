@@ -36,7 +36,6 @@ export function getLocaleFromPath(pathname: string): Locale {
 }
 
 export function getPathWithLocale(path: string, locale: Locale): string {
-  if (locale === 'en') return path;
   return `/${locale}${path}`;
 }
 
@@ -50,7 +49,7 @@ export function removeLocaleFromPath(pathname: string): string {
 
 export function getLocalizedPath(pathname: string, locale: Locale): string {
   const cleanPath = removeLocaleFromPath(pathname);
-  return locale === 'en' ? cleanPath : `/${locale}${cleanPath}`;
+  return cleanPath === '/' || cleanPath === '' ? `/${locale}` : `/${locale}${cleanPath}`;
 }
 
 export function isValidLocale(locale: string): locale is Locale {

@@ -191,8 +191,12 @@
 }
 
 /* ============================================
-   BASE STYLES
+   BASE STYLES  —  @layer base (Tailwind v4)
+   Custom rules must live in cascade layers so
+   Tailwind's @layer utilities can still win.
    ============================================ */
+
+@layer base {
 
 *,
 *::before,
@@ -304,9 +308,16 @@ select {
   border-width: 0;
 }
 
+:focus:not(:focus-visible) {
+  outline: none;
+}
+}
+
 /* ============================================
-   UTILITY CLASSES
+   CUSTOM COMPONENT CLASSES  —  @layer components
    ============================================ */
+
+@layer components {
 
 /* Comfortable reading measure for long-form text */
 .measure {
@@ -639,12 +650,11 @@ select {
   }
 }
 
-/* Focus styles for accessibility */
-:focus:not(:focus-visible) {
-  outline: none;
 }
 
-/* Print styles */
+/* ============================================
+   PRINT STYLES  —  unlayered, intentionally last
+   ============================================ */
 @media print {
   .no-print,
   nav,

@@ -12,6 +12,10 @@ const securityHeaders = [
     value: 'strict-origin-when-cross-origin',
   },
   {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
   },
@@ -24,7 +28,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com https://api.fontshare.com https://cdn.fontshare.com data:",
       "img-src 'self' blob: data: https://images.unsplash.com https://www.google.com",
       "media-src 'self'",
-      "connect-src 'self' https://analytics.vercel.app",
+      "connect-src 'self'",
       "frame-src https://www.google.com",
       "object-src 'none'",
       "base-uri 'self'",
