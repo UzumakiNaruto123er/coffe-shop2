@@ -59,7 +59,7 @@ export function Footer({ locale }: FooterProps) {
                   <li key={key}>
                     <Link
                       href={href}
-                      className="text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-navy-600 transition-colors"
+                      className="inline-block min-h-6 align-middle text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-navy-600 transition-colors"
                     >
                       {t.nav[key]}
                     </Link>
@@ -77,7 +77,7 @@ export function Footer({ locale }: FooterProps) {
                 <MapPin className="w-4 h-4 flex-shrink-0 text-navy-500 mt-0.5" aria-hidden="true" />
                 <span className="break-words">{BUSINESS_INFO.address}</span>
               </p>
-              <a href={BUSINESS_INFO.phoneHref} className="flex items-center gap-3 hover:text-navy-600 transition-colors">
+              <a href={BUSINESS_INFO.phoneHref} className="flex min-h-6 items-center gap-3 hover:text-navy-600 transition-colors">
                 <Phone className="w-4 h-4 flex-shrink-0 text-navy-500" aria-hidden="true" />
                 <span>{BUSINESS_INFO.phone}</span>
               </a>
@@ -85,7 +85,7 @@ export function Footer({ locale }: FooterProps) {
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 hover:text-navy-600 transition-colors"
+                className="flex min-h-6 items-center gap-3 hover:text-navy-600 transition-colors"
               >
                 <InstagramIcon className="w-4 h-4 flex-shrink-0 text-navy-500" aria-hidden="true" />
                 <span>{BUSINESS_INFO.instagram}</span>
@@ -94,7 +94,7 @@ export function Footer({ locale }: FooterProps) {
                 href={GOOGLE_MAPS.directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 hover:text-navy-600 transition-colors"
+                className="flex min-h-6 items-center gap-3 hover:text-navy-600 transition-colors"
               >
                 <MapPin className="w-4 h-4 flex-shrink-0 text-navy-500" aria-hidden="true" />
                 <span>{t.footer.directions}</span>
@@ -111,7 +111,7 @@ export function Footer({ locale }: FooterProps) {
                   <li key={key}>
                     <Link
                       href={`/${locale}${href}`}
-                      className="text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-navy-600 transition-colors"
+                      className="inline-block min-h-6 align-middle text-xs uppercase tracking-[0.15em] text-cream-400 hover:text-navy-600 transition-colors"
                     >
                       {t.legal[key].title}
                     </Link>

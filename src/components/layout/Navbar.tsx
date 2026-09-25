@@ -129,7 +129,7 @@ export function Navbar({ locale }: NavbarProps) {
                 href={BUSINESS_INFO.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cream-400 hover:text-navy-500 transition-colors"
+                className="inline-flex min-h-6 min-w-6 items-center justify-center text-cream-400 hover:text-navy-500 transition-colors"
                 aria-label={`${t.nav.follow} Instagram`}
               >
                 <InstagramIcon className="w-5 h-5" />

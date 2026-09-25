@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import Link from 'next/link';
 import { Amiri } from 'next/font/google';
 import { CupSoda, ArrowLeft } from 'lucide-react';
 import '@/styles/globals.css';
-import { defaultLocale } from '@/lib/i18n';
+import { defaultLocale, isValidLocale, localeDirections, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/dictionary';
 
 const amiri = Amiri({
@@ -15,8 +16,14 @@ const amiri = Amiri({
   fallback: ['serif'],
 });
 
-export function generateMetadata(): Metadata {
-  const dict = getDictionary(defaultLocale);
+async function resolveLocale(): Promise<Locale> {
+  const requested = (await headers()).get('x-locale');
+  return requested && isValidLocale(requested) ? requested : defaultLocale;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await resolveLocale();
+  const dict = getDictionary(locale);
   return {
     title: dict.meta.notFound.title,
     description: dict.meta.notFound.description,
@@ -24,16 +31,15 @@ export function generateMetadata(): Metadata {
   };
 }
 
-/**
- * Fallback 404 for the rare request that falls outside any locale segment.
- * In practice the locale proxy redirects most requests, so /en/not-found
- * handles 404s; this segment-less document is a self-contained safety net.
- */
-export default function RootNotFound() {
+export default async function RootNotFound() {
+  const locale = await resolveLocale();
+  const dict = getDictionary(locale);
+  const dir = localeDirections[locale];
+
   return (
-    <html lang="en" dir="ltr" className={`${amiri.variable} h-full antialiased`}>
+    <html lang={locale} dir={dir} className={`${amiri.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-charcoal-950 text-cream-100">
-        <div className="flex flex-1 items-center justify-center bg-charcoal-950 px-4" dir="ltr">
+        <div className="flex flex-1 items-center justify-center bg-charcoal-950 px-4" dir={dir}>
           <div className="text-center py-20">
             <span className="text-azure-500 text-xs uppercase tracking-[0.5em] mb-6 block">404</span>
             <div className="inline-flex items-center justify-center w-24 h-24 mb-8" aria-hidden="true">
@@ -41,14 +47,14 @@ export default function RootNotFound() {
             </div>
             <h1 className="font-display text-7xl font-extralight italic text-cream-100 mb-4">404</h1>
             <p className="font-display text-xl font-light text-cream-100/60 mb-10 max-w-md mx-auto">
-              {getDictionary(defaultLocale).notFound.message}
+              {dict.notFound.message}
             </p>
             <Link
-              href={`/${defaultLocale}`}
+              href={`/${locale}`}
               className="inline-flex items-center gap-2 bg-navy-500 text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-navy-600 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-              {getDictionary(defaultLocale).notFound.backHome}
+              <ArrowLeft className="w-4 h-4 rtl:rotate-180" aria-hidden="true" />
+              {dict.notFound.backHome}
             </Link>
           </div>
         </div>

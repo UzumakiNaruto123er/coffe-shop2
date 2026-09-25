@@ -447,6 +447,9 @@ select {
 /* Nav links with accent underline sweep */
 .nav-link {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.75rem;
