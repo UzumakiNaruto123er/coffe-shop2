@@ -1,8 +1,10 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Amiri } from 'next/font/google';
 import { CupSoda, ArrowLeft } from 'lucide-react';
 import '@/styles/globals.css';
 import { defaultLocale } from '@/lib/i18n';
+import { getDictionary } from '@/lib/dictionary';
 
 const amiri = Amiri({
   subsets: ['arabic'],
@@ -12,6 +14,15 @@ const amiri = Amiri({
   preload: true,
   fallback: ['serif'],
 });
+
+export function generateMetadata(): Metadata {
+  const dict = getDictionary(defaultLocale);
+  return {
+    title: dict.meta.notFound.title,
+    description: dict.meta.notFound.description,
+    robots: { index: false, follow: true },
+  };
+}
 
 /**
  * Fallback 404 for the rare request that falls outside any locale segment.
@@ -30,14 +41,14 @@ export default function RootNotFound() {
             </div>
             <h1 className="font-display text-7xl font-extralight italic text-cream-100 mb-4">404</h1>
             <p className="font-display text-xl font-light text-cream-100/60 mb-10 max-w-md mx-auto">
-              This page could not be found.
+              {getDictionary(defaultLocale).notFound.message}
             </p>
             <Link
               href={`/${defaultLocale}`}
               className="inline-flex items-center gap-2 bg-navy-500 text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.25em] font-bold hover:bg-navy-600 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-              Back to BLOO COFFEE
+              {getDictionary(defaultLocale).notFound.backHome}
             </Link>
           </div>
         </div>
