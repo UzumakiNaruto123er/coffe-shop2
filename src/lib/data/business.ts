@@ -57,7 +57,13 @@ export interface GalleryImage {
   src: string;
   alt: string;
   category: 'interior' | 'coffee' | 'food' | 'desserts' | 'atmosphere' | 'events';
-  span?: string;
+  /**
+   * Measured intrinsic aspect ratio of `src`, normalised to a tidy ratio.
+   * Layouts size their frames from this instead of forcing every image into
+   * one fixed box, which previously cropped ~45% off the landscape sources.
+   */
+  width: number;
+  height: number;
 }
 
 /**
@@ -70,97 +76,111 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     src: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop',
     alt: 'Café interior',
     category: 'interior',
-    span: 'lg:col-span-2 xl:col-span-2',
+    width: 1460,
+    height: 1000,
   },
   {
     id: 'g-2',
     src: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1935&auto=format&fit=crop',
     alt: 'Barista pouring latte art',
     category: 'coffee',
-    span: '',
+    width: 1500,
+    height: 1000,
   },
   {
     id: 'g-3',
     src: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=2070&auto=format&fit=crop',
     alt: 'Espresso machine',
     category: 'coffee',
-    span: '',
+    width: 1200,
+    height: 1800,
   },
   {
     id: 'g-4',
     src: 'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=2070&auto=format&fit=crop',
     alt: 'Cozy café seating',
     category: 'interior',
-    span: 'md:col-span-2 lg:col-span-1 xl:col-span-1',
+    width: 1500,
+    height: 1000,
   },
   {
     id: 'g-5',
     src: 'https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=1964&auto=format&fit=crop',
     alt: 'Coffee beans',
     category: 'coffee',
-    span: '',
+    width: 800,
+    height: 1000,
   },
   {
     id: 'g-6',
     src: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=2071&auto=format&fit=crop',
     alt: 'Café atmosphere',
     category: 'atmosphere',
-    span: 'md:col-span-2 lg:col-span-2 xl:col-span-2',
+    width: 1500,
+    height: 1000,
   },
   {
     id: 'g-7',
     src: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop',
     alt: 'Pour over coffee',
     category: 'coffee',
-    span: '',
+    width: 1500,
+    height: 1000,
   },
   {
     id: 'g-8',
     src: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1974&auto=format&fit=crop',
     alt: 'Latte art',
     category: 'coffee',
-    span: '',
+    width: 1200,
+    height: 1800,
   },
   {
     id: 'g-9',
     src: 'https://images.unsplash.com/photo-1572286258217-40142c1c6a70?q=80&w=2070&auto=format&fit=crop',
     alt: 'Coffee served',
     category: 'coffee',
-    span: '',
+    width: 800,
+    height: 1000,
   },
   {
     id: 'g-10',
     src: 'https://images.unsplash.com/photo-1493857671505-72967e2e2760?q=80&w=2070&auto=format&fit=crop',
     alt: 'Brewed coffee',
     category: 'atmosphere',
-    span: 'md:col-span-2 xl:col-span-2',
+    width: 1500,
+    height: 1000,
   },
   {
     id: 'g-11',
     src: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1974&auto=format&fit=crop',
     alt: 'Coffee drinks',
     category: 'coffee',
-    span: '',
+    width: 1200,
+    height: 1800,
   },
   {
     id: 'g-12',
     src: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?q=80&w=2070&auto=format&fit=crop',
     alt: 'Desserts',
     category: 'desserts',
-    span: '',
+    width: 900,
+    height: 1600,
   },
   {
     id: 'g-13',
     src: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=2070&auto=format&fit=crop',
     alt: 'Pastries',
     category: 'desserts',
-    span: '',
+    width: 1250,
+    height: 1000,
   },
   {
     id: 'g-14',
     src: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=2070&auto=format&fit=crop',
     alt: 'Sandwiches',
     category: 'food',
-    span: '',
+    width: 1500,
+    height: 1000,
   },
 ] as const;

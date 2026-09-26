@@ -164,6 +164,7 @@ const en = {
       cta: 'Contact us',
     },
     stats: {
+      eyebrow: 'Good to know',
       priceValue: '10–20 TND',
       priceLabel: 'per person',
       hoursValue: '09:00 – 23:00',
@@ -654,6 +655,7 @@ const fr: Dictionary = {
       cta: 'Contactez-nous',
     },
     stats: {
+      eyebrow: 'Bon à savoir',
       priceValue: '10–20 TND',
       priceLabel: 'par personne',
       hoursValue: '09:00 – 23:00',
@@ -1131,6 +1133,7 @@ const ar: Dictionary = {
       cta: 'اتصل بنا',
     },
     stats: {
+      eyebrow: 'معلومات سريعة',
       priceValue: '10–20 د.ت',
       priceLabel: 'للشخص',
       hoursValue: '09:00 – 23:00',

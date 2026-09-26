@@ -5,7 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { SafeImage } from '@/components/ui/SafeImage';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
-import { GOOGLE_MAPS } from '@/lib/data/business';
+import { GOOGLE_MAPS, GALLERY_IMAGES } from '@/lib/data/business';
 
 interface HeroProps {
   locale: Locale;
@@ -13,6 +13,9 @@ interface HeroProps {
 
 export function Hero({ locale }: HeroProps) {
   const t = getDictionary(locale);
+  // g-7 "Pour over coffee" — the LCP image, served through the shared set so
+  // its frame matches the source instead of cropping into a fixed 4:3 box.
+  const heroImage = GALLERY_IMAGES.find((image) => image.id === 'g-7') ?? GALLERY_IMAGES[6];
 
   return (
     <section
@@ -63,9 +66,12 @@ export function Hero({ locale }: HeroProps) {
           </div>
 
           <div className="relative z-10">
-            <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
+            <div
+              className="relative rounded-[2rem] overflow-hidden shadow-xl"
+              style={{ aspectRatio: `${heroImage.width} / ${heroImage.height}` }}
+            >
               <SafeImage
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop"
+                src={heroImage.src}
                 alt={t.home.hero.subtitle}
                 fill
                 priority

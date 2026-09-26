@@ -2,8 +2,7 @@ import { SafeImage as Image } from '@/components/ui/SafeImage';
 import { InstagramIcon } from '@/components/ui/InstagramIcon';
 import { Container, Section } from '@/components/ui/Container';
 import { getDictionary } from '@/lib/dictionary';
-import { BUSINESS_INFO } from '@/lib/data/business';
-import { cn } from '@/lib/utils';
+import { BUSINESS_INFO, GALLERY_IMAGES, type GalleryImage } from '@/lib/data/business';
 import type { Locale } from '@/lib/i18n';
 
 interface InstagramSectionProps {
@@ -11,19 +10,18 @@ interface InstagramSectionProps {
 }
 
 /**
- * Illustrative café photography (not actual business posts).
+ * Illustrative café photography (not actual business posts) — see the
+ * disclaimer above the grid. Drawn from the shared set so each tile can keep
+ * its own aspect ratio and its own alt text; the previous square frames
+ * cropped away ~56% of every source, and all six shared one alt string.
  */
-const GRID_IMAGES = [
-  'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=800&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop',
-];
+const GRID_IMAGE_IDS = ['g-4', 'g-5', 'g-10', 'g-12', 'g-3', 'g-9'];
 
 export function InstagramSection({ locale }: InstagramSectionProps) {
   const t = getDictionary(locale);
+  const gridImages = GRID_IMAGE_IDS.map((id) => GALLERY_IMAGES.find((image) => image.id === id)).filter(
+    (image): image is GalleryImage => Boolean(image)
+  );
 
   return (
     <Section id="instagram" padding="lg" variant="alternate">
@@ -55,22 +53,19 @@ export function InstagramSection({ locale }: InstagramSectionProps) {
           {t.home.instagram.subtitle}
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1">
-          {GRID_IMAGES.map((src, index) => (
+        <div className="columns-2 md:columns-3 lg:columns-6 gap-1">
+          {gridImages.map((image) => (
             <article
-              key={index}
-              className={cn(
-                'relative aspect-square overflow-hidden group',
-                index === 0 && 'lg:col-span-2 lg:row-span-2',
-                index === 1 && 'lg:col-span-2'
-              )}
+              key={image.id}
+              className="relative mb-1 break-inside-avoid overflow-hidden group bg-charcoal-950"
+              style={{ aspectRatio: `${image.width} / ${image.height}` }}
             >
               <Image
-                src={src}
-                alt={t.galleryPage.disclaimer}
+                src={image.src}
+                alt={image.alt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 17vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-bloo-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
               <InstagramIcon className="absolute bottom-4 left-4 w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />

@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { SafeImage } from '@/components/ui/SafeImage';
 import { getDictionary } from '@/lib/dictionary';
+import { GALLERY_IMAGES } from '@/lib/data/business';
 import type { Locale } from '@/lib/i18n';
 
 interface OfferingsProps {
@@ -12,6 +13,11 @@ interface OfferingsProps {
 export function Offerings({ locale }: OfferingsProps) {
   const t = getDictionary(locale);
   const [featured, ...supporting] = t.home.offerings.cards;
+  // g-3 "Espresso machine" — the featured card is "Espresso & Filter", so this
+  // is the one image that belongs here. It is 0.67 portrait, so the frame
+  // follows the image rather than cropping half its height into a 4:3 box;
+  // max-w-md keeps it from towering over the column.
+  const featuredImage = GALLERY_IMAGES.find((image) => image.id === 'g-3') ?? GALLERY_IMAGES[2];
 
   return (
     <Section id="offerings" padding="lg" variant="alternate" aria-labelledby="offerings-title">
@@ -41,9 +47,12 @@ export function Offerings({ locale }: OfferingsProps) {
             </h2>
 
             <article className="mt-10">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <div
+                className="relative mx-auto max-w-md lg:mx-0 rounded-2xl overflow-hidden"
+                style={{ aspectRatio: `${featuredImage.width} / ${featuredImage.height}` }}
+              >
                 <SafeImage
-                  src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop"
+                  src={featuredImage.src}
                   alt={featured.title}
                   fill
                   className="object-cover"
@@ -60,7 +69,7 @@ export function Offerings({ locale }: OfferingsProps) {
                 <p className="mt-3 text-cream-500 leading-relaxed max-w-md">{featured.description}</p>
                 <Link
                   href={`/${locale}/menu`}
-                  className="group inline-flex items-center gap-2 mt-6 text-xs uppercase tracking-[0.25em] font-bold text-navy-500 border-b border-navy-500/40 pb-1 hover:border-navy-500 transition-colors"
+                  className="group inline-flex items-center gap-2 mt-6 py-1 min-h-6 text-xs uppercase tracking-[0.25em] font-bold text-navy-500 border-b border-navy-500/40 hover:border-navy-500 transition-colors"
                 >
                   {t.home.hero.ctaMenu}
                   <ArrowRight

@@ -107,24 +107,22 @@ export function GalleryView({ locale }: GalleryViewProps) {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
           {visible.map((image, index) => (
             <button
               key={image.id}
               type="button"
               onClick={() => setLightboxIndex(index)}
               aria-label={`${page.open} — ${image.alt}`}
-              className={cn(
-                'relative aspect-[4/5] overflow-hidden group text-left',
-                image.span
-              )}
+              className="relative block w-full mb-4 break-inside-avoid overflow-hidden group text-left rounded-[1.25rem]"
+              style={{ aspectRatio: `${image.width} / ${image.height}` }}
             >
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
               />
               <span className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-bloo-950/80 to-transparent text-xs uppercase tracking-[0.2em] text-white">
                 {image.alt}

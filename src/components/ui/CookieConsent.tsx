@@ -1,12 +1,12 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
-import { Cookie } from 'lucide-react';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
 
 const STORAGE_KEY = 'bloo-cookie-consent';
+const EXIT_MS = 280;
 
 const listeners = new Set<() => void>();
 
@@ -30,46 +30,63 @@ function subscribe(callback: () => void) {
 }
 
 export function CookieConsent({ locale }: { locale: Locale }) {
+  // Server snapshot is "accepted" so the strip is never in the SSR HTML and
+  // hydration can never mismatch; it mounts client-side straight into its
+  // entrance animation.
   const accepted = useSyncExternalStore(subscribe, getConsent, () => true);
+  const [closing, setClosing] = useState(false);
+  const [gone, setGone] = useState(false);
   const t = getDictionary(locale);
 
-  const accept = () => {
+  // Unmount only after the exit animation has played out.
+  useEffect(() => {
+    if (!closing) return;
+    const timer = window.setTimeout(() => setGone(true), EXIT_MS);
+    return () => window.clearTimeout(timer);
+  }, [closing]);
+
+  const accept = useCallback(() => {
     try {
       window.localStorage.setItem(STORAGE_KEY, 'accepted');
     } catch {
-      // ignore
+      // storage unavailable — dismiss for this page view only
     }
+    setClosing(true);
     notify();
-  };
+  }, []);
 
-  if (accepted) return null;
+  const show = !gone && (!accepted || closing);
+  if (!show) return null;
 
   return (
     <aside
-      role="dialog"
+      className="cookie-strip no-print"
+      data-state={closing ? 'exit' : 'enter'}
+      role="region"
       aria-label={t.common.cookieBanner.title}
-      aria-live="polite"
-      className="no-print fixed bottom-0 inset-x-0 z-50 border-t border-white/10 bg-bloo-950/95 backdrop-blur p-5"
+      data-testid="cookie-strip"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center">
-        <div className="flex items-start gap-4 flex-1 min-w-0">
-          <Cookie className="w-5 h-5 text-bloo-200 shrink-0 mt-0.5" aria-hidden="true" />
-          <div>
-            <p className="font-display text-lg text-white mb-1">{t.common.cookieBanner.title}</p>
-            <p className="text-sm text-white/70">{t.common.cookieBanner.message}</p>
-          </div>
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 sm:px-6 md:flex-row md:items-center md:gap-8 md:py-5">
+        <div className="min-w-0 flex-1">
+          <p className="text-[0.65rem] font-semibold uppercase tracking-[0.28em] text-bloo-200">
+            {t.common.cookieBanner.title}
+          </p>
+          <p className="mt-1.5 max-w-2xl text-[0.8125rem] leading-relaxed text-white/80">
+            {t.common.cookieBanner.message}
+          </p>
         </div>
-        <div className="flex items-center gap-4 shrink-0">
+
+        <div className="flex shrink-0 items-center gap-4 md:gap-6">
           <Link
             href={`/${locale}/cookies`}
-            className="text-bloo-200 text-xs uppercase tracking-[0.2em] hover:underline"
+            className="nav-link text-bloo-200 hover:text-white"
           >
             {t.common.cookieBanner.learnMore}
           </Link>
           <button
             type="button"
             onClick={accept}
-            className="px-6 py-3 bg-white text-bloo-950 text-xs uppercase tracking-[0.2em] font-bold rounded-full hover:bg-bloo-100 transition-colors"
+            className="inline-flex min-h-11 items-center justify-center rounded-md bg-white px-6 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-bloo-950 transition-colors hover:bg-bloo-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
             {t.common.cookieBanner.accept}
           </button>
