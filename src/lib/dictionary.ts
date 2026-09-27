@@ -169,6 +169,7 @@ const en = {
       priceLabel: 'per person',
       hoursValue: '09:00 – 23:00',
       hoursLabel: 'open daily',
+      note: 'Two things worth knowing before you set off. Everything else is confirmed at the counter.',
     },
     atmosphere: {
       eyebrow: 'Visual stories',
@@ -660,6 +661,7 @@ const fr: Dictionary = {
       priceLabel: 'par personne',
       hoursValue: '09:00 – 23:00',
       hoursLabel: 'ouvert tous les jours',
+      note: 'Deux informations utiles avant de partir. Le reste se confirme au comptoir.',
     },
     atmosphere: {
       eyebrow: 'Histoires visuelles',
@@ -1138,6 +1140,7 @@ const ar: Dictionary = {
       priceLabel: 'للشخص',
       hoursValue: '09:00 – 23:00',
       hoursLabel: 'مفتوح يومياً',
+      note: 'معلومتان تستحقان المعرفة قبل الانطلاق. ما عدا ذلك يُؤكَّد عند المنضدة.',
     },
     atmosphere: {
       eyebrow: 'حكايات بصرية',

@@ -4,16 +4,28 @@ import { MapPin, Phone, Camera, Navigation, Clock } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { MapEmbed } from '@/components/ui/MapEmbed';
+import { SafeImage } from '@/components/ui/SafeImage';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
-import { BUSINESS_INFO, GOOGLE_MAPS } from '@/lib/data/business';
+import { BUSINESS_INFO, GALLERY_IMAGES, GOOGLE_MAPS } from '@/lib/data/business';
 
 interface MapSectionProps {
   locale: Locale;
 }
 
+/**
+ * "Join us in L'Aouina" was 792px tall with no photography at all — a heading,
+ * an address and a map. The address block now carries a landscape photograph
+ * (g-4 "Cozy café seating") so the section reads as a place you can picture,
+ * and the three contact channels dropped their card borders into a quiet
+ * inline row so the section gains a photograph without becoming a stack of
+ * boxes.
+ */
 export function MapSection({ locale }: MapSectionProps) {
   const t = getDictionary(locale);
+  // g-4 "Cozy café seating" (1500x1000) — a seating shot, which is what a
+  // visitor is actually deciding about when they ask where the place is.
+  const photo = GALLERY_IMAGES.find((image) => image.id === 'g-4') ?? GALLERY_IMAGES[3];
 
   const channels = [
     { icon: Phone, label: t.common.callUs, value: BUSINESS_INFO.phone, href: BUSINESS_INFO.phoneHref, external: false },
@@ -31,6 +43,19 @@ export function MapSection({ locale }: MapSectionProps) {
               {t.home.map.title1}{' '}
               <span className="italic text-azure-500">{t.home.map.title2}</span>
             </h2>
+
+            <figure
+              className="mt-8 relative w-full overflow-hidden rounded-2xl"
+              style={{ aspectRatio: `${photo.width} / ${photo.height}` }}
+            >
+              <SafeImage
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </figure>
 
             <address className="not-italic mt-8 text-lg text-cream-100/80 leading-relaxed">
               <span className="font-display text-2xl text-cream-100 block mb-2">
@@ -71,30 +96,36 @@ export function MapSection({ locale }: MapSectionProps) {
                 </a>
               </Button>
             </div>
-
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {channels.map(({ icon: Icon, label, value, href, external }) => (
-                <a
-                  key={href}
-                  href={href}
-                  target={external ? '_blank' : undefined}
-                  rel={external ? 'noopener noreferrer' : undefined}
-                  className="group border border-cream-200 bg-charcoal-900 px-5 py-5 transition-colors hover:border-azure-500/40 block"
-                >
-                  <Icon className="w-5 h-5 text-navy-500 mb-3" aria-hidden="true" />
-                  <p className="text-[0.6rem] uppercase tracking-[0.2em] text-cream-400 mb-1">
-                    {label}
-                  </p>
-                  <p className="text-sm text-cream-100 break-words">{value}</p>
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="lg:sticky lg:top-28">
             <MapEmbed title={t.locationPage.mapTitle} eager />
           </div>
         </div>
+
+        {/* Contact channels: a quiet inline row, not three bordered cards. */}
+        <ul className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-x-10 gap-y-6 border-t border-cream-200 pt-8">
+          {channels.map(({ icon: Icon, label, value, href, external }) => (
+            <li key={href}>
+              <a
+                href={href}
+                target={external ? '_blank' : undefined}
+                rel={external ? 'noopener noreferrer' : undefined}
+                className="group flex items-start gap-4"
+              >
+                <Icon className="w-5 h-5 text-navy-500 mt-0.5 shrink-0" aria-hidden="true" />
+                <span>
+                  <span className="block text-[0.6rem] uppercase tracking-[0.2em] text-cream-400 mb-1">
+                    {label}
+                  </span>
+                  <span className="block text-sm text-cream-100 break-words group-hover:text-azure-500 transition-colors">
+                    {value}
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </Container>
     </Section>
   );
