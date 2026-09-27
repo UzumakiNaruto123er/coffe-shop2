@@ -52,7 +52,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Explore */}
           <div>
-            <h3 className="eyebrow mb-6">{t.footer.exploreTitle}</h3>
+            <h2 className="eyebrow mb-6">{t.footer.exploreTitle}</h2>
             <nav aria-label={t.footer.exploreTitle}>
               <ul className="space-y-3">
                 {exploreLinks.map(({ href, key }) => (
@@ -71,7 +71,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Contact — verified information only */}
           <div>
-            <h3 className="eyebrow mb-6">{t.footer.contactTitle}</h3>
+            <h2 className="eyebrow mb-6">{t.footer.contactTitle}</h2>
             <div className="space-y-4 text-sm text-cream-400">
               <p className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 flex-shrink-0 text-navy-500 mt-0.5" aria-hidden="true" />
@@ -104,7 +104,7 @@ export function Footer({ locale }: FooterProps) {
 
           {/* Legal + languages */}
           <div>
-            <h3 className="eyebrow mb-6">{t.footer.legalTitle}</h3>
+            <h2 className="eyebrow mb-6">{t.footer.legalTitle}</h2>
             <nav aria-label={t.footer.legalTitle}>
               <ul className="space-y-3">
                 {LEGAL_LINKS.map(({ href, key }) => (
@@ -119,7 +119,7 @@ export function Footer({ locale }: FooterProps) {
                 ))}
               </ul>
             </nav>
-            <h4 className="eyebrow mt-10 mb-4">{t.footer.languagesTitle}</h4>
+            <h3 className="eyebrow mt-10 mb-4">{t.footer.languagesTitle}</h3>
             <LanguageSwitcher locale={locale} variant="pills" />
           </div>
         </div>

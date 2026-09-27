@@ -2,10 +2,11 @@ import { MapPin, Phone, Camera, ArrowRight } from 'lucide-react';
 import { Container, Section } from '@/components/ui/Container';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { MapEmbed } from '@/components/ui/MapEmbed';
+import { SafeImage } from '@/components/ui/SafeImage';
 import { Button } from '@/components/ui/Button';
 import { getDictionary } from '@/lib/dictionary';
 import type { Locale } from '@/lib/i18n';
-import { BUSINESS_INFO, GOOGLE_MAPS } from '@/lib/data/business';
+import { BUSINESS_INFO, GALLERY_IMAGES, GOOGLE_MAPS } from '@/lib/data/business';
 
 interface LocationViewProps {
   locale: Locale;
@@ -43,14 +44,28 @@ export function LocationView({ locale }: LocationViewProps) {
     <Section id="location" padding="xl">
       <Container size="lg" padding="md">
         <Breadcrumbs locale={locale} title={t.nav.location} href="/location" />
-        <div className="max-w-3xl mb-16">
-          <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
-            {page.tagline}
-          </span>
-          <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
-            {page.title1} <span className="italic text-azure-500">{page.title2}</span>
-          </h1>
-          <p className="text-xl text-cream-100/70 leading-relaxed measure">{page.arrivalDesc}</p>
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center mb-16">
+          <div className="lg:col-span-7">
+            <span className="text-azure-500 text-xs uppercase tracking-[0.4em] mb-4 block">
+              {page.tagline}
+            </span>
+            <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
+              {page.title1} <span className="italic text-azure-500">{page.title2}</span>
+            </h1>
+            <p className="text-xl text-cream-100/70 leading-relaxed measure">{page.arrivalDesc}</p>
+          </div>
+          <figure
+            className="lg:col-span-5 relative w-full overflow-hidden rounded-2xl"
+            style={{ aspectRatio: '3 / 2' }}
+          >
+            <SafeImage
+              src={GALLERY_IMAGES.find((i) => i.id === 'g-4')!.src}
+              alt={GALLERY_IMAGES.find((i) => i.id === 'g-4')!.alt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+          </figure>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
