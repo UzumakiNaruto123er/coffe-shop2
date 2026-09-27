@@ -7,10 +7,10 @@ Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4.
 ## Features
 
 - **i18n**: English, French, Arabic with RTL support (`en` / `fr` / `ar` routes, language switcher persisted in localStorage, `x-default` hreflang).
-- **Locale routing**: server-side redirects via `src/proxy.ts`; every page is statically prerendered per locale.
+- **Locale routing**: server-side redirects via `src/proxy.ts`; every page is server-rendered per request. A per-request nonce is required so that the strict `Content-Security-Policy` set in `src/proxy.ts` stays intact — do not add `export const dynamic = 'force-static'`, or the nonce will be dropped and the page blocked.
 - **Verified content only**: all business facts (address `Rés. Houssem, Avenue Mongi Slim, Tunis 2045`, phone `+216 54 472 945`, Google rating 4.9/5 from 25 reviews, Instagram `@bloo.coffeeshop`, price range 10–20 TND, hours 09:00–23:00 daily) live in `src/lib/data/business.ts`. Nothing is fabricated.
 - **Google Maps**: BLOO COFFEE embed + directions link, centralized in `GOOGLE_MAPS`.
-- **Pages**: Home, Menu, About, Gallery (filterable grid + lightbox), Reviews, Location, Contact, and legal pages (Terms, Privacy, Cookies, Legal Notice) — all in 3 locales, plus localized 404/error/loading states.
+- **Pages**: Home, Menu, About, Gallery (filterable grid + lightbox), Reviews, Location, Contact, and legal pages (Terms, Privacy, Cookies, Legal Notice) — all in 3 locales, plus localized 404 and error states. There is deliberately no `loading.tsx`: a Suspense fallback would replace the server-rendered homepage with a spinner for visitors whose JavaScript fails to load, so the route is left to render its content directly.
 - **SEO**: per-page metadata, canonical + hreflang, `sitemap.xml`, `robots.txt`, dynamic Open Graph image, JSON-LD (`CafeOrCoffeeShop`, `WebSite`, `BreadcrumbList`).
 - **Security headers**: CSP (allowing the Google Maps embed + Unsplash images), `X-Frame-Options: DENY`, nosniff, Referrer-Policy, Permissions-Policy.
 - **Accessibility**: skip link, semantic landmarks, localized aria-labels, keyboard-navigable menu/lightbox, full `prefers-reduced-motion` support.
@@ -64,14 +64,21 @@ src/
 ## Content notes
 
 - The **menu is intentionally directional**: prices and daily specials are confirmed in-store, so no items or prices are invented. Update `home.menu.categories` in `src/lib/dictionary.ts` and the `menuPage` intro when the owner supplies real menu data.
-- **Gallery images are illustrative Unsplash photos** (see `IMAGE_SETUP_GUIDE.md` for how to swap in real photos). They fail-safe to a branded fallback via `SafeImage`.
+- **Gallery images are illustrative Unsplash photos**. They fail-safe to a branded fallback via `SafeImage`, and every image is listed with its dimensions in `GALLERY_IMAGES` (`src/lib/data/business.ts`). To use real BLOO COFFEE photography, replace those entries and drop the files in `public/images/` — note that `public/images/**` is gitignored, so remove that rule (or add an explicit allow-list) to commit them.
 
 ## Deployment
 
 Hosted on Vercel. `main` deploys automatically on push. Stability notes:
 
-1. `output` is toggled off when building on Vercel (`VERCEL=1`) to avoid a Next 16.3 standalone `nft.json` ENOENT.
+1. `output` is toggled off when building on Vercel (`VERCEL=1`) to avoid a Next 16.3 standalone `nft.json` ENOENT. Vercel therefore serves the build directly, and `output: 'standalone'` only applies to self-hosting.
 2. `SITE_URL` must never be empty — `NEXT_PUBLIC_SITE_URL` is trimmed and defaulted in `src/lib/site.ts`.
+3. **Self-hosting with `standalone`** requires two manual copies after `next build`, otherwise `/_next/static/*` and every file in `public/` return 404:
+
+   ```sh
+   cp -r .next/static .next/standalone/.next/static
+   cp -r public .next/standalone/public
+   node .next/standalone/server.js
+   ```
 
 Verify after every deploy: the production site responds 200, `/en` contains localized hreflang, and the Google Maps embed URL is present.
 
