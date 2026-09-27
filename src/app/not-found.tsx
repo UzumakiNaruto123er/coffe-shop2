@@ -16,6 +16,15 @@ const amiri = Amiri({
   fallback: ['serif'],
 });
 
+/**
+ * NOTE: the `headers()` call above is load-bearing. It keeps this route
+ * dynamic, which is what lets Next.js inject the per-request CSP nonce into
+ * its framework <script> tags. Per the Next.js CSP guide, "to use a nonce,
+ * your page must be dynamically rendered" because static pages are built
+ * without request headers. Making this static would let the whole app be
+ * prerendered, and the `strict-dynamic` policy would then block every
+ * script chunk and break the site. Do not remove it.
+ */
 async function resolveLocale(): Promise<Locale> {
   const requested = (await headers()).get('x-locale');
   return requested && isValidLocale(requested) ? requested : defaultLocale;
