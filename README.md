@@ -11,6 +11,7 @@ Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS v4.
 - **Verified content only**: all business facts (address `Rés. Houssem, Avenue Mongi Slim, Tunis 2045`, phone `+216 54 472 945`, Google rating 4.9/5 from 25 reviews, Instagram `@bloo.coffeeshop`, price range 10–20 TND, hours 09:00–23:00 daily) live in `src/lib/data/business.ts`. Nothing is fabricated.
 - **Google Maps**: BLOO COFFEE embed + directions link, centralized in `GOOGLE_MAPS`.
 - **Pages**: Home, Menu, About, Gallery (filterable grid + lightbox), Reviews, Location, Contact, and legal pages (Terms, Privacy, Cookies, Legal Notice) — all in 3 locales, plus localized 404 and error states. There is deliberately no `loading.tsx`: a Suspense fallback would replace the server-rendered homepage with a spinner for visitors whose JavaScript fails to load, so the route is left to render its content directly.
+- **First-paint splash**: `src/components/brand/Loader.tsx` renders a short 3D brand animation over the first document render. This is a first-paint overlay, not a Suspense boundary: it is server-rendered, uses `pointer-events: none` so it can never trap input, and is dismissed by a CSS keyframe that reaches `visibility: hidden` on its own, so it clears even with JavaScript disabled. It is suppressed on language switches (via a `sessionStorage` flag set by the switcher) and on client-side navigation, and is not shown at all under `prefers-reduced-motion`. Do not reintroduce `loading.tsx` to achieve this effect.
 - **SEO**: per-page metadata, canonical + hreflang, `sitemap.xml`, `robots.txt`, dynamic Open Graph image, JSON-LD (`CafeOrCoffeeShop`, `WebSite`, `BreadcrumbList`).
 - **Security headers**: CSP (allowing the Google Maps embed + Unsplash images), `X-Frame-Options: DENY`, nosniff, Referrer-Policy, Permissions-Policy.
 - **Accessibility**: skip link, semantic landmarks, localized aria-labels, keyboard-navigable menu/lightbox, full `prefers-reduced-motion` support.
@@ -44,7 +45,7 @@ See `.env.example`. Only two are used:
 ```
 src/
 ├── app/
-│   ├── [locale]/          # Localized pages + layout, error/loading/not-found
+│   ├── [locale]/          # Localized pages + layout, error/not-found
 │   ├── api/               # business, gallery, menu, reviews (cached JSON)
 │   ├── layout.tsx         # Root layout (fonts, metadata, manifest link)
 │   ├── global-error.tsx

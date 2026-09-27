@@ -676,6 +676,29 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+
+  /*
+   * The first-paint brand splash.
+   *
+   * This override has to live here rather than in the component's CSS module.
+   * The resets above sit in an earlier cascade layer, and for !important
+   * declarations earlier layers win outright, so no amount of specificity in a
+   * module can beat them. At a 0.01ms duration Chromium samples the splash's
+   * final opacity but never commits the discrete `visibility` flip, so the
+   * overlay would be left sitting in the document.
+   *
+   * A reduced-motion visitor is therefore not shown the splash at all. That is
+   * the intended behaviour rather than a fallback: the animation is a 3D scene
+   * filling the entire viewport, and briefly blanking the whole page to play it
+   * is exactly the kind of motion this preference exists to suppress. Visitors
+   * who do not set the preference get the full splash.
+   */
+  .brand-splash {
+    animation: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+  }
 }
 
 }

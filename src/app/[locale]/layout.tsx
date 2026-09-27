@@ -10,6 +10,7 @@ import { HtmlLangSetter } from '@/components/locale/HtmlLangSetter';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { BackToTop } from '@/components/ui/BackToTop';
 import { CookieConsent } from '@/components/ui/CookieConsent';
+import { Loader } from '@/components/brand/Loader';
 import '@/styles/globals.css';
 
 const amiri = Amiri({
@@ -55,6 +56,14 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(SITE_URL),
     applicationName: 'BLOO COFFEE',
+    // Without this Next emits no <link rel="icon">, so browsers fall back to
+    // requesting /favicon.ico, which does not exist, and log a 404 on every
+    // page load. The asset already lives at public/favicon.svg. Kept to a single
+    // entry on purpose: the head already declares apple-touch-icon by hand, and
+    // a legacy rel="shortcut icon" would just be a second link to the same file.
+    icons: {
+      icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    },
     title: {
       default: dict.meta.home.title,
       template: '%s',
@@ -120,7 +129,6 @@ export default async function LocaleLayout({
         <link rel="dns-prefetch" href="https://www.google.com" />
         <link rel="dns-prefetch" href="https://www.instagram.com" />
         <meta name="theme-color" content="#1a3a52" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icons/icon-180x180.png" />
       </head>
@@ -137,6 +145,7 @@ export default async function LocaleLayout({
         <BackToTop locale={locale} />
         <CookieConsent locale={locale} />
         <JsonLd />
+        <Loader />
       </body>
     </html>
   );

@@ -23,6 +23,11 @@ const securityHeaders = [
 
 const nextConfig = {
   output: process.env.VERCEL ? undefined : 'standalone',
+  // Hides the on-screen route/issue badge during `next dev`. It is a dev-only
+  // overlay, but it renders an "N issues" chip that reads as a live defect and
+  // is easily mistaken for something the deployed site is showing. Compile and
+  // runtime errors are still surfaced.
+  devIndicators: false,
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
