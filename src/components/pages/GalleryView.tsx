@@ -82,7 +82,7 @@ export function GalleryView({ locale }: GalleryViewProps) {
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
             {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
-          <p className="text-cream-100/50">{page.disclaimer}</p>
+          <p className="text-cream-100/70">{page.disclaimer}</p>
         </div>
 
         <div className="flex flex-wrap gap-3 mb-12" role="group" aria-label={page.title2}>

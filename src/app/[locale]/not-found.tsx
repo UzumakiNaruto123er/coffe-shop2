@@ -29,10 +29,10 @@ export default function LocaleNotFound() {
             404
           </h1>
 
-          <p className="font-display text-xl font-light text-cream-100/60 mb-2 max-w-md mx-auto">
+          <p className="font-display text-xl font-light text-cream-100/70 mb-2 max-w-md mx-auto">
             {t.notFound.title1}
           </p>
-          <p className="font-display text-lg font-light text-cream-100/40 mb-8 max-w-md mx-auto">
+          <p className="font-display text-lg font-light text-cream-100/70 mb-8 max-w-md mx-auto">
             {t.notFound.message}
           </p>
 

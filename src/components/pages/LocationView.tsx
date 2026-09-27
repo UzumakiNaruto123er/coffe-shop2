@@ -50,7 +50,7 @@ export function LocationView({ locale }: LocationViewProps) {
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
             {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
-          <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.arrivalDesc}</p>
+          <p className="text-xl text-cream-100/70 leading-relaxed measure">{page.arrivalDesc}</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
@@ -72,7 +72,7 @@ export function LocationView({ locale }: LocationViewProps) {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10">
           <div>
             <h2 className="font-display text-3xl text-cream-100 mb-2">{page.hoursTitle}</h2>
-            <p className="text-cream-100/60 max-w-2xl measure">{page.hoursNote}</p>
+            <p className="text-cream-100/70 max-w-2xl measure">{page.hoursNote}</p>
           </div>
           <Button variant="primary" size="lg" asChild className="w-full sm:w-auto">
             <a href={GOOGLE_MAPS.directionsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3">

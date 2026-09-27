@@ -49,7 +49,7 @@ export function InstagramSection({ locale }: InstagramSectionProps) {
           </a>
         </div>
 
-        <p className="text-cream-100/60 leading-relaxed mb-10 max-w-2xl measure">
+        <p className="text-cream-100/70 leading-relaxed mb-10 max-w-2xl measure">
           {t.home.instagram.subtitle}
         </p>
 

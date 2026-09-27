@@ -84,10 +84,10 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
           <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
             {page.title1} <span className="italic text-azure-500">{page.title2}</span>
           </h1>
-          <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.subtitle}</p>
+          <p className="text-xl text-cream-100/70 leading-relaxed measure">{page.subtitle}</p>
         </div>
 
-        <p className="text-sm text-cream-100/50 border-l-2 border-azure-500/40 pl-4 mb-12 max-w-2xl">
+        <p className="text-sm text-cream-100/70 border-l-2 border-azure-500/40 pl-4 mb-12 max-w-2xl">
           {page.note}
         </p>
 
@@ -96,7 +96,7 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
             {hasEmail ? (
               <form onSubmit={openMailClient} noValidate className="max-w-xl">
                 <h2 className="font-display text-3xl text-cream-100 mb-2">{page.formTitle}</h2>
-                <p className="text-sm text-cream-100/60 mb-10">{page.formIntro}</p>
+                <p className="text-sm text-cream-100/70 mb-10">{page.formIntro}</p>
 
                 <div className="space-y-8">
                   <Input
@@ -133,13 +133,13 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
                   <Button type="submit" variant="primary" size="lg" icon={<Send className="w-4 h-4" aria-hidden="true" />}>
                     {page.send}
                   </Button>
-                  <p className="text-xs text-cream-100/40 max-w-xs">{page.documentNote}</p>
+                  <p className="text-xs text-cream-100/70 max-w-xs">{page.documentNote}</p>
                 </div>
               </form>
             ) : (
               <div className="min-w-0 max-w-xl border border-cream-200 bg-charcoal-900 p-8 lg:p-10 rounded-[1.5rem]">
                 <h2 className="font-display text-3xl text-cream-100 mb-4">{page.noFormTitle}</h2>
-                <p className="text-cream-100/60 mb-8">{page.noEmail}</p>
+                <p className="text-cream-100/70 mb-8">{page.noEmail}</p>
                 <div className="flex min-w-0 flex-col sm:flex-row gap-4">
                   <Button variant="primary" size="lg" asChild>
                     <a href={BUSINESS_INFO.phoneHref} className="inline-flex max-w-full items-center gap-3 break-words">
@@ -175,7 +175,7 @@ export function ContactView({ locale, contactEmail }: ContactViewProps) {
                 >
                   <Icon className="w-7 h-7 text-navy-500 mb-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
                   <h2 className="font-display text-xl text-cream-100 mb-2 break-words">{label}</h2>
-                  <p className="text-cream-100/55 text-sm mb-6 break-words">{description}</p>
+                  <p className="text-cream-100/70 text-sm mb-6 break-words">{description}</p>
                   <span className="mt-auto text-xs uppercase tracking-[0.25em] text-navy-600 font-bold">
                     {action}
                   </span>

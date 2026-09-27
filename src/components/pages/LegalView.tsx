@@ -22,18 +22,18 @@ export function LegalView({ locale, legalKey }: LegalViewProps) {
           {dict.legal.lastUpdated}: {dict.legal.updatedDate}
         </span>
         <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">{page.title}</h1>
-        <p className="text-lg text-cream-100/60 leading-relaxed mb-12 measure">{page.intro}</p>
+        <p className="text-lg text-cream-100/70 leading-relaxed mb-12 measure">{page.intro}</p>
 
         <div className="space-y-10">
           {page.sections.map((section) => (
             <section key={section.heading}>
               <h2 className="font-display text-2xl text-cream-100 mb-3">{section.heading}</h2>
-              <p className="text-cream-100/60 leading-relaxed measure">{section.body}</p>
+              <p className="text-cream-100/70 leading-relaxed measure">{section.body}</p>
             </section>
           ))}
         </div>
 
-        <p className="mt-16 text-sm text-cream-100/40">{dict.common.disclaimer}</p>
+        <p className="mt-16 text-sm text-cream-100/70">{dict.common.disclaimer}</p>
       </Container>
     </Section>
   );

@@ -32,7 +32,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           <div className="lg:col-span-1 border border-cream-200 bg-charcoal-900 p-10 rounded-[1.5rem] flex flex-col items-start">
-            <p className="text-xs uppercase tracking-[0.25em] text-cream-100/60 mb-4">
+            <p className="text-xs uppercase tracking-[0.25em] text-cream-100/70 mb-4">
               {page.overallTitle}
             </p>
             <p className="font-display font-light text-7xl text-azure-500 mb-4">
@@ -54,7 +54,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
                 );
               })}
             </div>
-            <p className="text-sm text-cream-100/60 mb-8">
+            <p className="text-sm text-cream-100/70 mb-8">
               {BUSINESS_INFO.reviewCount} — {page.basedOn}
             </p>
             <Button variant="primary" size="lg" asChild className="w-full">
@@ -65,7 +65,7 @@ export function ReviewsView({ locale }: ReviewsViewProps) {
           </div>
 
           <div className="lg:col-span-2 flex items-end">
-            <p className="text-cream-100/60 text-lg leading-relaxed measure border-l border-cream-300 pl-6">
+            <p className="text-cream-100/70 text-lg leading-relaxed measure border-l border-cream-300 pl-6">
               {page.note}
             </p>
           </div>

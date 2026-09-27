@@ -46,7 +46,7 @@ export default async function RootNotFound() {
               <CupSoda className="w-16 h-16 text-navy-500/40" />
             </div>
             <h1 className="font-display text-7xl font-extralight italic text-cream-100 mb-4">404</h1>
-            <p className="font-display text-xl font-light text-cream-100/60 mb-10 max-w-md mx-auto">
+            <p className="font-display text-xl font-light text-cream-100/70 mb-10 max-w-md mx-auto">
               {dict.notFound.message}
             </p>
             <Link

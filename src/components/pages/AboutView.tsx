@@ -70,12 +70,12 @@ export function AboutView({ locale }: AboutViewProps) {
                 <Star className="w-5 h-5 fill-azure-500 text-azure-500" aria-hidden="true" />
                 <span className="font-display text-4xl font-light text-azure-500">{page.ratingValue}</span>
               </dd>
-              <p className="mt-2 text-xs uppercase tracking-[0.2em] text-cream-100/60">{page.ratingLabel}</p>
+              <p className="mt-2 text-xs uppercase tracking-[0.2em] text-cream-100/70">{page.ratingLabel}</p>
             </div>
             <div>
               <dt className="sr-only">{page.reviewsLabel}</dt>
               <dd className="font-display text-4xl font-light text-cream-100">{page.reviewsValue}</dd>
-              <p className="mt-2 text-xs uppercase tracking-[0.2em] text-cream-100/60">{page.reviewsLabel}</p>
+              <p className="mt-2 text-xs uppercase tracking-[0.2em] text-cream-100/70">{page.reviewsLabel}</p>
             </div>
           </dl>
         </div>
@@ -88,7 +88,7 @@ export function AboutView({ locale }: AboutViewProps) {
               <div key={feature.title} className="border-t border-cream-200 pt-6">
                 <Icon className="w-6 h-6 text-azure-500 mb-4" aria-hidden="true" />
                 <h3 className="font-display text-xl text-cream-100 mb-2">{feature.title}</h3>
-                <p className="text-cream-100/55 text-sm leading-relaxed">{feature.description}</p>
+                <p className="text-cream-100/70 text-sm leading-relaxed">{feature.description}</p>
               </div>
             );
           })}
@@ -96,7 +96,7 @@ export function AboutView({ locale }: AboutViewProps) {
 
         <div className="border-t border-cream-200 pt-16">
           <h2 className="font-display text-3xl text-cream-100 mb-3">{page.hoursTitle}</h2>
-          <p className="text-cream-100/60 max-w-2xl measure">{page.hoursNote}</p>
+          <p className="text-cream-100/70 max-w-2xl measure">{page.hoursNote}</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href={BUSINESS_INFO.phoneHref}

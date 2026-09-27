@@ -25,7 +25,7 @@ export default function LocaleError({
         <h1 className="font-display font-light text-4xl text-cream-100 mb-4">
           {t.common.errorTitle}
         </h1>
-        <p className="text-cream-100/60 mb-10 max-w-md mx-auto">{t.common.errorMessage}</p>
+        <p className="text-cream-100/70 mb-10 max-w-md mx-auto">{t.common.errorMessage}</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button variant="primary" size="lg" onClick={reset} className="w-full sm:w-auto">
             {t.common.retry}

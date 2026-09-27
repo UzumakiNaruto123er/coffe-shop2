@@ -17,10 +17,10 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
       <Container size="lg" padding="md">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="eyebrow mb-6">{t.home.reviews.eyebrow}</span>
+            <span className="eyebrow text-azure-300 mb-6">{t.home.reviews.eyebrow}</span>
             <h2 className="display-title font-display font-light text-white">
               {t.home.reviews.title1}{' '}
-              <span className="italic text-azure-500">{t.home.reviews.title2}</span>
+              <span className="italic text-azure-400">{t.home.reviews.title2}</span>
             </h2>
             <p className="mt-6 text-lg text-white/70 leading-relaxed measure">
               {t.home.reviews.subtitle}
@@ -31,7 +31,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             href={GOOGLE_MAPS.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full max-w-md mx-auto overflow-hidden border border-white/15 bg-white/5 p-8 transition-colors hover:border-azure-500/60 group"
+            className="w-full max-w-md mx-auto overflow-hidden border border-white/15 bg-white/5 p-8 transition-colors hover:border-azure-400/60 group"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
@@ -46,7 +46,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-azure-500 font-bold text-sm">
+                <span className="text-azure-400 font-bold text-sm">
                   {BUSINESS_INFO.rating.toFixed(1)}
                 </span>
                 <div className="flex" aria-hidden="true">
@@ -55,8 +55,8 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
                       key={i}
                       className={
                         i < fullStars
-                          ? 'w-4 h-4 fill-azure-500 text-azure-500'
-                          : 'w-4 h-4 text-white/30'
+                          ? 'w-4 h-4 fill-azure-400 text-azure-400'
+                          : 'w-4 h-4 text-white/45'
                       }
                     />
                   ))}
@@ -66,7 +66,7 @@ export function ReviewsSection({ locale }: ReviewsSectionProps) {
             <p className="text-xs uppercase tracking-[0.2em] text-white/60 mb-5">
               {BUSINESS_INFO.reviewCount} — {t.home.reviews.ratingSub}
             </p>
-            <span className="block text-center text-xs uppercase tracking-[0.2em] text-azure-500 group-hover:text-azure-400 transition-colors border border-azure-500/50 px-6 py-3">
+            <span className="block text-center text-xs uppercase tracking-[0.2em] text-azure-400 group-hover:text-azure-300 transition-colors border border-azure-400/50 px-6 py-3">
               {t.home.reviews.cta}
             </span>
           </a>

@@ -17,7 +17,7 @@ export default function GlobalError({
             <h1 className="font-display font-light text-4xl text-cream-100 mb-4">
               Something went wrong
             </h1>
-            <p className="text-cream-100/60 mb-10 max-w-md mx-auto">
+            <p className="text-cream-100/70 mb-10 max-w-md mx-auto">
               An unexpected error occurred. Please try again.
             </p>
             <button

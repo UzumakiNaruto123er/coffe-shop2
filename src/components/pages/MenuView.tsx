@@ -36,7 +36,7 @@ export function MenuView({ locale }: MenuViewProps) {
             <h1 className="font-display font-light text-5xl md:text-6xl text-cream-100 mb-8">
               {page.title1} <span className="italic text-navy-500">{page.title2}</span>
             </h1>
-            <p className="text-xl text-cream-100/60 leading-relaxed measure">{page.intro}</p>
+            <p className="text-xl text-cream-100/70 leading-relaxed measure">{page.intro}</p>
           </div>
 
           <figure className="lg:col-span-5">
@@ -104,7 +104,7 @@ export function MenuView({ locale }: MenuViewProps) {
                 <Phone className="w-4 h-4" aria-hidden="true" />
                 {BUSINESS_INFO.phone}
               </a>
-              <p className="mt-6 text-xs text-cream-100/50 leading-relaxed">{page.note}</p>
+              <p className="mt-6 text-xs text-cream-100/70 leading-relaxed">{page.note}</p>
             </div>
 
             <div className="mt-10 border-t border-cream-200 pt-8">

@@ -49,7 +49,7 @@ export function Breadcrumbs({ locale, title, href }: BreadcrumbsProps) {
             {index < items.length - 1 ? (
               <Link
                 href={`/${locale}`}
-                className="inline-flex items-center min-h-6 text-cream-100/50 hover:text-azure-500 transition-colors truncate"
+                className="inline-flex items-center min-h-6 text-cream-100/70 hover:text-azure-500 transition-colors truncate"
               >
                 {item.label}
               </Link>
