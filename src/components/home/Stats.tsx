@@ -81,12 +81,19 @@ export function Stats({ locale }: StatsProps) {
         {/* Copy: inset to the far side, centred against the taller image */}
         <div className="relative lg:col-span-6 lg:col-start-6 px-4 sm:px-6 lg:px-0 lg:py-24 xl:py-28 lg:pe-14 rtl:lg:pe-0 rtl:lg:ps-14">
           <div className="lg:max-w-md lg:ms-auto rtl:lg:ms-0 rtl:lg:me-auto">
-            <span
+            {/*
+              This is the only homepage section that labels itself with a bare
+              span, so it was the one section absent from the document heading
+              outline and therefore skipped by anyone navigating by heading. It
+              is an h2 like every other section; the eyebrow styling is set
+              explicitly here, so the rendered result is unchanged.
+            */}
+            <h2
               id="stats-title"
               className="block text-azure-300 text-xs font-semibold uppercase tracking-[0.35em] mb-7"
             >
               {t.home.stats.eyebrow}
-            </span>
+            </h2>
 
             <dl className="grid gap-7">
               {items.map((item) => (
