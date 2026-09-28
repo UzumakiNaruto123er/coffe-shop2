@@ -9,8 +9,8 @@ function buildCsp(nonce: string): string {
   return [
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${isDev ? " 'unsafe-eval'" : ''}`,
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.fontshare.com",
-    "font-src 'self' https://fonts.gstatic.com https://api.fontshare.com https://cdn.fontshare.com data:",
+    "style-src 'self' 'unsafe-inline' https://api.fontshare.com",
+    "font-src 'self' https://api.fontshare.com https://cdn.fontshare.com data:",
     "img-src 'self' blob: data: https://images.unsplash.com https://www.google.com",
     "media-src 'self'",
     "connect-src 'self'",
