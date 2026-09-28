@@ -8,31 +8,44 @@ interface StatsProps {
 }
 
 /**
- * "Good to know" was a 384px band: a navy panel of two short stat rows beside
- * a landscape photo forced into the same shallow box, so the photograph had no
+ * "Good to know" has been rebuilt three times, and each earlier attempt failed
+ * in a way worth recording, because they fail in opposite directions.
+ *
+ * Originally a 384px band: a navy panel of two short stat rows beside a
+ * landscape photo crushed into the same shallow box, so the photograph had no
  * presence and the panel had no weight.
  *
- * It is now an asymmetric editorial split with a real photograph beside the
- * information column. Two earlier attempts are worth recording, because both
- * were wrong in opposite directions.
+ * First attempt: the photograph was height-matched to the copy column. The
+ * result was a tall photo beside a caption of almost identical height, which
+ * reads as an accident rather than a composition.
  *
- * Height-matching the image to the copy column left a tall photo and a short
- * caption of almost identical height, which reads as an accident rather than a
- * composition. Letting the photograph run at its native 2:3 with no cap fixed
- * the composition but made the section 1224px tall at 1440px, which is simply
- * too much page: the band was taller than the hero text and the copy was left
- * stranded beside a column of image.
+ * Second attempt: the photograph was released to its native 2:3 with no cap.
+ * The asymmetry was right but the section measured 1224px at 1440px, taller
+ * than the hero, and the copy was stranded beside a column of image. Capping it
+ * at 600x900 kept the ratio exact but left the text 312px away from the picture
+ * at 1440px and 752px away at 1920px, because the photograph was pinned to the
+ * inline-start bleed while `ms-auto` pushed the text to the far edge. The wider
+ * the viewport, the further apart they drifted. The picture and the words were
+ * not reading as one composition at all.
  *
- * So the photograph is capped. It is held to 600x900 at desktop by capping the
- * width, which preserves the 2:3 ratio exactly rather than cropping a tall
- * frame down to a squat one, and `object-cover` absorbs any mismatch between
- * the declared ratio and the delivered asset so the picture is never stretched.
- * At 1440px that is about 1.55x the height of the copy column, so the
- * asymmetry still reads as deliberate without the section dominating the page,
- * and the height stays constant from 1440px upward instead of growing with the
- * viewport. The copy is centred against it, and the figure is now five columns
- * wide with the copy starting at the sixth so the narrower image does not leave
- * a void between itself and the text.
+ * This version fixes both. The section is a normal band rather than a panel:
+ * the section's own padding sets its height, and the photograph is a normal
+ * photograph inside it rather than something stretched edge to edge. At 1440px
+ * the image is 400x500 in a section 628px tall, so it occupies 80% of the band
+ * and nothing is cropped to fill it.
+ *
+ * The photograph and the text are centred as a single pair, and because the
+ * row is a plain flex row under `dir=rtl` the order reverses for Arabic with no
+ * direction-specific classes: the picture sits on the reading-start side in
+ * both languages. Vertical centring comes from `items-center`, so the shorter
+ * text block sits centred against the photograph rather than being pushed to an
+ * edge, and the gap between them is a fixed 64px at every viewport instead of
+ * growing with the screen.
+ *
+ * The image is 4:5 rather than the source's 2:3. That is a deliberate, modest
+ * side crop: a 2:3 frame at this width would be 400x600 and the band would be
+ * a metre tall again, which is the mistake above. `object-cover` handles the
+ * crop so the picture is never stretched.
  *
  * Content is limited to facts already in the dictionary. No new claims.
  */
@@ -52,66 +65,65 @@ export function Stats({ locale }: StatsProps) {
     >
       <div className="bg-noise absolute inset-0 opacity-20" aria-hidden="true" />
 
-      <div className="relative lg:grid lg:grid-cols-12 lg:items-center">
-        {/* Photograph: 2:3 capped to 600x900, bleeding off the inline-start edge */}
-        <figure className="relative lg:col-span-5 lg:-ms-16 xl:-ms-24">
-          {/*
-            The height cap applies at every width so a tablet never renders a
-            full-bleed 2:3 panel over a metre tall. On desktop the width is
-            capped too, which keeps the ratio exactly 2:3 instead of cropping a
-            portrait down to a squat one; below that the box simply goes
-            full-bleed and the 900px ceiling crops the sides. object-cover
-            absorbs either case so the picture is never stretched.
-          */}
-          <div className="relative w-full aspect-[2/3] max-h-[900px] lg:max-w-[600px] overflow-hidden lg:rounded-e-[2rem] rtl:rounded-e-none rtl:rounded-s-[2rem] bg-charcoal-950">
+      {/*
+        A plain flex row, centred, so the pair reverses for Arabic under
+        `dir=rtl` without a single direction-specific class. The cap stops the
+        composition from becoming a small island in a very wide band.
+      */}
+      <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center gap-8 px-4 py-14 sm:px-6 lg:flex-row lg:justify-center lg:gap-16 lg:py-16">
+        {/*
+          Slightly wider between 640 and 1023px, where the pair is stacked and a
+          400px photograph would sit as a small card in a wide band. At lg the
+          two columns go side by side and the width comes back down so the pair
+          still fits without overflowing.
+        */}
+        <figure className="relative w-full max-w-[400px] shrink-0 sm:max-w-[460px] lg:max-w-[400px]">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.5rem] bg-charcoal-950">
             <SafeImage
               src={photo.src}
               alt={photo.alt}
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 600px"
+              sizes="(max-width: 1024px) 90vw, 400px"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-bloo-950/45 to-transparent lg:bg-gradient-to-r rtl:lg:bg-gradient-to-l"
+              className="absolute inset-0 bg-gradient-to-t from-bloo-950/35 to-transparent"
               aria-hidden="true"
             />
           </div>
         </figure>
 
-        {/* Copy: inset to the far side, centred against the taller image */}
-        <div className="relative lg:col-span-6 lg:col-start-6 px-4 sm:px-6 lg:px-0 lg:py-24 xl:py-28 lg:pe-14 rtl:lg:pe-0 rtl:lg:ps-14">
-          <div className="lg:max-w-md lg:ms-auto rtl:lg:ms-0 rtl:lg:me-auto">
-            {/*
-              This is the only homepage section that labels itself with a bare
-              span, so it was the one section absent from the document heading
-              outline and therefore skipped by anyone navigating by heading. It
-              is an h2 like every other section; the eyebrow styling is set
-              explicitly here, so the rendered result is unchanged.
-            */}
-            <h2
-              id="stats-title"
-              className="block text-azure-300 text-xs font-semibold uppercase tracking-[0.35em] mb-7"
-            >
-              {t.home.stats.eyebrow}
-            </h2>
+        <div className="relative w-full max-w-md">
+          {/*
+            This is the only homepage section that labels itself with a bare
+            span, so it was the one section absent from the document heading
+            outline and therefore skipped by anyone navigating by heading. It
+            is an h2 like every other section; the eyebrow styling is set
+            explicitly here, so the rendered result is unchanged.
+          */}
+          <h2
+            id="stats-title"
+            className="block text-azure-300 text-xs font-semibold uppercase tracking-[0.35em] mb-7"
+          >
+            {t.home.stats.eyebrow}
+          </h2>
 
-            <dl className="grid gap-7">
-              {items.map((item) => (
-                <div key={item.label} className="border-t border-white/15 pt-6">
-                  <dt className="text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-bloo-200/80 mb-2">
-                    {item.label}
-                  </dt>
-                  <dd className="font-display text-4xl sm:text-5xl font-extrabold text-white text-balance">
-                    {item.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+          <dl className="grid gap-7">
+            {items.map((item) => (
+              <div key={item.label} className="border-t border-white/15 pt-6">
+                <dt className="text-[0.65rem] uppercase tracking-[0.25em] font-semibold text-bloo-200/80 mb-2">
+                  {item.label}
+                </dt>
+                <dd className="font-display text-4xl sm:text-5xl font-extrabold text-white text-balance">
+                  {item.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
 
-            <p className="mt-9 text-sm sm:text-base text-white/75 leading-relaxed max-w-sm">
-              {t.home.stats.note}
-            </p>
-          </div>
+          <p className="mt-9 text-sm sm:text-base text-white/75 leading-relaxed max-w-sm">
+            {t.home.stats.note}
+          </p>
         </div>
       </div>
     </section>
