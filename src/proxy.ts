@@ -55,10 +55,10 @@ export const config = {
      * - api (API routes)
      * - _next/static/_next/image (framework assets)
      * - favicon.ico and manifest.json
-     * - public files: images, icons, sitemap, robots
+     * - public files: images, icons, fonts, sitemap, robots
      */
     {
-      source: '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|manifest.json|sitemap.xml|robots.txt|images|icons).*)',
+      source: '/((?!api|_next/static|_next/image|favicon.ico|favicon.svg|manifest.json|sitemap.xml|robots.txt|images|icons|fonts).*)',
       missing: [
         { type: 'header', key: 'next-router-prefetch' },
         { type: 'header', key: 'purpose', value: 'prefetch' },

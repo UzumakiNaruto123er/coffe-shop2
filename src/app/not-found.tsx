@@ -1,20 +1,10 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import Link from 'next/link';
-import { Amiri } from 'next/font/google';
 import { CupSoda, ArrowLeft } from 'lucide-react';
 import '@/styles/globals.css';
 import { defaultLocale, isValidLocale, localeDirections, type Locale } from '@/lib/i18n';
 import { getDictionary } from '@/lib/dictionary';
-
-const amiri = Amiri({
-  subsets: ['arabic'],
-  variable: '--font-amiri',
-  display: 'swap',
-  weight: ['400', '700'],
-  preload: true,
-  fallback: ['serif'],
-});
 
 /**
  * NOTE: the `headers()` call above is load-bearing. It keeps this route
@@ -46,7 +36,7 @@ export default async function RootNotFound() {
   const dir = localeDirections[locale];
 
   return (
-    <html lang={locale} dir={dir} className={`${amiri.variable} h-full antialiased`}>
+    <html lang={locale} dir={dir} className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-charcoal-950 text-cream-100">
         <div className="flex flex-1 items-center justify-center bg-charcoal-950 px-4" dir={dir}>
           <div className="text-center py-20">

@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { Amiri } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { locales, isValidLocale, localeDirections, type Locale } from '@/lib/i18n';
 import { getOgLocale, getLocaleUrl, SITE_URL, getOgImage } from '@/lib/site';
@@ -12,15 +11,6 @@ import { BackToTop } from '@/components/ui/BackToTop';
 import { CookieConsent } from '@/components/ui/CookieConsent';
 import { Loader } from '@/components/brand/Loader';
 import '@/styles/globals.css';
-
-const amiri = Amiri({
-  subsets: ['arabic'],
-  variable: '--font-amiri',
-  display: 'swap',
-  weight: ['400', '700'],
-  preload: true,
-  fallback: ['serif'],
-});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -120,7 +110,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       dir={dir}
-      className={`${amiri.variable} h-full antialiased`}
+      className="h-full antialiased"
       suppressHydrationWarning
     >
       <head>
